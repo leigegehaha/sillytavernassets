@@ -1,0 +1,17 @@
+{
+    "id": "5188fca4-ad74-4551-b841-28ac3a7594fb",
+    "scriptName": "小图书馆-（7）去注释（抢话）",
+    "findRegex": "/<!--🍃抢话自查:[\\s\\S]*?-->/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": true,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

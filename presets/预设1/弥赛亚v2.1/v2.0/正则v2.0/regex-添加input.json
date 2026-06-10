@@ -1,0 +1,17 @@
+{
+    "id": "6abe5ab8-2743-40e9-8c2e-0ab4bbaf9db5",
+    "scriptName": "添加input",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "^([\\s\\S]*)$",
+    "replaceString": "<user_input>\n$1\n</user_input>",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": 1,
+    "markdownOnly": true,
+    "promptOnly": true
+}

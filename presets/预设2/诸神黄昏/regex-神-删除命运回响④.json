@@ -1,0 +1,17 @@
+{
+    "id": "2c410958-6ba2-4934-9cc1-9b50e4ec3aa2",
+    "scriptName": "神-删除命运回响④",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/<details\\s+[^>]*data-fate\\s*=\\s*[\"']destiny[\"'][^>]*>[\\s\\S]*?<\\/details>/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

@@ -1,0 +1,17 @@
+{
+    "id": "95e304e9-e1b8-4793-84ed-694e37b410eb",
+    "scriptName": "【茉莉】❀捕获用户输入",
+    "findRegex": "^([\\s\\S]*)$",
+    "replaceString": "<当前回复>\n$1\n</当前回复>",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": false,
+    "minDepth": null,
+    "maxDepth": 1
+}

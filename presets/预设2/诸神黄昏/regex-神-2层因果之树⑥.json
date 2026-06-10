@@ -1,0 +1,17 @@
+{
+    "id": "ac40a388-bc92-461f-9bd0-f3cefb641012",
+    "scriptName": "神-2层因果之树⑥",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/<details\\s+[^>]*class\\s*=\\s*[\"'][^\"']*\\bforeshadow\\b[^\"']*[\"'][^>]*>[\\s\\S]*?<\\/details>/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": 4,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

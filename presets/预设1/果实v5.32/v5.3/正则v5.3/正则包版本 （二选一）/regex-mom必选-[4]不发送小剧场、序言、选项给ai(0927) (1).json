@@ -1,0 +1,17 @@
+{
+    "id": "c7967dee-24d5-48c6-94dc-4dd6510429fe",
+    "scriptName": "MoM必选-[4]不发送小剧场、序言、选项给AI(0927)",
+    "findRegex": "/<snow>[\\s\\S]*?</snow>|<pro.*?>[\\s\\S]*?</pro.*?>|<branches>[\\s\\S]*?</branches>/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

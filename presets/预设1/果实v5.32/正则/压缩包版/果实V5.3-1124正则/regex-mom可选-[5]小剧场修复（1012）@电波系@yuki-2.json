@@ -1,0 +1,17 @@
+{
+    "id": "0f005ecc-5f6b-404a-9beb-17f924abd044",
+    "scriptName": "MoM可选-[5]小剧场修复（1012）@电波系@yuki",
+    "findRegex": "(?<=<snow>[\\s\\S]*?body\\s*{[^}]*?)height:\\s*\\d+(?:vh)?%?(?=[\\s\\S]*?})",
+    "replaceString": "height: auto",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 1,
+    "minDepth": null,
+    "maxDepth": null
+}

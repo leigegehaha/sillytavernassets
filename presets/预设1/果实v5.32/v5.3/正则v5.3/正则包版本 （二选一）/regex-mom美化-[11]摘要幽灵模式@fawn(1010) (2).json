@@ -1,0 +1,17 @@
+{
+    "id": "b3b4213a-ea7f-44f7-8c5f-d99005785642",
+    "scriptName": "MoM美化-[11]摘要幽灵模式@fawn(1010)",
+    "findRegex": "/<meow_FM>\\s+serial[:：](.+?)\\s*time[:：](.+?)\\s*scene[:：](.+?)\\s*plot[:：](.+?)\\s*(?:seeds[:：]\\s?(.+?))?\\s*</[^bp>]*>/si",
+    "replaceString": "<div class=\"meow-fm-ghost\" style=\"font-family: inherit; max-width: 100%; margin: 2px 0; color: inherit; line-height: 1.4; opacity: 0.85;\">\n  <details style=\"border: none; display: inline-block; width: 100%;\">\n    <summary style=\"list-style: none; cursor: pointer; padding: 1px 0; display: flex; justify-content: space-between;\">\n      <span style=\"font-size: 0.95em;\">$1</span>\n      <span style=\"font-size: 0.85em; opacity: 0.6;\">$2</span>\n    </summary>\n    <div style=\"padding: 2px 0 0 8px; border-left: 1px dotted rgba(0,0,0,0.1); margin-left: 4px;\">\n      <div style=\"margin: 3px 0; font-size: 0.92em;\">\n        <span style=\"opacity: 0.7;\">→ </span>$3\n      </div>\n      <div style=\"margin-bottom: 4px; font-size: 0.9em; line-height: 1.5;\">\n        $4\n      </div>\n      <details style=\"border: none;\">\n        <summary style=\"list-style: none; cursor: pointer; font-size: 0.85em; opacity: 0.6; padding: 0 0 1px 0;\">\n          <span>···</span>\n        </summary>\n        <div style=\"font-size: 0.86em; line-height: 1.4; padding-left: 8px;\">\n          <ul style=\"margin: 2px 0; padding-left: 12px; list-style-type: none;\">$5</ul>\n        </div>\n      </details>\n    </div>\n  </details>\n  <div style=\"font-size: 0.7em; opacity: 0.4; text-align: right; padding-top: 1px;\">\n    ฅ^•ﻌ•^ฅ\n  </div>\n</div>",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

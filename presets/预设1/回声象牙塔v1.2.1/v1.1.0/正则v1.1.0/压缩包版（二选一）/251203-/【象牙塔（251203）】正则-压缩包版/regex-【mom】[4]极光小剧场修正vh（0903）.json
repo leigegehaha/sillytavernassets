@@ -1,0 +1,17 @@
+{
+    "id": "0476bd4a-c0a2-4e05-9d8b-be5c8ae439d3",
+    "scriptName": "【MoM】[4]极光小剧场修正vh（0903）",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/height:\\s*\\d+vh/g",
+    "replaceString": "height: auto",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": false
+}

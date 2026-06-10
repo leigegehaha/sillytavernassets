@@ -1,0 +1,17 @@
+{
+    "id": "12675bb4-60f9-4cf6-b97a-1d5f354fc1cb",
+    "scriptName": "【MoM】[2]8楼外只发送摘要和角色表（0927）",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/^[\\s\\S]*(<meow_FM>[\\s\\S]*$)/i",
+    "replaceString": "$1",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": 8,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

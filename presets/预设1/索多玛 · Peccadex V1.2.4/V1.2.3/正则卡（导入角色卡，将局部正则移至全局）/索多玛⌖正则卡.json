@@ -1,0 +1,147 @@
+{
+    "name": "索多玛⌖正则卡",
+    "description": "",
+    "personality": "",
+    "scenario": "",
+    "first_mes": "",
+    "mes_example": "",
+    "creatorcomment": "",
+    "avatar": "none",
+    "talkativeness": "0.5",
+    "fav": false,
+    "tags": [],
+    "spec": "chara_card_v3",
+    "spec_version": "3.0",
+    "data": {
+        "name": "索多玛⌖正则卡",
+        "description": "",
+        "personality": "",
+        "scenario": "",
+        "first_mes": "",
+        "mes_example": "",
+        "creator_notes": "",
+        "system_prompt": "",
+        "post_history_instructions": "",
+        "tags": [],
+        "creator": "",
+        "character_version": "",
+        "alternate_greetings": [],
+        "extensions": {
+            "talkativeness": "0.5",
+            "fav": false,
+            "world": "",
+            "depth_prompt": {
+                "prompt": "",
+                "depth": 4,
+                "role": "system"
+            },
+            "QuickReply_Profile_V54": [],
+            "regex_scripts": [
+                {
+                    "id": "0a115721-5ce3-4277-9615-e765922ea94e",
+                    "scriptName": "【索多玛】1.去除思维链",
+                    "findRegex": "/<think(?:ing)?\\b[^>]*?>[\\s\\S]*?<\\/think(?:ing)?>/gis",
+                    "replaceString": "",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": true,
+                    "promptOnly": true,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                },
+                {
+                    "id": "986ff5f1-f27d-4640-a612-6073a1daebfb",
+                    "scriptName": "【索多玛】2.去除多余内容",
+                    "findRegex": "/(<disclaimer>.*?</disclaimer>)/gsi",
+                    "replaceString": "",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": true,
+                    "promptOnly": true,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                },
+                {
+                    "id": "beb761c7-2fba-4619-8332-12cb67481cb5",
+                    "scriptName": "【索多玛】3.去除正文思维链",
+                    "disabled": false,
+                    "runOnEdit": true,
+                    "findRegex": "/((?:<\\s*!?\\s*-\\s*-|<\\s*-\\s*-)[\\s\\S]*?-\\s*-\\s*>(\\n)?)/g",
+                    "replaceString": "",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null,
+                    "markdownOnly": false,
+                    "promptOnly": true
+                },
+                {
+                    "id": "3f51a434-e1bf-4a38-a7b2-5a3001e27c60",
+                    "scriptName": "【索多玛】4.(可选)清空用户输入",
+                    "findRegex": "^([\\s\\S]*)$",
+                    "replaceString": "",
+                    "trimStrings": [],
+                    "placement": [
+                        1
+                    ],
+                    "disabled": false,
+                    "markdownOnly": false,
+                    "promptOnly": true,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": 2,
+                    "maxDepth": null
+                },
+                {
+                    "id": "50eb5d3d-5859-471c-b2a0-ee569339b1c8",
+                    "scriptName": "【索多玛】5.10条以外只发送摘要",
+                    "findRegex": "/^[\\s\\S]*(<Sodom>[\\s\\S]*?<\\/Sodom>)[\\s\\S]*$/si",
+                    "replaceString": "$1",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": false,
+                    "promptOnly": true,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": 11,
+                    "maxDepth": null
+                },
+                {
+                    "id": "7034d696-19e8-472b-a5f6-daae40eb8e6c",
+                    "scriptName": "【索多玛】6.隐藏小剧场",
+                    "findRegex": "/<\\s*Sin\\s*>[\\s\\S]*?<\\s*\\/\\s*Sin\\s*>/gsi",
+                    "replaceString": "",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": false,
+                    "promptOnly": true,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                }
+            ]
+        },
+        "group_only_greetings": []
+    },
+    "create_date": "2025-10-6 @20h 20m 12s 37ms"
+}

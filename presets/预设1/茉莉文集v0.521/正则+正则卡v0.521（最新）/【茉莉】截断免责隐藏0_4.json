@@ -1,0 +1,17 @@
+{
+    "id": "866c4c5b-f443-41a6-9ab9-9a5508175af7",
+    "scriptName": "【茉莉】❀截断免责隐藏0.4✨",
+    "findRegex": "/(<disclaimerX>[\\s\\S]*?</[\\s\\S]*?>)|(<版权[\\s\\S]*?>[\\s\\S]*?</[\\s\\S]*?>)|(<copy[\\s\\S]*?>[\\s\\S]*?</[\\s\\S]*?>)/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

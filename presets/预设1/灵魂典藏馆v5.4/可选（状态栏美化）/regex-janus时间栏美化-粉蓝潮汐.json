@@ -1,0 +1,18 @@
+{
+    "id": "d8e2beba-6912-4523-8f1c-38b883baefff",
+    "scriptName": "Janus时间栏美化-粉蓝潮汐",
+    "findRegex": "/「\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*」/g",
+    "replaceString": "<div style=\"\n  margin: 2.5em auto;\n  text-align: center;\n  padding: 12px 15px;\n  border-image:\n    linear-gradient(\n      90deg,\n      transparent,\n      #84BCD6 20%,\n      #4CA4E9 50%,\n      #84BCD6 80%,\n      transparent\n    ) 1;\n  border-width: 1px 0;\n  border-style: solid;\n  font-size: 0.7em;\n  letter-spacing: 0.5px;\n  line-height: 1.6;\n\">\n  <span style=\"color: #FF9FC1; font-weight: bold; text-shadow: 0 0 6px rgba(255, 159, 193, 0.45);\">\n    $1\n  </span>\n  <span style=\"margin: 0 0.8em; color: #4CA4E9; font-weight: 300; text-shadow: 0 0 4px rgba(76, 164, 233, 0.35);\">｜</span>\n  <span style=\"color: #84BCD6;\">$2</span>\n  <span style=\"margin: 0 0.8em; color: #4CA4E9; font-weight: 300; text-shadow: 0 0 4px rgba(76, 164, 233, 0.35);\">｜</span>\n  <span style=\"color: #84BCD6;\">$3</span>\n  <span style=\"margin: 0 0.8em; color: #4CA4E9; font-weight: 300; text-shadow: 0 0 4px rgba(76, 164, 233, 0.35);\">｜</span>\n  <span style=\"color: #84BCD6;\">$4</span>\n  <span style=\"margin: 0 0.8em; color: #4CA4E9; font-weight: 300; text-shadow: 0 0 4px rgba(76, 164, 233, 0.35);\">｜</span>\n  <span style=\"color: #84BCD6;\">$5</span>\n</div>\n",
+    "trimStrings": [],
+    "placement": [
+        1,
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": false,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

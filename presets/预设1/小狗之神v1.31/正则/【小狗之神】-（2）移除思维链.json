@@ -1,0 +1,17 @@
+{
+    "id": "7faaa3c8-e89d-4037-bb83-da2f9579ac19",
+    "scriptName": "【小狗之神】-（2）移除思维链",
+    "findRegex": "/<thinking>[\\s\\S]*?<\\/thinking>\\n?/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 0,
+    "maxDepth": null
+}

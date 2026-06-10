@@ -1,0 +1,17 @@
+{
+    "id": "preset_e1f60eb0-b2fd-4552-b383-6cc0f9973b8c",
+    "scriptName": "【行间】-（1）添加tag",
+    "findRegex": "^([\\s\\S]*)$",
+    "replaceString": "<user_input>\n$1\n</user_input>",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": 1
+}

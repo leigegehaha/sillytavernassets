@@ -1,0 +1,18 @@
+{
+    "id": "56401dc6-19dc-4fc2-b886-f1432409bc65",
+    "scriptName": "【小狗之神】-（8）不发送故事走向",
+    "findRegex": "/<!-- Options:BEGIN -->([\\s\\S]*?)<!-- Options:END -->\\r?\\n?/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        1,
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 0,
+    "maxDepth": null
+}

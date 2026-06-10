@@ -1,0 +1,17 @@
+{
+    "id": "ce546aac-9746-462c-8d55-27299ccee933",
+    "scriptName": "小图书馆-（4）不发送剧场",
+    "findRegex": "/<section\\s+data-id\\s*=\\s*[\"']?(\\d+)[\"']?[^>]*>([\\s\\S]*?)<\\/section>/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 0,
+    "maxDepth": null
+}

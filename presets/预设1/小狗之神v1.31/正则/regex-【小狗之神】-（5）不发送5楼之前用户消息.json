@@ -1,0 +1,17 @@
+{
+    "id": "4c33f3a3-1456-4d9a-bf74-0f55495091bd",
+    "scriptName": "【小狗之神】-（5）不发送5楼之前用户消息",
+    "findRegex": "([\\s\\S]*)",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 5,
+    "maxDepth": null
+}

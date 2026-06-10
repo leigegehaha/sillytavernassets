@@ -1,0 +1,17 @@
+{
+    "id": "9235a3ef-6a55-4d4b-a73c-7d9dc3f3e1d7",
+    "scriptName": "【MoM】🐾不发送小剧场(0628)",
+    "findRegex": "/<snow>[\\s\\S]*?</snow>/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

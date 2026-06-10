@@ -1,0 +1,17 @@
+{
+    "id": "4ffde19a-69a2-4277-aae6-28f3c3c54a03",
+    "scriptName": "去除原生思维链",
+    "findRegex": "<think>[\\s\\S]*?</think>",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

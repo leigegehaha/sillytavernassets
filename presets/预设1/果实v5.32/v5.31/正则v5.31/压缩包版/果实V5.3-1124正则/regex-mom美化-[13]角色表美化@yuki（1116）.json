@@ -1,0 +1,19 @@
+{
+    "id": "9fe65461-9a5c-43f2-abb1-745e0f20b75e",
+    "scriptName": "MoM美化-[13]角色表美化@YUKI（1116）",
+    "findRegex": "/<profile>\\s*([\\s\\S]*?)</[^>]*>/i",
+    "replaceString": " \n<details style=\"display: flex;flex-direction: column; width: 95%; margin: 0 auto;\">\n<summary style=\"list-style: none; text-align: center;margin: 10px 0 10px 0;\"><span style=\"cursor: pointer; padding:5px 10px 5px 10px; font-size: 1.0em;border:1.5px solid color-mix(in srgb, #898989 20%,var(--ac-style-color-selectedText) 30%);border-radius:8px;background-color: color-mix(in srgb, #898989 20%, var(--SmartThemeUnderlineColor) 10%);color: var(--ac-style-color-matchedText); box-shadow: 0 0 6px 2px rgba(0, 0, 0, 0.15);\">— 🍎Profile —</span></summary>\n<div markdown=\"1\" style=\"padding: 10px;border:1px dashed rgba(205,205,205,.2);border-radius:2px;-webkit-overflow-scrolling: touch;\"><center>\n\n$1\n\n</center></div>\n</details>\n ",
+    "trimStrings": [
+        "**"
+    ],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

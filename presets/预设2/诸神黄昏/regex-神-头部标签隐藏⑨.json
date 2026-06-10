@@ -1,0 +1,17 @@
+{
+    "id": "81aa5db0-81bd-4df0-9ca7-df632675aa94",
+    "scriptName": "神-头部标签隐藏⑨",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/<(?:正文头部)>\\s*|<\\/(?:正文头部)>\\s*/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": false
+}

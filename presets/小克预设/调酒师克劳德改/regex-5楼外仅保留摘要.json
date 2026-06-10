@@ -1,0 +1,17 @@
+{
+    "id": "871b2bce-dc58-4e03-9561-6f04083b1895",
+    "scriptName": "5楼外仅保留摘要",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/^[\\s\\S]*?<Lenitxt>([\\s\\S]*?)<\\/Lenitxt>[\\s\\S]*$/gm",
+    "replaceString": "$1",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": 2,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

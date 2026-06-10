@@ -1,0 +1,17 @@
+{
+    "id": "31f0a408-b776-41d3-b191-d3efd8bded33",
+    "scriptName": "【打工喵】替换用户消息",
+    "findRegex": "([\\s\\S]*)",
+    "replaceString": "<user_input>\n$1\n</user_input>",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": 1
+}

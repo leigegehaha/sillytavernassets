@@ -1,0 +1,17 @@
+{
+    "id": "d80c1a44-9a26-4865-98bf-2c530ec6b304",
+    "scriptName": "【MoM】[1]5楼外只发送摘要和角色表给AI",
+    "findRegex": "/^[\\s\\S]*(<meow_FM>[\\s\\S]*?</meow_FM>)|(<char_date>[\\s\\S]*?</char_date>)/g",
+    "replaceString": "$1$2",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": true,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 5,
+    "maxDepth": null
+}

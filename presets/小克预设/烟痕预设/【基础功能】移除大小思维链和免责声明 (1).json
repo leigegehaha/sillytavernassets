@@ -1,0 +1,17 @@
+{
+    "id": "27c5eb77-22f4-405a-94d9-babc390fa0ef",
+    "scriptName": "【Lyean】移除大小思维链和免责声明",
+    "findRegex": "/(<disclaimer>.*?</disclaimer>)|(<!-- State(.*?)d(.*?) -->(\\n)?)|(<!-- consider: (.*?) -->(\\n)?)|(.*?</think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

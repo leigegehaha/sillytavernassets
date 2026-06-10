@@ -1,0 +1,17 @@
+{
+    "id": "d2bef4b9-f5ea-4d56-8109-606e78b95764",
+    "scriptName": "Janus时间栏美化-黑白日间",
+    "findRegex": "/「\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*」/g",
+    "replaceString": "<div style=\"margin: 2.5em auto; text-align: center; padding: 12px 15px; border-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0.1), rgba(0,0,0,0)) 1; border-width: 1px 0; border-style: solid; font-size: 0.7em; letter-spacing: 0.5px; line-height: 1.6;\">\n    <span style=\"color: #333333; font-weight: bold;\">$1</span>\n    <span style=\"margin: 0 0.8em; color: rgba(0, 0, 0, 0.25); font-weight: 300;\">｜</span>\n    <span style=\"color: #777777;\">$2</span>\n    <span style=\"margin: 0 0.8em; color: rgba(0, 0, 0, 0.25); font-weight: 300;\">｜</span>\n    <span style=\"color: #777777;\">$3</span>\n    <span style=\"margin: 0 0.8em; color: rgba(0, 0, 0, 0.25); font-weight: 300;\">｜</span>\n    <span style=\"color: #777777;\">$4</span>\n    <span style=\"margin: 0 0.8em; color: rgba(0, 0, 0, 0.25); font-weight: 300;\">｜</span>\n    <span style=\"color: #777777;\">$5</span>\n</div>\n",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

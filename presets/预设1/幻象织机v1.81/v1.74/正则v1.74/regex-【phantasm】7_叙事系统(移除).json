@@ -1,0 +1,17 @@
+{
+    "id": "e1070276-b568-4181-bdc6-ce3e4f2ed26a",
+    "scriptName": "【Phantasm】7.叙事系统(移除)",
+    "findRegex": "/<INDRS>([\\s\\S]*?)</INDRS>/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 3,
+    "maxDepth": null
+}

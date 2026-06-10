@@ -1,0 +1,17 @@
+{
+    "id": "a8acdb25-376a-4bc3-89a1-8e65ac60be0b",
+    "scriptName": "【MoM】🐾5楼外伏笔不发送(0628)",
+    "findRegex": "<seeds>[\\s\\S]*?</seeds>",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 5,
+    "maxDepth": null
+}

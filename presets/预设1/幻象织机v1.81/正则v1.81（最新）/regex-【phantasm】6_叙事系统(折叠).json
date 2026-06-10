@@ -1,0 +1,17 @@
+{
+    "id": "df968b57-87cb-4399-ae1e-376f4e0ad3c6",
+    "scriptName": "【Phantasm】6.叙事系统(折叠)",
+    "findRegex": "/<INDRS>([\\s\\S]*?)</INDRS>/g",
+    "replaceString": "<details><summary>叙事系统</summary>\n$1\n</details>",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

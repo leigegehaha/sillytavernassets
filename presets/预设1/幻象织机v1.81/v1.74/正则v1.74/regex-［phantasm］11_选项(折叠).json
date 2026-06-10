@@ -1,0 +1,17 @@
+{
+    "id": "f5b4ecab-dc2b-4984-a8dc-349d1cd21489",
+    "scriptName": "［Phantasm］11.选项(折叠)",
+    "findRegex": "/<choice>([\\s\\S]*?)</choice>/g",
+    "replaceString": "<details><summary>选项</summary>\n$1\n</details>",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": true,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

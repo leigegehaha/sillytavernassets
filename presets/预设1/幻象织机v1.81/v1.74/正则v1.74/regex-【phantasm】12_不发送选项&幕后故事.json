@@ -1,0 +1,17 @@
+{
+    "id": "8c269b76-e4e1-4b2d-94db-1c79822f6fee",
+    "scriptName": "【Phantasm】12.不发送选项&幕后故事",
+    "findRegex": "/(<bts>[\\s\\S]*?</bts>)|<choice>[\\s\\S]*?</choice>/gm",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

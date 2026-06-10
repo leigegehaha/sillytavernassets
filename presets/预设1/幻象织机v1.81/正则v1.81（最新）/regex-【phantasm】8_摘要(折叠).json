@@ -1,0 +1,17 @@
+{
+    "id": "1fe18f6a-7e9b-4170-a251-9995229b331c",
+    "scriptName": "【Phantasm】8.摘要(折叠)",
+    "findRegex": "/<abstract>([\\s\\S]*?)<\\/abstract>/g",
+    "replaceString": "<details><summary>摘要</summary>\n$1\n</details>",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

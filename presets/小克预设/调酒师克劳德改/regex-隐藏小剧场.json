@@ -1,0 +1,17 @@
+{
+    "id": "09d42fba-3584-4ba4-ae2e-4e072f91f035",
+    "scriptName": "隐藏小剧场",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/<wine>[\\s\\S]*?<\\/wine>/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

@@ -1,0 +1,17 @@
+{
+    "id": "f300ff90-2f50-41c1-be71-78b8bed98451",
+    "scriptName": "【象牙塔】不发送多余内容（1119）",
+    "findRegex": "/<snow>[\\s\\S]*?<\\/snow>|<echo>[\\s\\S]*?<\\/echo>|<branches>[\\s\\S]*?<\\/branches>|<aurora_time>[\\s\\S]*?<\\/aurora_time>|<gossip>[\\s\\S]*?<\\/gossip>/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

@@ -1,0 +1,17 @@
+{
+    "id": "c484782d-4592-4cc6-9418-b793767c726a",
+    "scriptName": "小图书馆-（6）去注释（思考）",
+    "findRegex": "/<!--📄思考[\\s\\S]*?-->/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": true,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

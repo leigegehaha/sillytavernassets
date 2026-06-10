@@ -1,0 +1,17 @@
+{
+    "id": "97bdd080-eded-47ef-ac62-47308018cb41",
+    "scriptName": "象牙塔可选-隐藏thinking（自动解析失败开启）",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/<thinking>([\\s\\S]*?)<\\/thinking>/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": true
+}

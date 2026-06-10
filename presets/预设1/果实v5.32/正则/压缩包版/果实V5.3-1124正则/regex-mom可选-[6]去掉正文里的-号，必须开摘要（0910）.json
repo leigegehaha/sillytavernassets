@@ -1,0 +1,21 @@
+{
+    "id": "026e59c4-27b2-4778-bc13-f2ce063f124f",
+    "scriptName": "MoM可选-[6]去掉正文里的-号，必须开摘要（0910）",
+    "findRegex": "^([\\s\\S]*)(?=<meow_FM>)",
+    "replaceString": "$1",
+    "trimStrings": [
+        "-",
+        "**",
+        "-"
+    ],
+    "placement": [
+        2
+    ],
+    "disabled": true,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

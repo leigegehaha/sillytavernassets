@@ -1,0 +1,17 @@
+{
+    "id": "4bcd547b-0280-418d-869b-0f6c13a8cfde",
+    "scriptName": "神-2层缘契天定⑤",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/<details\\s+[^>]*class\\s*=\\s*[\"'][^\"']*\\bbond\\b[^\"']*[\"'][^>]*>[\\s\\S]*?<\\/details>/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": 4,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

@@ -1,0 +1,17 @@
+{
+    "id": "5ec1fe08-b433-4c1d-b8ee-44880a4e8653",
+    "scriptName": "【MoM】🐾隐藏关系图(0628)",
+    "findRegex": "```mermaid[\\s\\S]*?```",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

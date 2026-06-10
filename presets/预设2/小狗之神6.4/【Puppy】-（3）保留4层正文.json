@@ -1,0 +1,17 @@
+{
+    "id": "c84df892-66fe-4fb5-a89d-a4f3d95d3571",
+    "scriptName": "【Puppy】-（3）保留4层正文",
+    "findRegex": "/[\\s\\S]*?<dog>([\\s\\S]*?)<\\/dog>([\\s\\S]*)/gm",
+    "replaceString": "<!--\n<dog>$1</dog>\n-->",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 4,
+    "maxDepth": null
+}

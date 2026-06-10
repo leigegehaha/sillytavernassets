@@ -1,0 +1,17 @@
+{
+    "id": "9b06fab4-5779-4b44-b248-d3ce1a6a1c1c",
+    "scriptName": "【Phantasm】5.(防外审用)去除敏感标签",
+    "findRegex": "/<safe>|</safe>/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": true,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

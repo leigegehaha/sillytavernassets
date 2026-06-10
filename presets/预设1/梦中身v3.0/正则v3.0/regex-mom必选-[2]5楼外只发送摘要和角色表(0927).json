@@ -1,0 +1,17 @@
+{
+    "id": "e8c5df4d-7124-495a-ad6b-a53a3ef24c84",
+    "scriptName": "MoM必选-[2]5楼外只发送摘要和角色表(0927)",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/^[\\s\\S]*(<meow_FM>[\\s\\S]*$)/i",
+    "replaceString": "$1",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": 5,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

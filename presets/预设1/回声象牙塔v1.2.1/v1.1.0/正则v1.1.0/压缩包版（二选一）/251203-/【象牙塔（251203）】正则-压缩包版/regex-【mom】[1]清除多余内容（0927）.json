@@ -1,0 +1,17 @@
+{
+    "id": "429dbe1d-ef08-407e-b731-cd1ed9c3204b",
+    "scriptName": "【MoM】[1]清除多余内容（0927）",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/^[\\s\\S]*\\[finire\\]\\s?|\\s?<finish>[\\s\\S]*</finish>|\\s?<disclaimer>[\\s\\S]*</disclaimer>|\\s?<!--[\\s\\S]*?-->|(?<=<p style)-/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": true
+}

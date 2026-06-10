@@ -1,0 +1,17 @@
+{
+    "id": "6cdc20b1-e452-4006-a99e-942c3683e2b5",
+    "scriptName": "神-删</thinking>前①",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/^[\\s\\S]*?<\\/thinking>/i",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": true
+}

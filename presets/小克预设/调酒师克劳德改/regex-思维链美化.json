@@ -1,0 +1,17 @@
+{
+    "id": "2b72090a-94fa-4ca7-9d27-7a1317aadde7",
+    "scriptName": "思维链美化",
+    "findRegex": "<thinking>([\\s\\S]*?)<\\/thinking>",
+    "replaceString": "<details class=\"frosted-thinking\">\n  <summary>🍸 今日酒单</summary>\n  <div class=\"thinking-content\">$1</div>\n</details>\n\n<style>\n.frosted-thinking {\n  background: rgba(255, 255, 255, 0.15);\n  backdrop-filter: blur(10px);\n  -webkit-backdrop-filter: blur(10px);\n  border-radius: 12px;\n  padding: 12px;\n  margin: 8px 0;\n  border: 1px solid rgba(0, 0, 0, 0.1);\n  max-width: 100%;\n  box-sizing: border-box;\n}\n.frosted-thinking summary {\n  list-style: none;\n  cursor: pointer;\n  font-weight: bold;\n  color: #000 !important; /* 黑色文字 */\n  text-shadow: none;\n  margin: -4px -4px 8px -4px;\n  padding: 4px;\n  outline: none;\n}\n.frosted-thinking summary::-webkit-details-marker {\n  display: none;\n}\n.frosted-thinking .thinking-content {\n  margin-top: 8px;\n  color: #000; /* 内容也用黑色 */\n  line-height: 1.5;\n  white-space: pre-wrap;\n  font-size: 14px;\n}\n</style>",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

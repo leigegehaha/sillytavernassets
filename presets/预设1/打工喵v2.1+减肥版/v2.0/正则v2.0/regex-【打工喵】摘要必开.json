@@ -1,0 +1,17 @@
+{
+    "id": "1760ce75-fa18-4af4-9623-c58abe461ae9",
+    "scriptName": "【打工喵】摘要必开",
+    "findRegex": "/<report>([\\s\\S]*?)<\\/report>/gm",
+    "replaceString": "<details><summary>打工喵总结</summary>$1</details>",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

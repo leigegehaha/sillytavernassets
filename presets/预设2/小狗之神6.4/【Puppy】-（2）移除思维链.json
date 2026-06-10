@@ -1,0 +1,17 @@
+{
+    "id": "3d211dec-a860-44e9-b28b-87f05ba3486c",
+    "scriptName": "【Puppy】-（2）移除思维链",
+    "findRegex": "/<thinking>[\\s\\S]*?<\\/thinking>\\n?/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 0,
+    "maxDepth": null
+}

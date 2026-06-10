@@ -1,0 +1,17 @@
+{
+    "id": "01faef19-ff8f-4a81-860c-5435c0e0ba93",
+    "scriptName": "神-保留5层正文②",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "<content>[\\s\\S]*?</content>",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": 10,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

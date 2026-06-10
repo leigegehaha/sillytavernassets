@@ -1,0 +1,17 @@
+{
+    "id": "bd456825-1fd8-4c35-a538-7472fb863412",
+    "scriptName": "神-删除小剧场③",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/<details(?:\\s+[^>]*?)?\\s+class\\s*=\\s*[\"'][^\"']*side_theater[^\"']*[\"'][^>]*>[\\s\\S]*?<\\/details>/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

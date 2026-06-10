@@ -1,0 +1,17 @@
+{
+    "id": "1a6dfd7e-6f9f-44eb-9f08-8585f4c176e7",
+    "scriptName": "神-标签删除⑩",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/<(?:组件列表|蓝图小剧场列表)>\\s*|<\\/(?:组件列表|蓝图小剧场列表)>\\s*/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": true
+}

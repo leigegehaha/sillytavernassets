@@ -1,0 +1,17 @@
+{
+    "id": "c33c57e3-2fd8-49bd-909d-ebbe713eb471",
+    "scriptName": "【茉莉】❀截断免责隐藏✨",
+    "findRegex": "/(<disclaimerX>[\\s\\S]*?</disclaimerX>)/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": false,
+    "minDepth": null,
+    "maxDepth": null
+}

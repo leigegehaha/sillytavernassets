@@ -1,0 +1,18 @@
+{
+    "id": "6a66d6d0-977a-4908-9429-b2e24a56cb2c",
+    "scriptName": "【小狗之神】-（6）对话模式表情包",
+    "findRegex": "/<meme>.*?([a-zA-Z0-9_]+\\.(jpg|png|gif|webp))<\\/meme>/gm",
+    "replaceString": "<img src=\"https://files.catbox.moe/$1\" style=\"max-width:120px; border-radius:10px; display:block; margin:12px 0;\">",
+    "trimStrings": [],
+    "placement": [
+        1,
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": false,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

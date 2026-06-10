@@ -1,0 +1,17 @@
+{
+    "id": "484dfa72-7be6-4efc-98ef-90df4cb2ee9c",
+    "scriptName": "【Phantasm】3.(必要)最新user输入加tag",
+    "findRegex": "^([\\s\\S]*)$",
+    "replaceString": "</previous_round>\n\n<latest_user_input>\n$1\n</latest_user_input>",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": 1
+}

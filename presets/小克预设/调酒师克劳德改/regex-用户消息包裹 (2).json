@@ -1,0 +1,17 @@
+{
+    "id": "452a8fd8-4e1b-4a29-8e33-1beec1ceb993",
+    "scriptName": "用户消息包裹",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/(.*)/s",
+    "replaceString": "<user_input>\n$1\n</user_input>",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": 0,
+    "markdownOnly": false,
+    "promptOnly": true
+}

@@ -1,0 +1,13 @@
+{
+  "type": "script",
+  "enabled": true,
+  "name": "压缩相邻消息: 让 AI 对内容理解更连贯",
+  "id": "96fc21e5-4af7-4278-8626-a86076ebdc78",
+  "content": "import 'https://testingcf.jsdelivr.net/gh/StageDog/tavern_resource/dist/酒馆助手/压缩相邻消息/index.js'",
+  "info": "# 压缩相邻消息\n\n- **作者:** 青空莉想做舞台少女的狗\n- **版本:** 2025/10/23\n- **源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/src)\n\n像 [NoAss](https://gitgud.io/Monblant/noass) 那样压缩消息、剥离系统深度条目以及将聊天消息转换为单个身份消息, 从而\n\n- 内容理解更连贯：在发送给 llm 后，消息和消息之间可能存在 <|im_start|>system 等间隔，而压缩相邻同身份消息后自然省去了这些间隔\n- 自建对话语境：所有聊天记录合并成一个消息里的 A 和 B 对话而不是 user 和 ai 对话，免受模型有关 user 和 ai 对话理解的影响\n\n之所以重新写一个，是因为\n\n- 不想多装个插件\n- noass 原仓库的实现方式是直接自己组装提示词，性能和与其他插件、脚本的兼容性不是很好\n- 试试用 Vue 写前端界面\n\n本脚本的设置直接绑定在脚本变量上, 可以随脚本一起导出.\n\n此外, 整个功能是一个酒馆助手脚本, 因此\n\n- 可以放在预设脚本库内从而与预设绑定\n- 可以配合 \"标签化\" 内置库在名字前面加一个 `【预设名】` 实现随预设开关\n",
+  "button": {
+    "enabled": true,
+    "buttons": []
+  },
+  "data": {}
+}

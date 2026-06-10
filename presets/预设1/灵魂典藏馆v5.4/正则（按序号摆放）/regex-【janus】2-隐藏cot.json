@@ -1,0 +1,17 @@
+{
+    "id": "7b6f4860-75b4-4a84-abe5-d50d5fa791f4",
+    "scriptName": "【Janus】2-隐藏COT",
+    "findRegex": "/<think(?:ing)?>([\\s\\S]*?)<\\/think(?:ing)?>/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 0,
+    "maxDepth": null
+}

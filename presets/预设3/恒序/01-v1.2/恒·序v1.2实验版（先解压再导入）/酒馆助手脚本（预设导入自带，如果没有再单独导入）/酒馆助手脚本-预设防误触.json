@@ -1,0 +1,13 @@
+{
+  "type": "script",
+  "enabled": true,
+  "name": "预设防误触",
+  "id": "12ea87b4-3c99-44b2-b4e6-fe5abcf795f8",
+  "content": "import 'https://testingcf.jsdelivr.net/gh/StageDog/tavern_resource/dist/酒馆助手/预设防误触/index.js'",
+  "info": "# 预设防误触\n\n- **作者:** 青空莉想做舞台少女的狗\n- **版本:** 2025/04/29\n- **源文件:** [点此跳转](https://gitgud.io/StageDog/tavern_resource/-/tree/main/src)\n- **说明:** 启用后将预设上下文长度改为最大, 并锁定预设选项, 除了 '流式传输'、'请求思维链' 和 '具体条目' 以外的选项不能通过界面来修改\n",
+  "button": {
+    "enabled": true,
+    "buttons": []
+  },
+  "data": {}
+}

@@ -1,0 +1,18 @@
+{
+    "id": "560ccde7-20f5-4aee-aa64-c40c34d48597",
+    "scriptName": "【Puppy】-（5）不发送代替用户回复",
+    "findRegex": "/<doggie>[\\s\\S]*?<\\/doggie>\\n?/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        1,
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

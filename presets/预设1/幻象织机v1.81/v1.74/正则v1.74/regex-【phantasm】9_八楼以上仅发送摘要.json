@@ -1,0 +1,17 @@
+{
+    "id": "d9fb6a1c-bd04-43c4-acb6-95cb85067664",
+    "scriptName": "【Phantasm】9.八楼以上仅发送摘要",
+    "findRegex": "/(?=[\\s\\S]*<abstract>)((^|(?<=<\\/abstract>))[\\s\\S]*?(?=<abstract>|$))/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 9,
+    "maxDepth": null
+}

@@ -1,0 +1,17 @@
+{
+    "id": "ad093df6-ed64-43fc-9108-e363a3bb4d3a",
+    "scriptName": "小图书馆-（8选开）只发送最新用户输入",
+    "findRegex": "([\\s\\S]*)",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "disabled": true,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 1,
+    "maxDepth": null
+}

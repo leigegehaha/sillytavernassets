@@ -1,0 +1,17 @@
+{
+    "id": "2219c430-8f9b-4ed0-8bfe-71868b71696b",
+    "scriptName": "【Lyean】[不发送]5楼以下摘要文本",
+    "findRegex": "/<details><summary>摘要</summary>([\\s\\S]*?)</details>/gm",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": 5
+}

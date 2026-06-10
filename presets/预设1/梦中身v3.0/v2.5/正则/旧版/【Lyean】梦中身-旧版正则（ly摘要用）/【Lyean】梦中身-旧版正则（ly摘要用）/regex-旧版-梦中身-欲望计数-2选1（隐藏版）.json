@@ -1,0 +1,17 @@
+{
+    "id": "20fd5328-ed3e-47d6-8542-a1ec33170900",
+    "scriptName": "旧版-梦中身-欲望计数-2选1（隐藏版）",
+    "findRegex": "<!-- STATE_TRACKER -->\\s*\\[(.*?)\\]\\s*<!-- /STATE_TRACKER -->",
+    "replaceString": "```html\n<html>\n<head>\n    <style>\n        body {\n            margin: 0;\n            padding: 0;\n            background-color: transparent;\n        }\n        .state-hidden {\n            display: none;\n        }\n    </style>\n</head>\n<body>\n    <!-- disable-default-loading -->\n    <div class=\"state-hidden\">$1</div>\n</body>\n</html>\n```",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": true,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

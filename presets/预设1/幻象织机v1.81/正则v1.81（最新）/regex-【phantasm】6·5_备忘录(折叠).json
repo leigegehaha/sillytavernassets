@@ -1,0 +1,17 @@
+{
+    "id": "b5a7cba6-b28d-4a14-a2dd-2594fea6218f",
+    "scriptName": "【Phantasm】6·5.备忘录(折叠)",
+    "findRegex": "/<note>([\\s\\S]*?)<\\/note>/g",
+    "replaceString": "<details><summary>备忘录</summary>\n$1\n</details>",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

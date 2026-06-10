@@ -1,0 +1,17 @@
+{
+    "id": "e894e695-7ff4-4c1c-bc19-8b6fb17dfcac",
+    "scriptName": "MoM必选-[1]清除多余内容(0927)",
+    "findRegex": "/^[\\s\\S]*\\[finire\\]\\s?|\\s?<finish>[\\s\\S]*</finish>|\\s?<disclaimer>[\\s\\S]*</disclaimer>|\\s?<!--[\\s\\S]*?-->|(?<=<p style)-/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

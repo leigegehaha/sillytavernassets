@@ -1,0 +1,17 @@
+{
+    "id": "d01a08e5-7d33-4347-a834-4dc06f6507e5",
+    "scriptName": "【MoM】🐾清除多余内容(0705)",
+    "findRegex": "/[\\s\\S]*(<content>)|<finish>[\\s\\S]*|<disclaimer>[\\s\\S]*|<!--[\\s\\S]*?-->/g",
+    "replaceString": "$1",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

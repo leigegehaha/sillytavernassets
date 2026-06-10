@@ -1,0 +1,17 @@
+{
+    "id": "be70a94e-7a7d-4a81-905d-6252066aff27",
+    "scriptName": "神-2层正文头部⑧",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/<正文头部[^>]*>[\\s\\S]*?<\\/正文头部>/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": 4,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

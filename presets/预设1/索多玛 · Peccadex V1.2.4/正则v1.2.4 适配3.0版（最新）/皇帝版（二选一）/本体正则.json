@@ -1,0 +1,104 @@
+[
+    {
+        "id": "0a115721-5ce3-4277-9615-e765922ea94e",
+        "scriptName": "【索多玛】1.去除多余内容",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/^[\\s\\S]*\\[finire\\]\\s?|\\s?<disclaimer>[\\s\\S]*</disclaimer>|\\s?<!--[\\s\\S]*?-->/gi",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": true,
+        "promptOnly": true
+    },
+    {
+        "id": "7034d696-19e8-472b-a5f6-daae40eb8e6c",
+        "scriptName": "【索多玛】2.不发送小剧场和选项",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/<Sin>[\\s\\S]*?</Sin>|<branches>[\\s\\S]*?</branches>/gi",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null,
+        "markdownOnly": false,
+        "promptOnly": true
+    },
+    {
+        "id": "3f51a434-e1bf-4a38-a7b2-5a3001e27c60",
+        "scriptName": "【索多玛】3.(可选)清空用户输入",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "^([\\s\\S]*)$",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            1
+        ],
+        "substituteRegex": 0,
+        "minDepth": 2,
+        "maxDepth": null,
+        "markdownOnly": false,
+        "promptOnly": true
+    },
+    {
+        "id": "50eb5d3d-5859-471c-b2a0-ee569339b1c8",
+        "scriptName": "【索多玛】4.10楼以外只发送摘要",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "/^[\\s\\S]*<sodom>([\\s\\S]*?)<\\/sodom>[\\s\\S]*$/gi",
+        "replaceString": "$1",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": 11,
+        "maxDepth": null,
+        "markdownOnly": false,
+        "promptOnly": true
+    },
+    {
+        "id": "6a06c966-c467-4a45-8b08-bceeb1a21de7",
+        "scriptName": "【索多玛】5.摘要-暗黑@咩野",
+        "findRegex": "/<sodom>\\s*serial[:：]\\s*(.+?)\\s*time[:：]\\s*(.+?)\\s*location[:：]\\s*(.+?)\\s*summary[:：]\\s*([\\s\\S]+?)\\s*dialogue[:：]\\s*([\\s\\S]*?)\\s*<\\/sodom>/i",
+        "replaceString": "<details>\n<summary style=\"display: block; list-style: none; text-align: center; color: rgba(190, 13, 13);\">- PECCADEX • 靡音余韵 -</summary>\n```\n<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <!-- 引入外部字体 -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n    <link href=\"https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+SC:wght@400;700&display=swap\" rel=\"stylesheet\">\n    <!-- 引入 Font Awesome 图标库 -->\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css\">\n</head>\n<body style=\"min-height: auto; padding: 5px; background: transparent;\">\n\n<div class=\"peccadex-card-container-perfected\">\n    <!-- 主卡片 -->\n    <div class=\"peccadex-card-perfected\">\n        <!-- 卡片头部 -->\n        <header class=\"card-header-perfected\">\n            <div class=\"title-decoration-perfected\"></div>\n            <h1 class=\"main-title-perfected\">PECCADEX</h1>\n            <div class=\"serial-number-perfected\">\n                <span class=\"serial-prefix\">No.</span>\n                <span class=\"serial-value\">$1</span>\n            </div>\n            <div class=\"title-decoration-perfected\"></div>\n        </header>\n\n        <!-- 卡片主体内容 -->\n        <main class=\"card-body-perfected\">\n            <!-- 时间与地点信息 -->\n            <section class=\"info-grid-perfected\">\n                <div class=\"info-item-perfected\">\n                    <i class=\"fa-regular fa-clock icon\"></i>\n                    <span>$2</span>\n                </div>\n                <div class=\"info-item-perfected location-item\" data-location=\"$3\">\n                    <i class=\"fa-solid fa-map-location-dot icon\"></i>\n                    <!-- 地点信息将由JS动态生成 -->\n                    <span class=\"location-content\"></span>\n                </div>\n            </section>\n\n            <!-- 摘要内容 -->\n            <section class=\"summary-section-perfected\">\n                <p>$4</p>\n            </section>\n\n            <!-- 对话内容 -->\n            <section class=\"dialogue-section-perfected\" data-dialogue=\"$5\"></section>\n        </main>\n\n        <!-- 卡片底部装饰 -->\n        <footer class=\"card-footer-perfected\">\n            <div class=\"footer-quote-perfected\">\n                <p class=\"quote-en\">“My sovereign, may Your will be done.”</p>\n                <p class=\"quote-cn\">-索多玛-</p>\n            </div>\n        </footer>\n    </div>\n</div>\n\n<style>\n    /* 字体和颜色变量定义 */\n    :root {\n        --font-en: 'Marcellus', serif;\n        --font-cn: 'Noto Serif SC', serif;\n        --theme-red: #c70000;\n        --theme-red-shadow: rgba(199, 0, 0, 0.6);\n    }\n\n    /* 主容器 */\n    .peccadex-card-container-perfected {\n        width: 100%;\n        font-family: var(--font-cn), serif;\n        color: #e0e0e0;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n    }\n\n    /* 卡片核心样式 */\n    .peccadex-card-perfected {\n        width: 100%;\n        max-width: 500px;\n        background-color: #000000;\n        background-image: url(\"https://www.transparenttextures.com/patterns/white-wall-3-2.png\");\n        border: 1px solid #4a4a4a;\n        border-radius: 8px;\n        padding: 20px 25px;\n        box-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);\n        opacity: 0;\n        transform: translateY(20px);\n        animation: card-fade-in-perfected 1s ease-out forwards;\n    }\n\n    @keyframes card-fade-in-perfected { to { opacity: 1; transform: translateY(0); } }\n\n    /* 头部 */\n    .card-header-perfected { text-align: center; margin-bottom: 20px; position: relative; }\n    .main-title-perfected { font-family: var(--font-en); font-size: 24px; font-weight: 400; letter-spacing: 4px; color: #f5f5f5; margin: 10px 0; text-shadow: 0 0 5px var(--theme-red-shadow); }\n    .title-decoration-perfected { height: 1px; background: linear-gradient(to right, transparent, var(--theme-red), transparent); opacity: 0.6; }\n    .serial-number-perfected { font-family: var(--font-en); font-size: 12px; color: var(--theme-red); }\n\n    /* 信息网格 (时间与地点) */\n    .info-grid-perfected { display: grid; grid-template-columns: 1fr; gap: 8px; margin-bottom: 20px; font-size: 11px; color: #a0a0a0; }\n    .info-item-perfected { display: flex; align-items: center; }\n    .info-item-perfected .icon { color: var(--theme-red); margin-right: 8px; width: 14px; text-align: center; }\n\n    /* 优化后的地点样式 */\n    .location-part { display: inline-flex; align-items: center; }\n    .location-part::before { content: '|'; color: #555; margin: 0 4px; font-size: 10px; }\n    .location-part:first-child::before { display: none; }\n    .location-separator { font-family: sans-serif; color: var(--theme-red); margin: 0 6px; font-weight: bold; }\n\n    /* 摘要部分 */\n    .summary-section-perfected {\n        padding: 15px 0;\n        border-top: 1px solid #2a2a2a;\n        border-bottom: 1px solid #2a2a2a;\n        position: relative;\n    }\n    .summary-section-perfected p {\n        font-size: 12px;\n        line-height: 1.8;\n        text-align: justify;\n        margin: 0;\n        color: #c0c0c0;\n        text-indent: 2em; /* 首行缩进 */\n    }\n\n    /* 引言符号 */\n    .summary-section-perfected p::before,\n    .summary-section-perfected p::after {\n        font-family: \"Font Awesome 6 Free\";\n        font-weight: 900;\n        color: var(--theme-red);\n        font-size: 10px;\n        opacity: 0.7;\n        position: relative;\n    }\n\n    /* 左引言符号 */\n    .summary-section-perfected p::before {\n        content: \"\\f10d\";\n        margin-right: 0.5em;\n        top: -0.35em;\n    }\n\n    /* 右引言符号 */\n    .summary-section-perfected p::after {\n        content: \"\\f10e\";\n        margin-left: 0.2em;\n        top: -0.35em;\n    }\n\n\n    /* 对话部分 */\n    .dialogue-section-perfected { margin-top: 20px; font-size: 12px; }\n    .dialogue-line-perfected { display: flex; margin-bottom: 10px; opacity: 0; transform: translateX(-15px); animation: line-fade-in-perfected 0.5s ease-out forwards; }\n    .dialogue-speaker-perfected { font-weight: 700; color: var(--theme-red); flex-shrink: 0; margin-right: 8px; }\n    .dialogue-content-perfected { color: #cccccc; }\n    @keyframes line-fade-in-perfected { to { opacity: 1; transform: translateX(0); } }\n\n    /* 底部 */\n    .card-footer-perfected { margin-top: 25px; text-align: center; }\n    .footer-quote-perfected .quote-en { font-family: var(--font-en); font-size: 12px; color: #888; margin: 0; }\n    .footer-quote-perfected .quote-cn { font-family: var(--font-cn); font-size: 10px; color: #666; margin: 5px 0 0 0; }\n</style>\n\n<script>\n(function() {\n    // IIFE封装，与Silly Tavern环境隔离\n    if (window.peccadexCardPerfectedScriptLoaded) return;\n    window.peccadexCardPerfectedScriptLoaded = true;\n\n    // --- 1. 地点格式化功能 ---\n    function formatLocation(container) {\n        const locationItem = container.querySelector('.location-item');\n        if (!locationItem || locationItem.dataset.processed) return;\n        locationItem.dataset.processed = 'true';\n\n        const rawLocation = locationItem.dataset.location;\n        const contentSpan = locationItem.querySelector('.location-content');\n        if (!contentSpan) return;\n        contentSpan.innerHTML = ''; // 清空，防止重复渲染\n\n        const parts = rawLocation.split('→');\n        parts.forEach((part, index) => {\n            const subParts = part.replace(/\\[|\\]/g, '').split('|');\n            subParts.forEach((sub) => {\n                const span = document.createElement('span');\n                span.className = 'location-part';\n                span.textContent = sub.trim();\n                contentSpan.appendChild(span);\n            });\n\n            if (index < parts.length - 1) {\n                const separator = document.createElement('span');\n                separator.className = 'location-separator';\n                separator.textContent = '→';\n                contentSpan.appendChild(separator);\n            }\n        });\n    }\n\n    // --- 2. 对话逐行显示功能 ---\n    function setupDialogue(container) {\n        const section = container.querySelector('.dialogue-section-perfected');\n        if (!section || section.dataset.processed) return;\n        section.dataset.processed = 'true';\n\n        const rawDialogue = section.dataset.dialogue;\n        if (!rawDialogue || rawDialogue.trim() === '') {\n            section.style.display = 'none';\n            return;\n        }\n        section.innerHTML = ''; // 清空，防止重复渲染\n\n        rawDialogue.trim().split(/\\r?\\n/).forEach((line, index) => {\n            if (line.trim() === '') return;\n            const lineElement = document.createElement('div');\n            lineElement.className = 'dialogue-line-perfected';\n            lineElement.style.animationDelay = `${index * 0.15}s`;\n\n            const colonIndex = line.search(/[:：]/);\n            if (colonIndex !== -1) {\n                const speaker = line.substring(0, colonIndex).trim();\n                const content = line.substring(colonIndex + 1).trim();\n                lineElement.innerHTML = `<span class=\"dialogue-speaker-perfected\">${speaker}:</span><span class=\"dialogue-content-perfected\">${content}</span>`;\n            } else {\n                lineElement.innerHTML = `<span class=\"dialogue-content-perfected\">${line}</span>`;\n            }\n            section.appendChild(lineElement);\n        });\n    }\n\n    // --- 主执行函数 ---\n    function initializeCards() {\n        document.querySelectorAll('.peccadex-card-perfected').forEach(card => {\n            if (card.dataset.initialized) return;\n\n            formatLocation(card);\n            setupDialogue(card);\n\n            card.dataset.initialized = 'true';\n        });\n    }\n\n    // 立即执行并设置MutationObserver以处理动态加载的内容\n    initializeCards();\n    const observer = new MutationObserver(initializeCards);\n    observer.observe(document.body, { childList: true, subtree: true });\n\n})();\n</script>\n\n</body>\n</html>\n```\n</details>",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "251540f2-cef3-423c-96ea-13030f73a50c",
+        "scriptName": "【索多玛】6.行动选项-暗黑",
+        "disabled": false,
+        "runOnEdit": true,
+        "findRegex": "<branches>\\s+(?:<details>[\\s\\S]*?</summary>\\s*)?([\\s\\S]+?)(?:</details>\\s*)?</branches>",
+        "replaceString": "```html\n<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n<meta charset=\"UTF-8\">\n<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n\n<!-- 引入外部字体 -->\n<link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n<link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n<link href=\"https://fonts.googleapis.com/css2?family=Marcellus&family=Noto+Serif+SC:wght@400;700&display=swap\" rel=\"stylesheet\">\n\n<style>\n/* --- 全局样式变量与基础设定 --- */\n:root {\n    --font-en: 'Marcellus', serif;\n    --font-cn: 'Noto Serif SC', serif;\n    --theme-red: #c70000;\n    --dark-bg: #0a0a0a;\n    --text-color: #d0d0d0;\n    --border-color: #2a2a2a;\n    --hover-bg: rgba(199, 0, 0, 0.1);\n    --active-bg: rgba(199, 0, 0, 0.15);\n\n    /* 内嵌的SVG图标 */\n    --icon-chevron: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512'%3E%3Cpath fill='currentColor' d='M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z'/%3E%3C/svg%3E\");\n    --icon-circle: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='currentColor' d='M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z'/%3E%3C/svg%3E\");\n}\n\nbody {\n    background: transparent;\n    margin: 0;\n    padding: 5px;\n    color: var(--text-color);\n    font-family: var(--font-cn), serif;\n}\n\n/* --- 主容器：模拟卡片式设计 --- */\n.action-selector-container {\n    background-color: var(--dark-bg);\n    background-image: url(\"https://www.transparenttextures.com/patterns/white-wall-3-2.png\");\n    border: 1px solid #4a4a4a;\n    border-radius: 8px;\n    padding: 20px 25px;\n    max-width: 500px;\n    margin: auto;\n    /* 移除了 box-shadow */\n    opacity: 0;\n    transform: translateY(15px);\n    animation: card-fade-in 0.8s ease-out forwards;\n}\n\n@keyframes card-fade-in {\n    to {\n        opacity: 1;\n        transform: translateY(0);\n    }\n}\n\n/* --- 折叠标题 <summary> 美化 --- */\ndetails {\n    outline: none;\n}\n\nsummary {\n    display: block;\n    list-style: none;\n    cursor: pointer;\n    text-align: center;\n    padding-bottom: 15px;\n    margin-bottom: 15px;\n    border-bottom: 1px solid var(--border-color);\n    font-family: var(--font-en), serif;\n    font-size: 1.2em;\n    font-weight: 400;\n    letter-spacing: 3px;\n    color: var(--theme-red);\n    user-select: none;\n    transition: color 0.3s ease;\n    /* 移除了 text-shadow */\n}\n\ndetails[open] > summary {\n    margin-bottom: 15px; /* 展开时保持间距 */\n}\n\ndetails:not([open]) > summary {\n    margin-bottom: 0; /* 折叠时移除边距 */\n}\n\n\nsummary:hover {\n    color: #ff4d4d; /* 悬停时颜色变亮作为反馈 */\n}\n\nsummary::-webkit-details-marker { display: none; }\nsummary::marker { display: none; }\n\n\n/* --- 选项列表与单个选项样式 --- */\n#options-container {\n    padding: 0;\n    margin: 0;\n}\n\n.clickable-text {\n    color: var(--text-color);\n    font-size: 14px;\n    padding: 13px 10px;\n    cursor: pointer;\n    list-style-type: none;\n    border-bottom: 1px solid var(--border-color);\n    display: flex;\n    align-items: center;\n    transition: background-color 0.3s ease, color 0.3s ease;\n    opacity: 0;\n    transform: translateX(-20px);\n    animation: option-fade-in 0.5s ease-out forwards;\n}\n\n.clickable-text:last-child {\n    border-bottom: none;\n}\n\n.clickable-text::before {\n    content: '';\n    display: inline-block;\n    width: 12px;\n    height: 12px;\n    margin-right: 15px;\n    flex-shrink: 0;\n    background-color: #555;\n    mask-image: var(--icon-chevron);\n    mask-size: contain;\n    mask-repeat: no-repeat;\n    mask-position: center;\n    transition: background-color 0.3s ease, transform 0.3s ease, mask-image 0.3s ease;\n}\n\n/* 鼠标悬停状态 */\n.clickable-text:hover {\n    background-color: var(--hover-bg);\n    color: #fff;\n}\n\n.clickable-text:hover::before {\n    background-color: var(--theme-red);\n    transform: translateX(4px);\n}\n\n/* 选中状态 (.active) */\n.clickable-text.active {\n    background-color: var(--active-bg);\n    color: #fff;\n    font-weight: 700;\n}\n\n.clickable-text.active::before {\n    mask-image: var(--icon-circle);\n    background-color: var(--theme-red);\n    transform: scale(1.05);\n}\n\n@keyframes option-fade-in {\n    to {\n        opacity: 1;\n        transform: translateX(0);\n    }\n}\n</style>\n</head>\n<body>\n\n<div class=\"action-selector-container\">\n    <!-- 移除了 'open' 属性，使其默认折叠 -->\n    <details>\n      <summary>- ACTION OPTIONS -</summary>\n      <div id=\"options-container\"></div>\n    </details>\n</div>\n\n<div id=\"raw-options-data\" style=\"display:none;\">$1</div>\n\n<script>\n// JavaScript部分无需修改\ndocument.addEventListener('DOMContentLoaded', function() {\n  const rawText = document.getElementById('raw-options-data').textContent.trim();\n  const container = document.getElementById('options-container');\n  const lines = rawText.split(/\\r?\\n/).filter(line => line.trim() !== '');\n\n  lines.forEach((line, index) => {\n    const cleanText = line.trim().replace(/^[A-Z]\\.\\s*/i, '');\n    if (cleanText) {\n      const optionDiv = document.createElement('div');\n      optionDiv.className = 'clickable-text';\n      optionDiv.setAttribute('data-action', cleanText);\n      optionDiv.textContent = cleanText;\n      optionDiv.style.animationDelay = `${index * 0.08}s`;\n\n      optionDiv.addEventListener('click', function() {\n        document.querySelectorAll('.clickable-text').forEach(b => b.classList.remove('active'));\n        this.classList.add('active');\n        \n        const textToSend = this.getAttribute('data-action');\n        \n        try {\n          const input = window.parent.document.querySelector('#send_textarea');\n          const trigger = window.parent.triggerSlash;\n          if (input) {\n            const newValue = input.value + textToSend;\n            if (trigger) {\n              trigger(`/setinput ${newValue}`);\n            } else {\n              input.value = newValue;\n              input.dispatchEvent(new Event('input', { bubbles: true }));\n            }\n          } else if (trigger) {\n            trigger(`/setinput ${textToSend}`);\n          }\n        } catch (e) {\n          console.error('设置输入框文本时出错:', e);\n        }\n      });\n      container.appendChild(optionDiv);\n    }\n  });\n});\n</script>\n\n</body>\n</html>\n```",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": 5,
+        "markdownOnly": true,
+        "promptOnly": false
+    }
+]

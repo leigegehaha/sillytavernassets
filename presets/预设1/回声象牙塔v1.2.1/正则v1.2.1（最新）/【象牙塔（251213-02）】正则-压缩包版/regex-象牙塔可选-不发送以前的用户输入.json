@@ -1,0 +1,17 @@
+{
+    "id": "cb4fd6e4-430d-400b-8420-2da971321b80",
+    "scriptName": "象牙塔可选-不发送以前的用户输入",
+    "disabled": true,
+    "runOnEdit": true,
+    "findRegex": "^([\\s\\S]*)$",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "substituteRegex": 0,
+    "minDepth": 1,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

@@ -1,0 +1,17 @@
+{
+    "id": "321fba54-7510-491b-a271-21c0285e4259",
+    "scriptName": "【打工喵】仅发送摘要",
+    "findRegex": "^[\\s\\S]*?(<report>[\\s\\S]*<\\/report>)[\\s\\S]*$",
+    "replaceString": "$1",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 5,
+    "maxDepth": null
+}

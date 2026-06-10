@@ -1,0 +1,17 @@
+{
+    "id": "98650d7f-3dc3-4444-a9f2-1d55e61d9e3c",
+    "scriptName": "【MoM】[2]只发送最后选项给AI(把最小深度删去改为无限则对ai隐藏全部选项)",
+    "findRegex": "<branches>[\\s\\S]*?</branches>",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": true,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

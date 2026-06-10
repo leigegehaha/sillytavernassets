@@ -1,0 +1,17 @@
+{
+    "id": "03ce4f9f-acb0-477b-a815-4c915a17c6ee",
+    "scriptName": "象牙塔可选-捕获用户输入(不读指令开)",
+    "disabled": true,
+    "runOnEdit": true,
+    "findRegex": "^([\\s\\S]*)$",
+    "replaceString": "<user_input>  \n$1\n</user_input>",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": 1,
+    "markdownOnly": true,
+    "promptOnly": true
+}

@@ -1,0 +1,17 @@
+{
+    "id": "a126c62c-8f27-40c1-9645-5f644f0886ba",
+    "scriptName": "[灯]不发送小剧场",
+    "findRegex": "/<details>[\\s\\S]*?<\\/details>/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 3,
+    "maxDepth": null
+}

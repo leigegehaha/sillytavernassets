@@ -1,0 +1,18 @@
+{
+    "id": "3d7a50bf-6c02-4387-83f3-1969e98805b7",
+    "scriptName": "Janus时间栏美化-无色",
+    "findRegex": "/「\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*\\|\\s*([^|]+?)\\s*」/g",
+    "replaceString": "<style>\n.border {\n  text-align: center;\n  font-size: 13px;\n  margin-bottom: 40px;\n  line-height: 2;\n}\n.border-divider {\n  margin: 0 8px;\n  opacity: 0.5;\n}\n.border-line {\n  display: block;\n  margin: 5px 0;\n}\n.border-line:nth-child(1) { opacity: 0.75; }\n.border-line:nth-child(2) { opacity: 0.6; }\n.border-line:nth-child(3) { opacity: 0.5; }\n</style>\n\n<div class=\"border\">\n  <span class=\"border-line\">$1 · $2 · $3</span>\n  <span class=\"border-line\">✧</span>\n  <span class=\"border-line\">$4<span class=\"border-divider\">✦</span>$5</span>\n</div>\n",
+    "trimStrings": [],
+    "placement": [
+        1,
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": false,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

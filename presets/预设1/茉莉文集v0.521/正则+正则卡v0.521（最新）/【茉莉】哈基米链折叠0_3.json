@@ -1,0 +1,17 @@
+{
+    "id": "94e96551-82ec-445a-9b50-0f9a06f71b34",
+    "scriptName": "【茉莉】❀哈基米链折叠0.3✨",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/([\\s\\S]*?</thinking>)|<丢失文稿修复>/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": true
+}

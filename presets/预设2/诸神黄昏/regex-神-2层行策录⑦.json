@@ -1,0 +1,17 @@
+{
+    "id": "9d090633-b2de-4972-8ccd-0cd9f1f70c9f",
+    "scriptName": "神-2层行策录⑦",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/<details\\s+[^>]*class\\s*=\\s*[\"'][^\"']*\\bagenda\\b[^\"']*[\"'][^>]*>[\\s\\S]*?<\\/details>/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": 4,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

@@ -1,0 +1,17 @@
+{
+    "id": "9845b000-e342-4cd3-8cd8-ad00753b9a22",
+    "scriptName": "MoM必选-[3]3楼外伏笔不发送给AI(0927)",
+    "findRegex": "/(?<=<meow_FM>[\\s\\S]*?)seeds[:：][\\s\\S]*?(?=</meow_FM)/i",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 3,
+    "maxDepth": null
+}

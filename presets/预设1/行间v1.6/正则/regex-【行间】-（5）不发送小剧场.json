@@ -1,0 +1,18 @@
+{
+    "id": "preset_eca04fa5-db5c-4f55-8228-61eaf38137ae",
+    "scriptName": "【行间】-（5）不发送小剧场",
+    "findRegex": "/<small_theater>[\\s\\S]*?<\\/small_theater>\\n?/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        1,
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

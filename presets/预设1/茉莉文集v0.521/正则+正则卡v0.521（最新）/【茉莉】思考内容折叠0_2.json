@@ -1,0 +1,17 @@
+{
+    "id": "efdf50fe-7943-49b9-ba0f-eeef7d7d36a3",
+    "scriptName": "【茉莉】❀思考内容折叠0_2",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/[\\s\\S]*?\\[开始写作\\]/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": true
+}

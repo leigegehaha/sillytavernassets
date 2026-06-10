@@ -1,0 +1,18 @@
+{
+    "id": "1f911b54-f626-43fe-8745-2c0e13dfa853",
+    "scriptName": "【Janus】3-2楼外仅保留摘要",
+    "findRegex": "/^[\\s\\S]*?(<assess>[\\s\\S]*?<\\/assess>)[\\s\\S]*$|<user_input>[\\s\\S]*?<\\/user_input>/g",
+    "replaceString": "$1",
+    "trimStrings": [],
+    "placement": [
+        1,
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 2,
+    "maxDepth": null
+}

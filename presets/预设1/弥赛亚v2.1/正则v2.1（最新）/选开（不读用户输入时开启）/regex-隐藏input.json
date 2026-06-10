@@ -1,0 +1,17 @@
+{
+    "id": "341d4052-13f1-46cd-b859-4a076b209c51",
+    "scriptName": "隐藏input",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "^([\\s\\S]*)$",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "substituteRegex": 0,
+    "minDepth": 1,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

@@ -1,0 +1,17 @@
+{
+    "id": "49fa9042-66d2-4f31-93ea-9a10106899cc",
+    "scriptName": "监察者最新输入",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "(^[\\s\\S]*$)",
+    "replaceString": "<最新输入>$1</最新输入>",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "substituteRegex": 0,
+    "minDepth": 0,
+    "maxDepth": 2,
+    "markdownOnly": false,
+    "promptOnly": true
+}

@@ -1,0 +1,17 @@
+{
+    "id": "d41df0be-8bad-455b-8464-c6b613ba0fa3",
+    "scriptName": "【Phantasm】1.(必要)隐藏正文前内容",
+    "findRegex": "([\\s\\S]*)(?:</think>|</thinking>|</illusion>|\\[[Pp]\\w*\\s+[Ww]\\w*:\\])",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

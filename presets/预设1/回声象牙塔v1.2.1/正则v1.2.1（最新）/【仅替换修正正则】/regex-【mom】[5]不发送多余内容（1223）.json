@@ -1,0 +1,17 @@
+{
+    "id": "f300ff90-2f50-41c1-be71-78b8bed98451",
+    "scriptName": "【MoM】[5]不发送多余内容（1223）",
+    "findRegex": "/<snow>[\\s\\S]*?<\\/snow>|<echo>[\\s\\S]*?<\\/echo>|<gossip>[\\s\\S]*?</gossip>|<branches>[\\s\\S]*?</branches>|<details>[\\s\\S]*?<\\/summary>|<\\/details>|<p\\s+style[^>]*>|<\\/p>/gi",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

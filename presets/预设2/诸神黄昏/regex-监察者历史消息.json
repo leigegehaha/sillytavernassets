@@ -1,0 +1,17 @@
+{
+    "id": "1cd38949-b309-4002-87aa-831bf782395b",
+    "scriptName": "监察者历史消息",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "(^[\\s\\S]*$)",
+    "replaceString": "<历史消息>$1</历史消息>",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "substituteRegex": 0,
+    "minDepth": 3,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

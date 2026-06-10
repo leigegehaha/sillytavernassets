@@ -1,0 +1,17 @@
+{
+    "id": "58598443-86ba-42a4-9985-02dcd4588d3c",
+    "scriptName": "【MoM】[3]5楼外伏笔不发送给AI（0927）",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/(?<=<meow_FM>[\\s\\S]*?)seeds[:：][\\s\\S]*?(?=</meow_FM)/i",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": 5,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

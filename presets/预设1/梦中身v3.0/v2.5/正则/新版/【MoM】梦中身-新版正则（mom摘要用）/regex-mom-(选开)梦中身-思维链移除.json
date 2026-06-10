@@ -1,0 +1,17 @@
+{
+    "id": "f80a3ec2-a3ec-4333-beef-acc5a90df4de",
+    "scriptName": "mom-(选开)梦中身-思维链移除",
+    "findRegex": "/(<!-- Intrusion Rejected -->\\s*<thinking>[\\s\\S]*?<\\/thinking>(\\s*)?)|(<disclaimer>.*?<\\/disclaimer>)|(<!-- State(.*?)d(.*?) -->(\\n)?)|(<!-- consider: (.*?) -->(\\n)?)|(.*?<\\/think(ing)?>(\\n)?)|(<think(ing)?>[\\s\\S]*<\\/think(ing)?>(\\n)?)/gs",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": true,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

@@ -1,0 +1,17 @@
+{
+    "id": "db23dd1f-1c5e-4a19-9432-c43f8716bca9",
+    "scriptName": "摘要美化-浅蓝",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "<Lenitxt>[\\s\\S]*?<Nub>([\\s\\S]*?)<\\/Nub>[\\s\\S]*?<Title>([\\s\\S]*?)<\\/Title>[\\s\\S]*?<Time>([\\s\\S]*?)<\\/Time>[\\s\\S]*?<Pln>([\\s\\S]*?)<\\/Pln>[\\s\\S]*?<Per>([\\s\\S]*?)<\\/Per>[\\s\\S]*?<Cond>([\\s\\S]*?)<\\/Cond>[\\s\\S]*?</Lenitxt>",
+    "replaceString": "<style>\n.archive-card-details {\n  background: linear-gradient(135deg, #f8fdff 0%, #ffffff 100%);\n  width: 100%;\n  margin: 1rem 0;\n  font-family: 'Georgia', 'Times New Roman', serif;\n  box-shadow: 0 2px 10px rgba(173, 216, 230, 0.15);\n  border-radius: 8px;\n}\n\n.archive-card-summary {\n  display: flex;\n  align-items: center;\n  padding: 0.75rem 1rem;\n  background: linear-gradient(90deg, #e6f3ff 0%, #f0f8ff 100%);\n  border-left: 5px solid #87ceeb;\n  color: #333;\n  cursor: pointer;\n  list-style: none;\n  transition: all 0.3s ease;\n  border-radius: 8px 8px 0 0;\n}\n\n.archive-card-summary::-webkit-details-marker {\n  display: none;\n}\n\n.archive-card-summary:hover {\n  background: linear-gradient(90deg, #d1e8ff 0%, #e6f3ff 100%);\n  transform: translateY(-1px);\n}\n\n.archive-chapter-nub {\n  font-size: 1.2rem;\n  font-weight: bold;\n  color: #2c3e50;\n  min-width: 40px;\n  text-align: center;\n}\n\n.archive-chapter-title {\n  font-size: 1.1rem;\n  margin-left: 1rem;\n  letter-spacing: 0.5px;\n  color: #333;\n}\n\n.archive-content-wrapper {\n  background: linear-gradient(135deg, #f0f8ff 0%, #f8fdff 100%);\n  border: 1px solid #b0e0e6;\n  border-top: none;\n  padding: 1.5rem;\n  color: #333;\n  border-radius: 0 0 8px 8px;\n}\n\n.archive-metadata {\n  display: grid;\n  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));\n  gap: 0.5rem 1rem;\n  font-size: 0.9em;\n  padding-bottom: 1.25rem;\n  margin-bottom: 1.25rem;\n  border-bottom: 1px dashed #c0e0f0;\n}\n\n.archive-metadata-item {\n  display: flex;\n}\n\n.archive-metadata-label {\n  color: #555;\n  margin-right: 0.5rem;\n  min-width: 40px;\n  font-weight: 500;\n}\n\n.archive-condition {\n  font-size: 0.95em;\n  line-height: 1.7;\n  white-space: pre-wrap;\n  color: #444;\n  background: rgba(224, 244, 255, 0.3);\n  padding: 0.75rem;\n  border-radius: 4px;\n}\n</style>\n\n<details class=\"archive-card-details\">\n    <summary class=\"archive-card-summary\">\n        <span class=\"archive-chapter-nub\">$1</span>\n        <span class=\"archive-chapter-title\">$2</span>\n    </summary>\n    <div class=\"archive-content-wrapper\">\n        <div class=\"archive-metadata\">\n            <div class=\"archive-metadata-item\">\n                <span class=\"archive-metadata-label\">时间:</span>\n                <span>$3</span>\n            </div>\n            <div class=\"archive-metadata-item\">\n                <span class=\"archive-metadata-label\">地点:</span>\n                <span>$4</span>\n            </div>\n            <div class=\"archive-metadata-item\">\n                <span class=\"archive-metadata-label\">人物:</span>\n                <span>$5</span>\n            </div>\n        </div>\n        <div class=\"archive-condition\">$6</div>\n    </div>\n</details>\n",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": false
+}

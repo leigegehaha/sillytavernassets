@@ -1,0 +1,156 @@
+[
+    {
+        "id": "af3cbb9f-a16b-4d69-a734-c12a0da50d5a",
+        "scriptName": "状态栏美化",
+        "findRegex": "/<magazine_header>\\s*\\[IssueInfo\\|(.*?)\\|(.*?)\\|(.*?)\\]\\s*\\[MetaInfo\\|(.*?)\\|(.*?)\\|(.*?)\\]\\s*\\[StatusInfo\\|(.*?)\\|(.*?)\\|(.*?)\\|(.*?)\\|(.*?)\\]\\s*<\\/magazine_header>/s",
+        "replaceString": "<!-- 引入京华老宋体 -->\n<link href=\"https://fontsapi.zeoseven.com/309/main/result.css\" onload=\"this.rel='stylesheet'\" rel=\"preload\" as=\"style\" crossorigin />\n<noscript><link rel=\"stylesheet\" href=\"https://fontsapi.zeoseven.com/309/main/result.css\" /></noscript>\n\n<div class=\"vintage-magazine-header\">\n    <style>\n        .vintage-magazine-header {\n            /* 基础字体设置 */\n            font-family: \"KingHwaOldSong\", serif;\n            color: var(--smart-text-color, #333); /* 自动适配文本颜色 */\n            background: transparent; /* 无背景色 */\n            width: 100%;\n            margin-bottom: 20px;\n            border-bottom: 3px double var(--smart-text-color, #333); /* 双线底边框 */\n            padding-bottom: 10px;\n            position: relative;\n            box-sizing: border-box;\n            font-weight: normal;\n        }\n\n        /* 顶部日期地点栏 - 类似报纸刊号栏 */\n        .vm-meta-bar {\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            font-size: 0.8em;\n            text-transform: uppercase;\n            letter-spacing: 1px;\n            border-bottom: 1px solid var(--smart-text-color, #333);\n            padding-bottom: 5px;\n            margin-bottom: 10px;\n            opacity: 0.8;\n        }\n\n        /* 主标题区域 */\n        .vm-title-section {\n            text-align: center;\n            margin: 15px 0;\n            position: relative;\n        }\n\n        /* 章节代码 (Issue No.) */\n        .vm-issue-no {\n            font-size: 0.9em;\n            letter-spacing: 3px;\n            margin-bottom: 5px;\n            display: block;\n            opacity: 0.7;\n        }\n\n        /* 章节标题 (Main Headline) */\n        .vm-headline {\n            font-size: 2.2em;\n            line-height: 1.2;\n            margin: 5px 0;\n            text-transform: uppercase; /* 大写增强气势 */\n            letter-spacing: 2px;\n            transition: all 0.4s ease;\n            cursor: default;\n        }\n\n        /* 标题悬停效果：字间距拉大，颜色微变 */\n        .vm-headline:hover {\n            letter-spacing: 5px;\n            text-shadow: 2px 2px 0px rgba(128, 128, 128, 0.2);\n        }\n\n        /* 装饰短句 (Sub-headline) */\n        .vm-subhead {\n            font-size: 1.1em;\n            font-style: italic;\n            margin-top: 5px;\n            opacity: 0.9;\n            position: relative;\n            display: inline-block;\n            padding: 0 20px;\n        }\n        /* 装饰短句两侧的线条 */\n        .vm-subhead::before, .vm-subhead::after {\n            content: \"—\"; /* 使用破折号作为装饰 */\n            margin: 0 10px;\n            opacity: 0.5;\n        }\n\n        /* 折叠面板区域 - 包含详细状态 */\n        .vm-details-accordion {\n            margin-top: 15px;\n            border-top: 1px solid var(--smart-text-color, #333);\n        }\n\n        .vm-details-summary {\n            list-style: none;\n            cursor: pointer;\n            padding: 8px 0;\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            font-size: 0.9em;\n            font-weight: bold;\n            transition: all 0.3s ease;\n        }\n\n        /* 隐藏原生三角 */\n        .vm-details-summary::-webkit-details-marker { display: none; }\n\n        /* 自定义指示器 */\n        .vm-indicator {\n            font-size: 0.8em;\n            transition: transform 0.3s ease;\n        }\n        details[open] .vm-indicator { transform: rotate(180deg); }\n\n        .vm-details-summary:hover {\n            opacity: 0.7;\n            letter-spacing: 1px;\n        }\n\n        /* 折叠内容 */\n        .vm-details-content {\n            padding: 10px 0;\n            display: grid;\n            grid-template-columns: repeat(2, 1fr); /* 两列布局 */\n            gap: 10px;\n            font-size: 0.85em;\n            background: rgba(128, 128, 128, 0.05); /* 极淡的背景区分 */\n        }\n\n        .vm-stat-item {\n            display: flex;\n            flex-direction: column;\n            border-left: 2px solid var(--smart-text-color, #333);\n            padding-left: 10px;\n        }\n\n        .vm-label {\n            font-size: 0.8em;\n            opacity: 0.6;\n            text-transform: uppercase;\n            margin-bottom: 2px;\n        }\n\n        .vm-value {\n            font-size: 1.1em;\n        }\n\n        /* 移动端适配 */\n        @media (max-width: 600px) {\n            .vm-headline { font-size: 1.6em; }\n            .vm-subhead { font-size: 0.95em; padding: 0; }\n            .vm-subhead::before, .vm-subhead::after { display: none; } /* 手机端隐藏装饰线 */\n            .vm-details-content { grid-template-columns: 1fr; } /* 手机端单列 */\n        }\n    </style>\n\n    <!-- 顶部信息栏 -->\n    <div class=\"vm-meta-bar\">\n        <span>$4</span> <!-- 时间 -->\n        <span>$5</span> <!-- 地点 -->\n        <span>$6</span> <!-- 天气 -->\n    </div>\n\n    <!-- 标题区域 -->\n    <div class=\"vm-title-section\">\n        <span class=\"vm-issue-no\">VOL. $1</span>\n        <h1 class=\"vm-headline\">$2</h1>\n        <div class=\"vm-subhead\">$3</div>\n    </div>\n\n    <!-- 手风琴状态栏 -->\n    <details class=\"vm-details-accordion\">\n        <summary class=\"vm-details-summary\">\n            <span>CURRENT STATUS // 当前状态</span>\n            <span class=\"vm-indicator\">▼</span>\n        </summary>\n        <div class=\"vm-details-content\">\n            <div class=\"vm-stat-item\">\n                <span class=\"vm-label\">Activity</span>\n                <span class=\"vm-value\">$7</span>\n            </div>\n            <div class=\"vm-stat-item\">\n                <span class=\"vm-label\">Character</span>\n                <span class=\"vm-value\">$8</span>\n            </div>\n            <div class=\"vm-stat-item\">\n                <span class=\"vm-label\">Outfit</span>\n                <span class=\"vm-value\">$9</span>\n            </div>\n            <div class=\"vm-stat-item\">\n                <span class=\"vm-label\">Mood</span>\n                <span class=\"vm-value\">$10</span>\n            </div>\n            <!-- 全宽显示好感度 -->\n            <div class=\"vm-stat-item\" style=\"grid-column: 1 / -1; border-left: none; border-top: 1px dashed var(--smart-text-color, #333); padding-top: 5px; padding-left: 0;\">\n                <div style=\"display: flex; justify-content: space-between; align-items: center;\">\n                    <span class=\"vm-label\">Affection</span>\n                    <span class=\"vm-value\">$11%</span>\n                </div>\n                <!-- 简单的纯CSS进度条 -->\n                <div style=\"width: 100%; height: 4px; background: rgba(128,128,128,0.2); margin-top: 5px;\">\n                    <div style=\"width: $11%; height: 100%; background: var(--smart-text-color, #333);\"></div>\n                </div>\n            </div>\n        </div>\n    </details>\n</div>\n",
+        "trimStrings": [],
+        "placement": [
+            1,
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": false,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": 2
+    },
+    {
+        "id": "42fb89c5-e9e8-4fa4-8f28-d9cb98514ba9",
+        "scriptName": "用户消息添加标签",
+        "findRegex": "([\\s\\S]*)$",
+        "replaceString": "<user_input>\n$1\n</user_input>",
+        "trimStrings": [],
+        "placement": [
+            1
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": 0
+    },
+    {
+        "id": "165d5731-7373-4b07-9c43-0eef6f1142b9",
+        "scriptName": "去除5楼外用户消息",
+        "findRegex": "[\\s\\S]*",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            1
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": 5,
+        "maxDepth": null
+    },
+    {
+        "id": "5f769d96-dc54-43df-8c85-160745a16584",
+        "scriptName": "隐藏小剧场",
+        "findRegex": "/<wine>[\\s\\S]*?<\\/wine>/g",
+        "replaceString": "^$",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": 2,
+        "maxDepth": null
+    },
+    {
+        "id": "c046c7ae-0846-40d7-9e94-4e9bcd28df1e",
+        "scriptName": "移除思维链",
+        "findRegex": "/<thinking>[\\s\\S]*?<\\/thinking>\\n?/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "7d3ffa9e-fe17-49ab-a6d9-d47f84acafbd",
+        "scriptName": "5楼外仅保留摘要",
+        "findRegex": "/^[\\s\\S]*?<酒单存档>([\\s\\S]*?)<\\/酒单存档>[\\s\\S]*$/gm",
+        "replaceString": "$1",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": 5,
+        "maxDepth": null
+    },
+    {
+        "id": "cb5b74d6-9a59-44f4-b76a-b7d37d6352fb",
+        "scriptName": "新摘要美化",
+        "findRegex": "/<酒单存档>\\s*\\[Meta\\|(.*?)\\|(.*?)\\|(.*?)\\]\\s*\\[SurfacePlot\\|(.*?)]\\s*\\[HiddenPlot\\|(.*?)]\\s*<\\/酒单存档>/s",
+        "replaceString": "<style>\n    /* 摘要样式 */\n    .archive-root {\n        font-family: \"KingHwaOldSong\", serif;\n        color: #444;\n        width: 90%;\n        margin: 20px auto 10px auto;\n        border-left: 3px solid #000;\n        padding-left: 15px;\n        position: relative;\n    }\n\n    .archive-root details summary {\n        list-style: none;\n        cursor: pointer;\n        font-size: 1.1em;\n        font-weight: bold;\n        letter-spacing: 1px;\n        opacity: 0.6;\n        transition: opacity 0.3s;\n    }\n    .archive-root details summary:hover { opacity: 1; }\n    .archive-root details summary::-webkit-details-marker { display: none; }\n\n    .archive-root details summary::after {\n        content: \" [ARCHIVE]\";\n        font-size: 0.7em;\n        vertical-align: middle;\n        opacity: 0.5;\n    }\n\n    .archive-content {\n        margin-top: 10px;\n        font-size: 0.9em;\n        line-height: 1.6;\n    }\n\n    .archive-section {\n        margin-bottom: 12px;\n    }\n\n    .archive-label {\n        display: block;\n        font-size: 0.75em;\n        border-bottom: 1px solid #ddd;\n        margin-bottom: 4px;\n        color: #000;\n        font-weight: bold;\n    }\n\n    .archive-text {\n        white-space: pre-wrap;\n        text-align: justify;\n    }\n\n    /* 隐藏剧情的高亮 */\n    .hidden-plot {\n        color: #666;\n        font-style: italic;\n        background: linear-gradient(to right, rgba(0,0,0,0.05), transparent);\n        padding: 5px;\n        border-radius: 4px;\n    }\n</style>\n\n<div class=\"archive-root\">\n    <details>\n        <summary>酒单存档 <span style=\"float:right; font-size:0.8em; font-weight:normal;\">$2 | $1</span></summary>\n\n        <div class=\"archive-content\">\n            <!-- Meta -->\n            <div class=\"archive-section\">\n                <span class=\"archive-label\">PARTICIPANTS</span>\n                <div class=\"archive-text\">$3</div>\n            </div>\n\n            <!-- Surface Plot -->\n            <div class=\"archive-section\">\n                <span class=\"archive-label\">SURFACE LOG</span>\n                <div class=\"archive-text\">$4</div>\n            </div>\n\n            <!-- Hidden Plot -->\n            <div class=\"archive-section\">\n                <span class=\"archive-label\">HIDDEN UNDERCURRENT</span>\n                <div class=\"archive-text hidden-plot\">$5</div>\n            </div>\n        </div>\n    </details>\n</div>\n",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": 2
+    },
+    {
+        "id": "722f7d2c-e2f5-402a-9322-002c8f998876",
+        "scriptName": "选择器测试",
+        "findRegex": "/<choice_panel>\\s*<title>(.*?)<\\/title>\\s*<choice>\\s*A\\.\\s*(.*?)\\s*(?:B\\.\\s*(.*?))?\\s*(?:C\\.\\s*(.*?))?\\s*(?:D\\.\\s*(.*?))?\\s*(?:E\\.\\s*(.*?))?\\s*<\\/choice>\\s*<\\/choice_panel>/s",
+        "replaceString": "```html\n<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>剧情分支选择器</title>\n</head>\n<body>\n    <style>\n        /* 确保在不同设备上表现一致 */\n        .choice-selector-container *,\n        .choice-selector-container *::before,\n        .choice-selector-container *::after {\n            box-sizing: border-box;\n        }\n\n        /* 主容器样式 */\n        .choice-selector-container {\n            font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif;\n            width: 100%;\n            max-width: 600px;\n            margin: 16px auto;\n            background-color: #FFFFFF;\n            border: 1px solid #E0E0E0;\n            border-radius: 12px;\n            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);\n            overflow: hidden;\n            color: #333333;\n        }\n\n        /* 标题区域 */\n        .choice-selector-header {\n            padding: 16px 20px;\n            border-bottom: 1px solid #E0E0E0;\n            display: flex;\n            align-items: center;\n            gap: 8px;\n        }\n\n        /* 标题前的装饰性小方块 */\n        .choice-selector-header::before {\n            content: '';\n            display: block;\n            width: 6px;\n            height: 16px;\n            background-color: #757575;\n            border-radius: 2px;\n        }\n\n        .choice-selector-title {\n            font-size: 1.05rem;\n            font-weight: 600;\n            color: #333333;\n        }\n\n        /* 选项列表区域 */\n        .choice-selector-list {\n            padding: 16px;\n            display: flex;\n            flex-direction: column;\n            gap: 10px;\n        }\n\n        /* 单个选项样式 */\n        .choice-selector-option {\n            display: flex;\n            align-items: flex-start; /* 允许多行文本时，序号和文本顶部对齐 */\n            padding: 14px 16px;\n            background-color: #FAFAFA;\n            border: 1px solid #EEEEEE;\n            border-radius: 8px;\n            cursor: pointer;\n            transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;\n            -webkit-tap-highlight-color: transparent; /* 移除移动端点击时的默认高亮 */\n        }\n\n        /* 选项序号样式 */\n        .choice-selector-option-prefix {\n            font-weight: 700;\n            color: #757575;\n            margin-right: 12px;\n            flex-shrink: 0;\n            padding-top: 1px; /* 微调对齐 */\n        }\n\n        /* 选项文本样式 */\n        .choice-selector-option-text {\n            font-size: 0.95rem;\n            line-height: 1.5;\n            color: #333333;\n            white-space: pre-wrap; /* 保留换行符 */\n            word-break: break-word; /* 防止长单词溢出 */\n        }\n\n        /* 鼠标悬停效果 */\n        .choice-selector-option:hover {\n            background-color: #F0F0F0;\n            border-color: #D0D0D0;\n        }\n\n        /* 鼠标点击效果 */\n        .choice-selector-option:active {\n            transform: scale(0.99);\n            background-color: #EAEAEA;\n        }\n\n        /* 底部信息栏 */\n        .choice-selector-footer {\n            padding: 10px 20px;\n            background-color: #F9F9F9;\n            text-align: right;\n            font-size: 0.8rem;\n            color: #AAAAAA;\n            border-top: 1px solid #F0F0F0;\n        }\n\n        /* 媒体查询，适配小屏幕 */\n        @media (max-width: 450px) {\n            .choice-selector-header {\n                padding: 12px 16px;\n            }\n            .choice-selector-title {\n                font-size: 1rem;\n            }\n            .choice-selector-list {\n                padding: 12px;\n            }\n            .choice-selector-option {\n                padding: 12px 14px;\n            }\n        }\n    </style>\n\n    <div class=\"choice-selector-container\">\n        <!-- 标题 -->\n        <div class=\"choice-selector-header\">\n            <span class=\"choice-selector-title\">$1</span>\n        </div>\n\n        <!-- 选项列表 -->\n        <div class=\"choice-selector-list\">\n            <!-- 选项 A -->\n            <div class=\"choice-selector-option\" onclick=\"selectAndSend(this, 'A')\">\n                <span class=\"choice-selector-option-prefix\">A.</span>\n                <span class=\"choice-selector-option-text\">$2</span>\n            </div>\n            <!-- 选项 B (如果存在) -->\n            <div class=\"choice-selector-option\" onclick=\"selectAndSend(this, 'B')\" style=\"display: $3 ? 'flex' : 'none';\">\n                <span class=\"choice-selector-option-prefix\">B.</span>\n                <span class=\"choice-selector-option-text\">$3</span>\n            </div>\n            <!-- 选项 C (如果存在) -->\n            <div class=\"choice-selector-option\" onclick=\"selectAndSend(this, 'C')\" style=\"display: $4 ? 'flex' : 'none';\">\n                <span class=\"choice-selector-option-prefix\">C.</span>\n                <span class=\"choice-selector-option-text\">$4</span>\n            </div>\n            <!-- 选项 D (如果存在) -->\n            <div class=\"choice-selector-option\" onclick=\"selectAndSend(this, 'D')\" style=\"display: $5 ? 'flex' : 'none';\">\n                <span class=\"choice-selector-option-prefix\">D.</span>\n                <span class=\"choice-selector-option-text\">$5</span>\n            </div>\n            <!-- 选项 E (如果存在) -->\n            <div class=\"choice-selector-option\" onclick=\"selectAndSend(this, 'E')\" style=\"display: $6 ? 'flex' : 'none';\">\n                <span class=\"choice-selector-option-prefix\">E.</span>\n                <span class=\"choice-selector-option-text\">$6</span>\n            </div>\n        </div>\n\n        <div class=\"choice-selector-footer\">\n            <span>Click to select and send. (点击选项以发送)</span>\n        </div>\n    </div>\n\n    <script>\n        function selectAndSend(element) {\n            // 从被点击的元素中找到包含选项文本的span\n            const textElement = element.querySelector('.choice-selector-option-text');\n            if (textElement) {\n                const choiceText = textElement.innerText.trim();\n\n                // 检查 triggerSlash 函数是否存在\n                if (typeof triggerSlash === 'function') {\n                    // 构建 STscript 命令，将选项内容填入输入框并立即发送\n                    const command = `/send ${choiceText} | /trigger`;\n                    triggerSlash(command);\n                } else {\n                    // 如果在没有SillyTavern的环境中，提供一个备用方案\n                    const chatInput = document.querySelector('#send_textarea'); // 假设输入框ID是这个\n                    if(chatInput) {\n                        chatInput.value = choiceText;\n                    }\n                    console.log(\"Selected: \" + choiceText);\n                }\n            }\n        }\n    </script>\n</body>\n</html>\n```\n",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": 2
+    },
+    {
+        "id": "564dc4bc-c589-43e0-a133-11dd8ebbf70e",
+        "scriptName": "不发送选项",
+        "findRegex": "/<choice_panel>\\s*<title>(.*?)<\\/title>\\s*<choice>\\s*A\\.\\s*(.*?)\\s*(?:B\\.\\s*(.*?))?\\s*(?:C\\.\\s*(.*?))?\\s*(?:D\\.\\s*(.*?))?\\s*(?:E\\.\\s*(.*?))?\\s*<\\/choice>\\s*<\\/choice_panel>/s",
+        "replaceString": "1",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": 1,
+        "maxDepth": null
+    }
+]

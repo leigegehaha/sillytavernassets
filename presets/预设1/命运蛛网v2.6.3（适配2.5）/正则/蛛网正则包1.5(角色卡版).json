@@ -1,0 +1,266 @@
+{
+    "name": "蛛网正则包1.5(11.15更新)",
+    "description": "",
+    "personality": "",
+    "scenario": "",
+    "first_mes": "作者:鸦唳\r\n🕷️使用方法:\r\n1.配合命运蛛网使用\r\n2.将局部正则移到全局正则\r\n3.根据顺序排列正则\r\n4.最后根据需要打开正则\r\n",
+    "mes_example": "",
+    "creatorcomment": "",
+    "avatar": "none",
+    "talkativeness": "0.5",
+    "fav": false,
+    "tags": [],
+    "spec": "chara_card_v3",
+    "spec_version": "3.0",
+    "data": {
+        "name": "蛛网正则包1.5(11.15更新)",
+        "description": "",
+        "personality": "",
+        "scenario": "",
+        "first_mes": "作者:鸦唳\r\n🕷️使用方法:\r\n1.配合命运蛛网使用\r\n2.将局部正则移到全局正则\r\n3.根据顺序排列正则\r\n4.最后根据需要打开正则\r\n",
+        "mes_example": "",
+        "creator_notes": "",
+        "system_prompt": "",
+        "post_history_instructions": "",
+        "tags": [],
+        "creator": "",
+        "character_version": "",
+        "alternate_greetings": [],
+        "extensions": {
+            "talkativeness": "0.5",
+            "fav": false,
+            "world": "",
+            "depth_prompt": {
+                "prompt": "",
+                "depth": 4,
+                "role": "system"
+            },
+            "regex_scripts": [
+                {
+                    "id": "1859693a-1402-41ad-8bf9-831c821157a3",
+                    "scriptName": "🕷️①吐槽内容美化",
+                    "findRegex": "/^〖(.*?)〗$/gm",
+                    "replaceString": "<div style=\"background-color: rgba(255, 255, 255, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-radius: 15px; padding: 15px; margin: 10px 0; color: #333; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 1em; line-height: 1.5; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); word-wrap: break-word; white-space: pre-wrap;\">$1</div>",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": true,
+                    "promptOnly": false,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                },
+                {
+                    "id": "ed5755e3-9e98-485d-9561-7d26ff82ae5c",
+                    "scriptName": "🕷️②5楼外只发送摘要",
+                    "findRegex": "/<content>([\\s\\S]*?)</content>/g",
+                    "replaceString": "",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": false,
+                    "promptOnly": true,
+                    "runOnEdit": false,
+                    "substituteRegex": 0,
+                    "minDepth": 5,
+                    "maxDepth": null
+                },
+                {
+                    "id": "ec698886-3fc6-42aa-b285-c313b7ce2521",
+                    "scriptName": "🕷③不发送小剧场",
+                    "findRegex": "/<raven>([\\s\\S]*?)</raven>/g",
+                    "replaceString": "",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": false,
+                    "promptOnly": true,
+                    "runOnEdit": false,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                },
+                {
+                    "id": "3623583e-47c3-4ecb-8b08-3481734672ee",
+                    "scriptName": "🕷️④不发送历史选项",
+                    "findRegex": "/<Options>([\\s\\S]*?)</Options>/g",
+                    "replaceString": "",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": false,
+                    "promptOnly": true,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": 2,
+                    "maxDepth": null
+                },
+                {
+                    "id": "75f286ad-e4e3-4a9e-9d74-79ccdb575e85",
+                    "scriptName": "🕷️⑤不发送吐槽",
+                    "findRegex": "/〖([\\s\\S]*?)〗/g",
+                    "replaceString": "",
+                    "trimStrings": [],
+                    "placement": [
+                        1,
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": true,
+                    "promptOnly": false,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                },
+                {
+                    "id": "3c13830c-84ba-45dc-86a7-bfe58ef24c02",
+                    "scriptName": "🕷️⑥不发送随机内容",
+                    "findRegex": "/<随机内容>([\\s\\S]*?)</随机内容>/g",
+                    "replaceString": "",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": false,
+                    "promptOnly": true,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                },
+                {
+                    "id": "4df546af-e144-4b81-a629-5e7cd2f2ee33",
+                    "scriptName": "🕷️⑦摘要美化3选1(白色版)",
+                    "findRegex": "/<webs>\\s*时间:\\s*(.*?)\\s*地点:\\s*(.*?)\\s*内容:\\s*(.*?)\\s*剧情事项:\\s*(.*?)<\\/webs>/s",
+                    "replaceString": "<div style=\"background-color: #fdfdfd; border: 15px solid; border-image: url('data:image/svg+xml,<svg width=\\'100\\' height=\\'100\\' xmlns=\\'http://www.w3.org/2000/svg\\'><defs><pattern id=\\'p\\' width=\\'100\\' height=\\'100\\' patternUnits=\\'userSpaceOnUse\\'><path d=\\'M0,50 H100 M50,0 V100 M25,0 V100 M75,0 V100 M0,25 H100 M0,75 H100 M12.5,0 V100 M37.5,0 V100 M62.5,0 V100 M87.5,0 V100 M0,12.5 H100 M0,37.5 H100 M0,62.5 H100 M0,87.5 H100\\' stroke=\\'%23e0e0e0\\' stroke-width=\\'0.5\\'/><path d=\\'M50,50 C25,75 25,75 0,50 C25,25 25,25 50,50 C75,25 75,25 100,50 C75,75 75,75 50,50 Z\\' stroke=\\'%23dcdcdc\\' stroke-width=\\'1\\' fill=\\'none\\'/><circle cx=\\'50\\' cy=\\'50\\' r=\\'45\\' stroke=\\'%23dcdcdc\\' stroke-width=\\'1\\' fill=\\'none\\'/><circle cx=\\'50\\' cy=\\'50\\' r=\\'35\\' stroke=\\'%23dcdcdc\\' stroke-width=\\'1\\' fill=\\'none\\'/><circle cx=\\'50\\' cy=\\'50\\' r=\\'25\\' stroke=\\'%23dcdcdc\\' stroke-width=\\'1\\' fill=\\'none\\'/></pattern></defs><rect width=\\'100%\\' height=\\'100%\\' fill=\\'url(%23p)\\'/></svg>') 30 round; border-image-outset: 0; padding: 15px; margin: 10px; border-radius: 10px; box-shadow: 0 0 20px rgba(0, 0, 0, 0.08); color: #333333; font-family: sans-serif;\">\n    <details>\n        <summary style=\"cursor: pointer; font-weight: bold; color: #222222; list-style: none; display: flex; align-items: center; justify-content: space-between;\">\n            <span>\n                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 24 24\" fill=\"currentColor\" style=\"margin-right: 8px; vertical-align: -0.125em;\"><path d=\"M12 2a1 1 0 0 1 1 1v2.215a8.95 8.95 0 0 1 4.542 1.63L19.4 5.1a1 1 0 0 1 1.29.283l.112.185a1 1 0 0 1-.395 1.373l-1.84 1.103A8.955 8.955 0 0 1 21 12h2.215a1 1 0 0 1 .984 1.185l-.12.427a1 1 0 0 1-1.258.782L19.72 13.8a8.95 8.95 0 0 1-1.63 4.542l.748 1.86a1 1 0 0 1-.282 1.29l-.185.112a1 1 0 0 1-1.373-.395l-1.103-1.84a8.955 8.955 0 0 1-4.597 1.838V21a1 1 0 0 1-1.185.984l-.427-.12a1 1 0 0 1-.782-1.258L11.8 19.72a8.95 8.95 0 0 1-4.542-1.63l-1.86.748a1 1 0 0 1-1.29-.282l-.112-.185a1 1 0 0 1 .395-1.373l1.84-1.103A8.955 8.955 0 0 1 3 12H.785a1 1 0 0 1-.984-1.185l.12-.427a1 1 0 0 1 1.258-.782L4.28 10.2a8.95 8.95 0 0 1 1.63-4.542L5.167 3.797a1 1 0 0 1 .282-1.29l.185-.112a1 1 0 0 1 1.373.395l1.103 1.84A8.955 8.955 0 0 1 12 3V2a1 1 0 0 1 1-1zm0 4a6 6 0 1 0 0 12a6 6 0 0 0 0-12z\"/></svg>\n                蛛网回顾\n            </span>\n            <span style=\"font-size: 0.8em; color: #888;\">🕷️</span>\n        </summary>\n        <div style=\"border-top: 1px solid #e0e0e0; padding-top: 15px; margin-top: 15px;\">\n            <p style=\"margin: 5px 0;\"><strong style=\"color: #777;\">时间:</strong> $1</p>\n            <p style=\"margin: 5px 0;\"><strong style=\"color: #777;\">地点:</strong> $2</p>\n            <div style=\"margin: 5px 0;\">\n                <strong style=\"color: #777; display: block; margin-bottom: 5px;\">内容:</strong>\n                <div style=\"white-space: pre-wrap; background-color: #f5f5f5; padding: 10px; border-radius: 5px;\">$3</div>\n            </div>\n            <details style=\"margin: 10px 0 0 0; border-top: 1px dashed #ddd; padding-top: 10px;\">\n                <summary style=\"cursor: pointer; color: #e53935; font-weight: bold;\">剧情事项</summary>\n                <div style=\"padding: 10px; background-color: rgba(229, 57, 53, 0.05); border-radius: 5px; margin-top: 5px; white-space: pre-wrap;\">$4</div>\n            </details>\n        </div>\n    </details>\n</div>\n",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": true,
+                    "promptOnly": false,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                },
+                {
+                    "id": "06cb1ece-1eb0-4144-9d5a-20c71fc70f8d",
+                    "scriptName": "🕷️⑦摘要美化3选1(黑色版)",
+                    "findRegex": "/<webs>\\s*时间:\\s*(.*?)\\s*地点:\\s*(.*?)\\s*内容:\\s*(.*?)\\s*剧情事项:\\s*(.*?)<\\/webs>/s",
+                    "replaceString": "<div style=\"background-color: #1a1a1a; border: 15px solid; border-image: url('data:image/svg+xml,<svg width=\\'100\\' height=\\'100\\' xmlns=\\'http://www.w3.org/2000/svg\\'><defs><pattern id=\\'p\\' width=\\'100\\' height=\\'100\\' patternUnits=\\'userSpaceOnUse\\'><path d=\\'M0,50 H100 M50,0 V100 M25,0 V100 M75,0 V100 M0,25 H100 M0,75 H100 M12.5,0 V100 M37.5,0 V100 M62.5,0 V100 M87.5,0 V100 M0,12.5 H100 M0,37.5 H100 M0,62.5 H100 M0,87.5 H100\\' stroke=\\'%23444\\' stroke-width=\\'0.5\\'/><path d=\\'M50,50 C25,75 25,75 0,50 C25,25 25,25 50,50 C75,25 75,25 100,50 C75,75 75,75 50,50 Z\\' stroke=\\'%23555\\' stroke-width=\\'1\\' fill=\\'none\\'/><circle cx=\\'50\\' cy=\\'50\\' r=\\'45\\' stroke=\\'%23555\\' stroke-width=\\'1\\' fill=\\'none\\'/><circle cx=\\'50\\' cy=\\'50\\' r=\\'35\\' stroke=\\'%23555\\' stroke-width=\\'1\\' fill=\\'none\\'/><circle cx=\\'50\\' cy=\\'50\\' r=\\'25\\' stroke=\\'%23555\\' stroke-width=\\'1\\' fill=\\'none\\'/></pattern></defs><rect width=\\'100%\\' height=\\'100%\\' fill=\\'url(%23p)\\'/></svg>') 30 round; border-image-outset: 0; padding: 15px; margin: 10px; border-radius: 10px; box-shadow: 0 0 15px rgba(128, 128, 128, 0.2); color: #cccccc; font-family: sans-serif;\">\n    <details>\n        <summary style=\"cursor: pointer; font-weight: bold; color: #f0f0f0; list-style: none; display: flex; align-items: center; justify-content: space-between;\">\n            <span>\n                <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 24 24\" fill=\"currentColor\" style=\"margin-right: 8px; vertical-align: -0.125em;\"><path d=\"M12 2a1 1 0 0 1 1 1v2.215a8.95 8.95 0 0 1 4.542 1.63L19.4 5.1a1 1 0 0 1 1.29.283l.112.185a1 1 0 0 1-.395 1.373l-1.84 1.103A8.955 8.955 0 0 1 21 12h2.215a1 1 0 0 1 .984 1.185l-.12.427a1 1 0 0 1-1.258.782L19.72 13.8a8.95 8.95 0 0 1-1.63 4.542l.748 1.86a1 1 0 0 1-.282 1.29l-.185.112a1 1 0 0 1-1.373-.395l-1.103-1.84a8.955 8.955 0 0 1-4.597 1.838V21a1 1 0 0 1-1.185.984l-.427-.12a1 1 0 0 1-.782-1.258L11.8 19.72a8.95 8.95 0 0 1-4.542-1.63l-1.86.748a1 1 0 0 1-1.29-.282l-.112-.185a1 1 0 0 1 .395-1.373l1.84-1.103A8.955 8.955 0 0 1 3 12H.785a1 1 0 0 1-.984-1.185l.12-.427a1 1 0 0 1 1.258-.782L4.28 10.2a8.95 8.95 0 0 1 1.63-4.542L5.167 3.797a1 1 0 0 1 .282-1.29l.185-.112a1 1 0 0 1 1.373.395l1.103 1.84A8.955 8.955 0 0 1 12 3V2a1 1 0 0 1 1-1zm0 4a6 6 0 1 0 0 12a6 6 0 0 0 0-12z\"/></svg>\n                蛛网回顾\n            </span>\n            <span style=\"font-size: 0.8em; color: #888;\">🕸️</span>\n        </summary>\n        <div style=\"border-top: 1px solid #444; padding-top: 15px; margin-top: 15px;\">\n            <p style=\"margin: 5px 0;\"><strong style=\"color: #a0a0a0;\">时间:</strong> $1</p>\n            <p style=\"margin: 5px 0;\"><strong style=\"color: #a0a0a0;\">地点:</strong> $2</p>\n            <div style=\"margin: 5px 0;\">\n                <strong style=\"color: #a0a0a0; display: block; margin-bottom: 5px;\">内容:</strong>\n                <div style=\"white-space: pre-wrap; background-color: rgba(0,0,0,0.2); padding: 10px; border-radius: 5px;\">$3</div>\n            </div>\n            <details style=\"margin: 10px 0 0 0; border-top: 1px dashed #555; padding-top: 10px;\">\n                <summary style=\"cursor: pointer; color: #ff8a80; font-weight: bold;\">剧情事项</summary>\n                <div style=\"padding: 10px; background-color: rgba(255, 138, 128, 0.05); border-radius: 5px; margin-top: 5px; white-space: pre-wrap;\">$4</div>\n            </details>\n        </div>\n    </details>\n</div>\n",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": true,
+                    "markdownOnly": true,
+                    "promptOnly": false,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                },
+                {
+                    "id": "203f4bc8-d1d7-4a59-a9c3-9b82bd010540",
+                    "scriptName": "🕷️⑦摘要美化3选1(黑色动效)",
+                    "findRegex": "/<webs>\\s*时间:\\s*(.*?)\\s*地点:\\s*(.*?)\\s*内容:\\s*(.*?)\\s*剧情事项:\\s*(.*?)<\\/webs>/s",
+                    "replaceString": "```\n<html>\n<!DOCTYPE html>\n<html lang=\"zh-CN\">\n<head>\n    <meta charset=\"UTF-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n    <title>蜘蛛网回顾组件</title>\n    <style>\n        /* 原有样式 */\n        .spider-review {\n            background-color: #1a1a1a;\n            border: 15px solid;\n            border-image: url('data:image/svg+xml,<svg width=\\'100\\' height=\\'100\\' xmlns=\\'http://www.w3.org/2000/svg\\'><defs><pattern id=\\'p\\' width=\\'100\\' height=\\'100\\' patternUnits=\\'userSpaceOnUse\\'><path d=\\'M0,50 H100 M50,0 V100 M25,0 V100 M75,0 V100 M0,25 H100 M0,75 H100 M12.5,0 V100 M37.5,0 V100 M62.5,0 V100 M87.5,0 V100 M0,12.5 H100 M0,37.5 H100 M0,62.5 H100 M0,87.5 H100\\' stroke=\\'%23444\\' stroke-width=\\'0.5\\'/><path d=\\'M50,50 C25,75 25,75 0,50 C25,25 25,25 50,50 C75,25 75,25 100,50 C75,75 75,75 50,50 Z\\' stroke=\\'%23555\\' stroke-width=\\'1\\' fill=\\'none\\'/><circle cx=\\'50\\' cy=\\'50\\' r=\\'45\\' stroke=\\'%23555\\' stroke-width=\\'1\\' fill=\\'none\\'/><circle cx=\\'50\\' cy=\\'50\\' r=\\'35\\' stroke=\\'%23555\\' stroke-width=\\'1\\' fill=\\'none\\'/><circle cx=\\'50\\' cy=\\'50\\' r=\\'25\\' stroke=\\'%23555\\' stroke-width=\\'1\\' fill=\\'none\\'/></pattern></defs><rect width=\\'100%\\' height=\\'100%\\' fill=\\'url(%23p)\\'/></svg>') 30 round;\n            border-image-outset: 0;\n            padding: 15px;\n            margin: 10px;\n            border-radius: 10px;\n            box-shadow: 0 0 15px rgba(128, 128, 128, 0.2);\n            color: #cccccc;\n            font-family: sans-serif;\n            position: relative;\n            overflow: hidden;\n        }\n        \n        .spider-review summary {\n            cursor: pointer;\n            font-weight: bold;\n            color: #f0f0f0;\n            list-style: none;\n            display: flex;\n            align-items: center;\n            justify-content: space-between;\n        }\n        \n        .spider-review summary span:first-child {\n            display: flex;\n            align-items: center;\n        }\n        \n        .spider-review summary svg {\n            margin-right: 8px;\n            vertical-align: -0.125em;\n        }\n        \n        .spider-review summary span:last-child {\n            font-size: 0.8em;\n            color: #888;\n        }\n        \n        .spider-review .content {\n            border-top: 1px solid #444;\n            padding-top: 15px;\n            margin-top: 15px;\n        }\n        \n        .spider-review p {\n            margin: 5px 0;\n        }\n        \n        .spider-review strong {\n            color: #a0a0a0;\n        }\n        \n        .spider-review .content-text {\n            white-space: pre-wrap;\n            background-color: rgba(0,0,0,0.2);\n            padding: 10px;\n            border-radius: 5px;\n        }\n        \n        .spider-review .important {\n            margin: 10px 0 0 0;\n            border-top: 1px dashed #555;\n            padding-top: 10px;\n        }\n        \n        .spider-review .important summary {\n            cursor: pointer;\n            color: #ff8a80;\n            font-weight: bold;\n        }\n        \n        .spider-review .important-content {\n            padding: 10px;\n            background-color: rgba(255, 138, 128, 0.05);\n            border-radius: 5px;\n            margin-top: 5px;\n            white-space: pre-wrap;\n        }\n        \n        /* 蜘蛛动画样式 */\n        .spider {\n            position: absolute;\n            width: 24px;\n            height: 24px;\n            z-index: 10;\n            animation: spiderMove 25s linear infinite;\n        }\n        \n        @keyframes spiderMove {\n            0% {\n                top: 0;\n                left: 0;\n                transform: rotate(0deg);\n            }\n            25% {\n                top: 0;\n                left: calc(100% - 24px);\n                transform: rotate(90deg);\n            }\n            50% {\n                top: calc(100% - 24px);\n                left: calc(100% - 24px);\n                transform: rotate(180deg);\n            }\n            75% {\n                top: calc(100% - 24px);\n                left: 0;\n                transform: rotate(270deg);\n            }\n            100% {\n                top: 0;\n                left: 0;\n                transform: rotate(360deg);\n            }\n        }\n        \n        /* 蜘蛛腿动画 */\n        .spider-leg {\n            stroke: #cccccc;\n            stroke-width: 1.5;\n            animation: legMove 0.8s ease-in-out infinite alternate;\n        }\n        \n        .spider-leg:nth-child(2) {\n            animation-delay: -0.1s;\n        }\n        \n        .spider-leg:nth-child(3) {\n            animation-delay: -0.2s;\n        }\n        \n        .spider-leg:nth-child(4) {\n            animation-delay: -0.3s;\n        }\n        \n        .spider-leg:nth-child(5) {\n            animation-delay: -0.4s;\n        }\n        \n        .spider-leg:nth-child(6) {\n            animation-delay: -0.5s;\n        }\n        \n        .spider-leg:nth-child(7) {\n            animation-delay: -0.6s;\n        }\n        \n        .spider-leg:nth-child(8) {\n            animation-delay: -0.7s;\n        }\n        \n        @keyframes legMove {\n            from {\n                transform: rotate(-5deg);\n            }\n            to {\n                transform: rotate(5deg);\n            }\n        }\n    </style>\n</head>\n<body>\n    <div class=\"spider-review\">\n        <!-- 蜘蛛动画 -->\n        <div class=\"spider\">\n            <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n                <!-- 蜘蛛身体 -->\n                <circle cx=\"12\" cy=\"12\" r=\"4\" fill=\"#cccccc\"/>\n                <!-- 蜘蛛腿 -->\n                <path class=\"spider-leg\" d=\"M12 8 L10 4\" />\n                <path class=\"spider-leg\" d=\"M12 8 L14 4\" />\n                <path class=\"spider-leg\" d=\"M12 16 L10 20\" />\n                <path class=\"spider-leg\" d=\"M12 16 L14 20\" />\n                <path class=\"spider-leg\" d=\"M8 12 L4 10\" />\n                <path class=\"spider-leg\" d=\"M8 12 L4 14\" />\n                <path class=\"spider-leg\" d=\"M16 12 L20 10\" />\n                <path class=\"spider-leg\" d=\"M16 12 L20 14\" />\n            </svg>\n        </div>\n        \n        <!-- 原有内容 -->\n        <details>\n            <summary>\n                <span>\n                    <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"1em\" height=\"1em\" viewBox=\"0 0 24 24\" fill=\"currentColor\">\n                        <path d=\"M12 2a1 1 0 0 1 1 1v2.215a8.95 8.95 0 0 1 4.542 1.63L19.4 5.1a1 1 0 0 1 1.29.283l.112.185a1 1 0 0 1-.395 1.373l-1.84 1.103A8.955 8.955 0 0 1 21 12h2.215a1 1 0 0 1 .984 1.185l-.12.427a1 1 0 0 1-1.258.782L19.72 13.8a8.95 8.95 0 0 1-1.63 4.542l.748 1.86a1 1 0 0 1-.282 1.29l-.185.112a1 1 0 0 1-1.373-.395l-1.103-1.84a8.955 8.955 0 0 1-4.597 1.838V21a1 1 0 0 1-1.185.984l-.427-.12a1 1 0 0 1-.782-1.258L11.8 19.72a8.95 8.95 0 0 1-4.542-1.63l-1.86.748a1 1 0 0 1-1.29-.282l-.112-.185a1 1 0 0 1 .395-1.373l1.84-1.103A8.955 8.955 0 0 1 3 12H.785a1 1 0 0 1-.984-1.185l.12-.427a1 1 0 0 1 1.258-.782L4.28 10.2a8.95 8.95 0 0 1 1.63-4.542L5.167 3.797a1 1 0 0 1 .282-1.29l.185-.112a1 1 0 0 1 1.373.395l1.103 1.84A8.955 8.955 0 0 1 12 3V2a1 1 0 0 1 1-1zm0 4a6 6 0 1 0 0 12a6 6 0 1 0 0-12z\"/>\n                    </svg>\n                    蛛网回顾\n                </span>\n                <span>🕸️</span>\n            </summary>\n            <div class=\"content\">\n                <p><strong>时间:</strong>$1</p>\n                <p><strong>地点:</strong>$2</p>\n                <div>\n                    <strong>内容:</strong>\n                    <div class=\"content-text\">$3</div>\n                </div>\n                <details class=\"important\">\n                    <summary>剧情事项</summary>\n                    <div class=\"important-content\">$4</div>\n                </details>\n            </div>\n        </details>\n    </div>\n</body>\n</html>\n```",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": true,
+                    "markdownOnly": true,
+                    "promptOnly": false,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                },
+                {
+                    "id": "48ab0aa3-f829-4c6a-b6d3-120f09ce2eab",
+                    "scriptName": "🕷️⑧选项2选1-猩红蛛网(选开)",
+                    "findRegex": "<Options>[\\s\\n]*A\\.(.*?)[\\s\\n]*B\\.(.*?)[\\s\\n]*C\\.(.*?)[\\s\\n]*D\\.(.*?)[\\s\\n]*E\\.(.*?)[\\s\\n]*</Options>",
+                    "replaceString": "```html\n<html>\n<head>\n    <!-- disable-default-loading -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n    <link href=\"https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Text:ital@0;1&display=swap\" rel=\"stylesheet\">\n    <style>\n        :root {\n            --gothic-bg: #1A1A1A;\n            --gothic-border: #4a0000;\n            --gothic-glow: rgba(139, 0, 0, 0.6);\n            --gothic-header-bg: #101010;\n            --gothic-text: #BDBDBD;\n            --gothic-accent: #B70000;\n            --gothic-hover-bg: #2C0000;\n        }\n\n        body {\n            font-family: 'Crimson Text', serif;\n            background-color: transparent;\n            color: var(--gothic-text);\n            margin: 0;\n            padding: 5px 15px 15px;\n            display: flex;\n            justify-content: center;\n        }\n\n        ::-webkit-scrollbar {\n            width: 8px;\n        }\n        ::-webkit-scrollbar-track {\n            background: var(--gothic-header-bg);\n            border-radius: 4px;\n        }\n        ::-webkit-scrollbar-thumb {\n            background: var(--gothic-accent);\n            border-radius: 4px;\n        }\n        ::-webkit-scrollbar-thumb:hover {\n            background: #ff0000;\n        }\n\n        .spider-options-container {\n            position: relative;\n            width: 100%;\n            max-width: 550px;\n            background-color: var(--gothic-bg);\n            border: 1px solid var(--gothic-border);\n            border-radius: 3px;\n            box-shadow: 0 0 15px var(--gothic-glow), inset 0 0 10px rgba(0, 0, 0, 0.7);\n            overflow: hidden;\n            transition: all 0.5s ease-out;\n        }\n\n        .spider-options-container::before,\n        .spider-options-container::after {\n            content: '';\n            position: absolute;\n            width: 120px;\n            height: 120px;\n            background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M0,0 L100,0 M0,0 L100,25 M0,0 L100,50 M0,0 L100,75 M0,0 L100,100 M0,0 L75,100 M0,0 L50,100 M0,0 L25,100 M0,0 L0,100' stroke='%23B70000' stroke-width='0.7' fill='none'/%3E%3Cpath d='M10,0 A10,10 0 0,1 0,10 M25,0 A25,25 0 0,1 0,25 M50,0 A50,50 0 0,1 0,50 M75,0 A75,75 0 0,1 0,75 M100,0 A100,100 0 0,1 0,100' stroke='%23B70000' stroke-width='0.7' fill='none'/%3E%3C/svg%3E\");\n            background-size: contain;\n            background-repeat: no-repeat;\n            z-index: 0;\n            opacity: 0.5;\n        }\n        .spider-options-container::before {\n            top: -1px;\n            left: -1px;\n        }\n        .spider-options-container::after {\n            bottom: -1px;\n            right: -1px;\n            transform: rotate(180deg);\n        }\n\n        .options-header {\n            padding: 15px 20px;\n            background: var(--gothic-header-bg);\n            font-family: 'Uncial Antiqua', cursive;\n            font-size: 1.3em;\n            cursor: pointer;\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            user-select: none;\n            border-bottom: 1px solid var(--gothic-border);\n            position: relative;\n            z-index: 2;\n        }\n\n        .options-header span {\n            color: #FFFFFF;\n        }\n\n        .toggle-icon {\n            width: 24px;\n            height: 24px;\n            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);\n            fill: #FFFFFF;\n        }\n\n        .spider-options-container.collapsed .toggle-icon {\n            transform: rotate(-135deg);\n        }\n\n        .options-list {\n            list-style: none;\n            padding: 5px 0;\n            margin: 0;\n            max-height: 250px; /* Adjust max height as needed */\n            overflow-y: auto;  /* <-- THIS IS THE KEY CHANGE */\n            overflow-x: hidden;\n            transition: max-height 0.7s ease-in-out, padding 0.7s ease-in-out;\n            position: relative;\n            z-index: 1;\n        }\n\n        .spider-options-container.collapsed .options-list {\n            max-height: 0;\n            padding: 0;\n        }\n\n        .option-item {\n            padding: 13px 25px;\n            border-bottom: 1px solid #2a2a2a;\n            cursor: pointer;\n            transition: background-color 0.3s ease, color 0.3s ease;\n            display: flex;\n            align-items: baseline;\n        }\n\n        .option-item:last-child {\n            border-bottom: none;\n        }\n\n        .option-item:hover {\n            background-color: var(--gothic-hover-bg);\n            color: #FFF;\n        }\n\n        .option-item .option-letter {\n            font-family: 'Uncial Antiqua', cursive;\n            color: var(--gothic-accent);\n            margin-right: 15px;\n            font-size: 1.1em;\n            flex-shrink: 0;\n        }\n\n        .option-item .option-text {\n            line-height: 1.6;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"spider-options-container collapsed\">\n        <div class=\"options-header\">\n            <span>🕸️CHOICE</span>\n            <svg class=\"toggle-icon\" viewBox=\"0 0 24 24\">\n              <path d=\"M12 2 L12 22 M2 12 L22 12 M5 5 L19 19 M5 19 L19 5\"/>\n            </svg>\n        </div>\n        <div class=\"options-list\">\n            <div class=\"option-item\" onclick=\"selectOption('$1')\">\n                <span class=\"option-letter\">A.</span>\n                <span class=\"option-text\">$1</span>\n            </div>\n            <div class=\"option-item\" onclick=\"selectOption('$2')\">\n                <span class=\"option-letter\">B.</span>\n                <span class=\"option-text\">$2</span>\n            </div>\n            <div class=\"option-item\" onclick=\"selectOption('$3')\">\n                <span class=\"option-letter\">C.</span>\n                <span class=\"option-text\">$3</span>\n            </div>\n            <div class=\"option-item\" onclick=\"selectOption('$4')\">\n                <span class=\"option-letter\">D.</span>\n                <span class=\"option-text\">$4</span>\n            </div>\n            <div class=\"option-item\" onclick=\"selectOption('$5')\">\n                <span class=\"option-letter\">E.</span>\n                <span class=\"option-text\">$5</span>\n            </div>\n        </div>\n    </div>\n\n    <script>\n        function selectOption(text) {\n            if (typeof triggerSlash === 'function') {\n                triggerSlash(`/send ${text}`);\n            } else {\n                console.error(\"SillyTavern's triggerSlash function is not available.\");\n            }\n        }\n\n        const container = document.querySelector('.spider-options-container');\n        const header = document.querySelector('.options-header');\n\n        header.addEventListener('click', () => {\n            container.classList.toggle('collapsed');\n        });\n    </script>\n</body>\n</html>\n```",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": true,
+                    "promptOnly": false,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                },
+                {
+                    "id": "0dd78786-73bf-4bdb-a5b1-7a1a34437be4",
+                    "scriptName": "🕷️⑧选项2选1-象牙圣坛(选开)",
+                    "findRegex": "<Options>[\\s\\n]*A\\.(.*?)[\\s\\n]*B\\.(.*?)[\\s\\n]*C\\.(.*?)[\\s\\n]*D\\.(.*?)[\\s\\n]*E\\.(.*?)[\\s\\n]*</Options>",
+                    "replaceString": "```html\n<html>\n<head>\n    <!-- disable-default-loading -->\n    <link rel=\"preconnect\" href=\"https://fonts.googleapis.com\">\n    <link rel=\"preconnect\" href=\"https://fonts.gstatic.com\" crossorigin>\n    <link href=\"https://fonts.googleapis.com/css2?family=Uncial+Antiqua&family=Crimson+Text:ital@0;1&display=swap\" rel=\"stylesheet\">\n    <style>\n        :root {\n            --gothic-bg: #FDFDFD;\n            --gothic-border: #A56969;\n            --gothic-glow: rgba(165, 105, 105, 0.4);\n            --gothic-header-bg: #F0F0F0;\n            --gothic-text: #4A4A4A;\n            --gothic-accent: #A56969;\n            --gothic-hover-bg: #EFEFEF;\n        }\n\n        body {\n            font-family: 'Crimson Text', serif;\n            background-color: transparent;\n            color: var(--gothic-text);\n            margin: 0;\n            padding: 5px 15px 15px;\n            display: flex;\n            justify-content: center;\n        }\n\n        ::-webkit-scrollbar {\n            width: 8px;\n        }\n        ::-webkit-scrollbar-track {\n            background: var(--gothic-hover-bg);\n            border-radius: 4px;\n        }\n        ::-webkit-scrollbar-thumb {\n            background: var(--gothic-border);\n            border-radius: 4px;\n        }\n        ::-webkit-scrollbar-thumb:hover {\n            background: #8c5353;\n        }\n\n        .spider-options-container {\n            position: relative;\n            width: 100%;\n            max-width: 550px;\n            background-color: var(--gothic-bg);\n            border: 1px solid var(--gothic-border);\n            border-radius: 3px;\n            box-shadow: 0 0 15px var(--gothic-glow), 0 0 25px rgba(0,0,0,0.1);\n            overflow: hidden;\n            transition: all 0.5s ease-out;\n        }\n\n        .spider-options-container::before,\n        .spider-options-container::after {\n            content: '';\n            position: absolute;\n            width: 120px;\n            height: 120px;\n            background-image: url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M0,0 L100,0 M0,0 L100,25 M0,0 L100,50 M0,0 L100,75 M0,0 L100,100 M0,0 L75,100 M0,0 L50,100 M0,0 L25,100 M0,0 L0,100' stroke='%23A56969' stroke-width='0.7' fill='none'/%3E%3Cpath d='M10,0 A10,10 0 0,1 0,10 M25,0 A25,25 0 0,1 0,25 M50,0 A50,50 0 0,1 0,50 M75,0 A75,75 0 0,1 0,75 M100,0 A100,100 0 0,1 0,100' stroke='%23A56969' stroke-width='0.7' fill='none'/%3E%3C/svg%3E\");\n            background-size: contain;\n            background-repeat: no-repeat;\n            z-index: 0;\n            opacity: 0.7;\n        }\n        .spider-options-container::before {\n            top: -1px;\n            left: -1px;\n        }\n        .spider-options-container::after {\n            bottom: -1px;\n            right: -1px;\n            transform: rotate(180deg);\n        }\n\n        .options-header {\n            padding: 15px 20px;\n            background: var(--gothic-header-bg);\n            font-family: 'Uncial Antiqua', cursive;\n            font-size: 1.3em;\n            cursor: pointer;\n            display: flex;\n            justify-content: space-between;\n            align-items: center;\n            user-select: none;\n            border-bottom: 1px solid #E0E0E0;\n            position: relative;\n            z-index: 2;\n        }\n\n        .options-header span {\n            color: var(--gothic-text);\n        }\n\n        .toggle-icon {\n            width: 24px;\n            height: 24px;\n            transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);\n            fill: var(--gothic-text);\n        }\n\n        .spider-options-container.collapsed .toggle-icon {\n            transform: rotate(-135deg);\n        }\n\n        .options-list {\n            list-style: none;\n            padding: 5px 0;\n            margin: 0;\n            max-height: 250px; /* Adjust max height as needed */\n            overflow-y: auto;  /* <-- THIS IS THE KEY CHANGE */\n            overflow-x: hidden;\n            transition: max-height 0.7s ease-in-out, padding 0.7s ease-in-out;\n            position: relative;\n            z-index: 1;\n        }\n\n        .spider-options-container.collapsed .options-list {\n            max-height: 0;\n            padding: 0;\n        }\n\n        .option-item {\n            padding: 13px 25px;\n            border-bottom: 1px solid #F0F0F0;\n            cursor: pointer;\n            transition: background-color 0.3s ease, color 0.3s ease;\n            display: flex;\n            align-items: baseline;\n        }\n\n        .option-item:last-child {\n            border-bottom: none;\n        }\n\n        .option-item:hover {\n            background-color: var(--gothic-hover-bg);\n        }\n\n        .option-item .option-letter {\n            font-family: 'Uncial Antiqua', cursive;\n            color: var(--gothic-accent);\n            margin-right: 15px;\n            font-size: 1.1em;\n            flex-shrink: 0;\n        }\n\n        .option-item .option-text {\n            line-height: 1.6;\n        }\n    </style>\n</head>\n<body>\n    <div class=\"spider-options-container collapsed\">\n        <div class=\"options-header\">\n            <span>🕷️CHOICE</span>\n            <svg class=\"toggle-icon\" viewBox=\"0 0 24 24\">\n              <path d=\"M12 2 L12 22 M2 12 L22 12 M5 5 L19 19 M5 19 L19 5\"/>\n            </svg>\n        </div>\n        <div class=\"options-list\">\n            <div class=\"option-item\" onclick=\"selectOption('$1')\">\n                <span class=\"option-letter\">A.</span>\n                <span class=\"option-text\">$1</span>\n            </div>\n            <div class=\"option-item\" onclick=\"selectOption('$2')\">\n                <span class=\"option-letter\">B.</span>\n                <span class=\"option-text\">$2</span>\n            </div>\n            <div class=\"option-item\" onclick=\"selectOption('$3')\">\n                <span class=\"option-letter\">C.</span>\n                <span class=\"option-text\">$3</span>\n            </div>\n            <div class=\"option-item\" onclick=\"selectOption('$4')\">\n                <span class=\"option-letter\">D.</span>\n                <span class=\"option-text\">$4</span>\n            </div>\n            <div class=\"option-item\" onclick=\"selectOption('$5')\">\n                <span class=\"option-letter\">E.</span>\n                <span class=\"option-text\">$5</span>\n            </div>\n        </div>\n    </div>\n\n    <script>\n        function selectOption(text) {\n            if (typeof triggerSlash === 'function') {\n                triggerSlash(`/send ${text}`);\n            } else {\n                console.error(\"SillyTavern's triggerSlash function is not available.\");\n            }\n        }\n\n        const container = document.querySelector('.spider-options-container');\n        const header = document.querySelector('.options-header');\n\n        header.addEventListener('click', () => {\n            container.classList.toggle('collapsed');\n        });\n    </script>\n</body>\n</html>\n```",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": true,
+                    "markdownOnly": true,
+                    "promptOnly": false,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                },
+                {
+                    "id": "fe35f42c-7686-4e60-b86b-4ea90b0fa86c",
+                    "scriptName": "🕷️⑨随机内容折叠",
+                    "findRegex": "/<随机内容>(.*?)<\\/随机内容>/s",
+                    "replaceString": "<details> \n<summary>🦷随机内容</summary> $1 </details>",
+                    "trimStrings": [],
+                    "placement": [
+                        2
+                    ],
+                    "disabled": false,
+                    "markdownOnly": true,
+                    "promptOnly": false,
+                    "runOnEdit": true,
+                    "substituteRegex": 0,
+                    "minDepth": null,
+                    "maxDepth": null
+                },
+                {
+                    "id": "ec18f3fa-ed36-430e-83a4-997bcef8f72f",
+                    "scriptName": "🕷️⑩(选开)去除用户历史输入",
+                    "findRegex": "^([\\s\\S]*)$",
+                    "replaceString": "",
+                    "trimStrings": [],
+                    "placement": [
+                        1
+                    ],
+                    "disabled": true,
+                    "markdownOnly": false,
+                    "promptOnly": true,
+                    "runOnEdit": false,
+                    "substituteRegex": 0,
+                    "minDepth": 1,
+                    "maxDepth": null
+                }
+            ]
+        },
+        "group_only_greetings": []
+    },
+    "create_date": "2025-9-14 @12h 05m 52s 691ms"
+}

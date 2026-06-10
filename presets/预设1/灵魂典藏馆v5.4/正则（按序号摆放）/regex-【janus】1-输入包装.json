@@ -1,0 +1,17 @@
+{
+    "id": "851ebd1e-5bff-4ffa-8e5b-33e7834932cc",
+    "scriptName": "【Janus】1-输入包装",
+    "findRegex": "([\\s\\S]*)",
+    "replaceString": "<user_input>\n$1\n</user_input>",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

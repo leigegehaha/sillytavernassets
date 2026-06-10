@@ -1,0 +1,17 @@
+{
+    "id": "8df3aec9-6899-47ac-a066-eb0bf3796cb0",
+    "scriptName": "【留光】-（2）移除思维链",
+    "findRegex": "/<thinking>[\\s\\S]*?<\\/thinking>\\n?/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 0,
+    "maxDepth": null
+}

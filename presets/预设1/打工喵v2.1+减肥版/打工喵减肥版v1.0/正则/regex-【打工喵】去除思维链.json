@@ -1,0 +1,17 @@
+{
+    "id": "78090a06-6ca2-4d00-9449-bb6ec3b56e60",
+    "scriptName": "【打工喵】去除思维链",
+    "findRegex": "/^[\\s\\S]*</thinking>/",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

@@ -1,0 +1,17 @@
+{
+    "id": "61c2d4c7-6f48-4943-9d7a-6ebc18dd64de",
+    "scriptName": "【Janus】4-摘要美化",
+    "findRegex": "/<assess>([\\s\\S]*?)<\\/assess>/g",
+    "replaceString": "<details style=\"font-size:0.85em;opacity:0.6;margin:10px 0;\"><summary style=\"text-align:center;cursor:pointer;padding:8px;background:transparent;list-style:none;\">📁 Janusの观察日记</summary><div style=\"padding:12px;background:transparent;white-space:pre-wrap;opacity:1;line-height:1.6;overflow:hidden;\">$1</div></details>\n",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": false,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}

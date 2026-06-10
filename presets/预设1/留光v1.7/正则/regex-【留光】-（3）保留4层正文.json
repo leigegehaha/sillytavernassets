@@ -1,0 +1,17 @@
+{
+    "id": "b3630a2e-bcbc-45ff-a1db-c3dcd04df653",
+    "scriptName": "【留光】-（3）保留4层正文",
+    "findRegex": "/[\\s\\S]*?【馆藏开启】([\\s\\S]*?)【馆藏封存】([\\s\\S]*)/gm",
+    "replaceString": "<!--\n【馆藏开启】$1【馆藏封存】\n-->",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 4,
+    "maxDepth": null
+}

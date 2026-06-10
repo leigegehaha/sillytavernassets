@@ -1,0 +1,17 @@
+{
+    "id": "2283c926-3fe6-4bb7-82bf-c0773c574339",
+    "scriptName": "【茉莉】❀穿甲思维折叠0_2🚧",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "/([\\s\\S]*?<新章>)/g",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null,
+    "markdownOnly": true,
+    "promptOnly": true
+}

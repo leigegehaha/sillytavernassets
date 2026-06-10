@@ -1,0 +1,18 @@
+{
+    "id": "641fe0ab-c0eb-4cff-9d0f-4b682e8c5768",
+    "scriptName": "【茉莉】❀隐藏前文内容0.20",
+    "findRegex": "([\\s\\S]*?)(?=<details><summary>章节摘要❀|$)",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        1,
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": false,
+    "minDepth": 6,
+    "maxDepth": null
+}

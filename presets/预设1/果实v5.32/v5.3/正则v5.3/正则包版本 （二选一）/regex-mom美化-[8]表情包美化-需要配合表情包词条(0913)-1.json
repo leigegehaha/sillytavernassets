@@ -1,0 +1,18 @@
+{
+    "id": "3fc9b132-1ed1-4fff-b07e-ba0fecc0c32d",
+    "scriptName": "MoM美化-[8]😊表情包美化-需要配合表情包词条(0913)",
+    "findRegex": "/<emoji>(.+?)</emoji>/g",
+    "replaceString": "\n<img src=\"https://gitgud.io/mom1/bqb/-/raw/master/$1\"width=\"128\"height=\"128\">\n",
+    "trimStrings": [],
+    "placement": [
+        2,
+        6
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": false,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": 5
+}

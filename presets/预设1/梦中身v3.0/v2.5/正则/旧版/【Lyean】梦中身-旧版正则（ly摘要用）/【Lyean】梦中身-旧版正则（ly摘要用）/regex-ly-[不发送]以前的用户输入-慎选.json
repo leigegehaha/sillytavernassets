@@ -1,0 +1,17 @@
+{
+    "id": "620eb4f3-c529-4a20-a725-9af53c02ba46",
+    "scriptName": "Ly-[不发送]以前的用户输入-慎选",
+    "findRegex": "^([\\s\\S]*)$",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        1
+    ],
+    "disabled": true,
+    "markdownOnly": false,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": 1,
+    "maxDepth": null
+}

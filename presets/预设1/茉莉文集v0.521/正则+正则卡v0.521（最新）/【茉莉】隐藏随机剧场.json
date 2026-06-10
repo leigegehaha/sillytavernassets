@@ -1,0 +1,17 @@
+{
+    "id": "ce72b99b-cd43-4016-b8eb-46b16e87440c",
+    "scriptName": "【茉莉】❀隐藏随机剧场",
+    "disabled": false,
+    "runOnEdit": true,
+    "findRegex": "<details><summary>番外[:：][\\s\\S]*?</details>",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "substituteRegex": 0,
+    "minDepth": 1,
+    "maxDepth": null,
+    "markdownOnly": false,
+    "promptOnly": true
+}

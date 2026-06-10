@@ -1,0 +1,355 @@
+[
+    {
+        "id": "43c0b9a2-51bc-493f-9bf4-bbc5ca7dd912",
+        "scriptName": "回滚模式开|去除不纯净内容",
+        "findRegex": "/(?:\\r?\\n)<Section:\\d+>(?:(?!<Section:\\d+>)[\\s\\S])*?<[^\\r\\n>]*FAILED::IMMEDIATELY[^\\r\\n>]*>/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "634f0498-5ba8-46ec-abb7-ca20c88eab0a",
+        "scriptName": "回滚模式开|去除回滚标签",
+        "findRegex": "/(?:\\r?\\n)<\\/?Sectio[^\\r\\n>]*>/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "8f1b6032-cd08-489a-b878-05898b94f283",
+        "scriptName": "选一|思维链字可以变！",
+        "findRegex": "\\[\\[((?:(?!\\]\\])[\\s\\S])*?)(?:◆([^\\r\\n\\]◆]*)\\s*[|｜]\\s*([^\\r\\n\\]◆]*)(?:◆((?:(?!\\]\\])[\\s\\S])*?))?)?\\]\\]",
+        "replaceString": "<style>.cot-w.cot-w summary,.cot-w.cot-w details{all:unset!important;display:revert!important;box-sizing:border-box!important;background:none!important;border:none!important;box-shadow:none!important;text-shadow:none!important;margin:0!important;padding:0!important;text-align:left!important;text-indent:0!important;color:inherit!important;width:auto!important;height:auto!important;min-height:0!important;border-radius:0!important;position:relative!important;opacity:1!important;transform:none!important}.cot-w.cot-w summary::before,.cot-w.cot-w summary::after,.cot-w.cot-w details::before,.cot-w.cot-w details::after{content:none!important;display:none!important;all:unset!important;background:none!important;width:0!important;height:0!important;border:none!important}.cot-w.cot-w summary::-webkit-details-marker,.cot-w.cot-w summary::marker{display:none!important;content:\"\"!important;all:unset!important}.cot-w{margin:10px auto;width:96%;max-width:600px;font-family:inherit;color:var(--smart-theme-body-color,inherit);--bor:var(--smart-theme-border,rgba(127,127,127,0.3));--bg:var(--smart-theme-bg,rgba(0,0,0,0.02));--acc:var(--smart-theme-link-color,rgba(125,200,255,0.8))}.cot-w details{transition:all .3s ease}.cot-w.cot-w details>summary{list-style:none!important;outline:0!important;display:block!important;cursor:pointer!important;background:none!important;padding-right:0!important;text-align:left!important}@keyframes c-wave-mask{0%{-webkit-mask-position:-200% 0}100%{-webkit-mask-position:200% 0}}@keyframes c-neon{0%,100%{text-shadow:0 0 4px currentColor;opacity:1}50%{text-shadow:0 0 10px currentColor;opacity:.8}}@keyframes spin-pulse{0%{transform:rotate(225deg) scale(0.85)}50%{transform:rotate(405deg) scale(0.65)}100%{transform:rotate(585deg) scale(0.85)}}@keyframes txt-spring{0%{opacity:1;filter:blur(0);letter-spacing:1.5px;transform:scale(1)}40%{opacity:0;filter:blur(4px);letter-spacing:-4px;transform:scale(0.9)}100%{opacity:1;filter:blur(0);letter-spacing:1.5px;transform:scale(1)}}.cot-title{display:flex;align-items:center;justify-content:center;gap:0;padding:12px 0;opacity:.95;transition:.2s;user-select:none;font-size:0.85em;letter-spacing:1.5px}.cot-title:hover{opacity:1}.cot-star{width:34px;height:34px;position:relative;display:flex;align-items:center;justify-content:center;transition:transform .3s ease;flex-shrink:0}.c-ring{position:absolute;width:12px;height:12px;border:1px currentColor;border-radius:1px!important;transform:rotate(45deg);transition:all .5s cubic-bezier(.34,1.56,.64,1)}.c-ring.c-dot{border-style:dotted;opacity:.7}.c-ring.sol{border-style:solid;opacity:0;transform:rotate(45deg) scale(.5)}.cot-core{width:6px;height:6px;background:currentColor;transform:rotate(45deg) scale(.6);transition:all .5s;box-shadow:0 0 0 transparent}details:not([open]) .cot-star{transform:scale(0.8)}details[open] .c-ring.c-dot{opacity:0;transform:rotate(225deg) scale(.5)}details[open] .c-ring.sol{opacity:1;animation:spin-pulse 3s linear infinite}details[open] .cot-core{transform:rotate(225deg) scale(.6);box-shadow:0 0 8px currentColor}.cot-txt-area{display:flex;justify-content:center;align-items:center;white-space:normal;text-align:center;line-height:1.3;overflow:hidden;padding:12px 6px;margin:-12px 0;max-width:500px;position:relative}details[open] .cot-txt-area{font-size:0.85em;animation:txt-spring 1.9s cubic-bezier(0.34,1.56,0.64,1) forwards}details:not([open]) .cot-txt-area{font-size:0.85em;transform:scale(1);letter-spacing:1.5px}details:not([open]) .t-off{position:relative;color:currentColor;font-weight:600;-webkit-mask-image:linear-gradient(-75deg,rgba(0,0,0,0.6) 30%,#000 50%,rgba(0,0,0,0.6) 70%);-webkit-mask-size:200%;animation:c-wave-mask 6s linear infinite}details[open] .t-on{font-weight:700;animation:c-neon 3s ease-in-out infinite}details[open] .t-off{display:none}details:not([open]) .t-on{display:none}.cot-box{background:var(--bg);border:1px solid var(--bor);border-radius:6px;position:relative;text-align:justify;white-space:pre-line;line-height:1.4;font-size:0.9em;box-shadow:0 4px 12px rgba(0,0,0,0.05);overflow:hidden;transition:all .5s cubic-bezier(.4,0,.2,1);max-height:8000px;opacity:1;margin-top:8px;padding:16px 22px;transform:translateY(0)}.cot-box h3{font-size:0.95em;font-weight:700;margin:1.5em 0 0.4em;display:flex;align-items:center;opacity:.9;color:currentColor}.cot-box h3::after{content:\"\";flex:1;margin-left:12px;height:1px;border-bottom:1px dashed currentColor;opacity:.3}.cot-box h3:first-of-type{margin-top:0}.cot-box ul,.cot-box ol{list-style:none!important;padding:0!important;margin:0!important}.cot-box li{position:relative;padding-left:1.6em;margin:0.05em 0!important;line-height:1.3}.cot-box li::before{content:\"◈\";position:absolute;left:0;top:.1em;font-size:0.9em;opacity:.7}.cot-box:active{transform:scale(0.99)}details:not([open]) .cot-box{max-height:0;opacity:0;margin-top:0;padding-top:0;padding-bottom:0;border-width:0;pointer-events:none;transform:translateY(-8px)}.cot-box::before{content:\"\";position:absolute;inset:0;background:currentColor;opacity:.02;pointer-events:none}.cot-box p{margin:.15em 0}</style><div class=\"cot-w\"><details><summary><div class=\"cot-title\"><div class=\"cot-star\"><div class=\"c-ring c-dot\"></div><div class=\"c-ring sol\"></div><div class=\"cot-core\"></div></div><div class=\"cot-txt-area\"><span class=\"t-off\">$2</span><span class=\"t-on\">$3</span></div><div class=\"cot-star\"><div class=\"c-ring c-dot\"></div><div class=\"c-ring sol\"></div><div class=\"cot-core\"></div></div></div><div class=\"cot-box\">$1$2|$3$4</div></summary></details></div>",
+        "trimStrings": [
+            "<",
+            ">",
+            "▲",
+            "▼"
+        ],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "a53b7bb9-01b4-4385-bade-a83060b7aee8",
+        "scriptName": "选一|思维链全部隐藏",
+        "findRegex": "^[\\s\\S]*?@@\\[[^\\n]*?]@@",
+        "replaceString": "",
+        "trimStrings": [
+            "<",
+            ">",
+            "▲",
+            "▼"
+        ],
+        "placement": [
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "371e61a2-164c-4688-9d71-e389505371fa",
+        "scriptName": "自动总结选一|5楼前仅发送全部创作后记",
+        "findRegex": "/^[\\s\\S]*?▼▼▼(?![\\s\\S]*▼▼▼)|▲▲▲(?![\\s\\S]*▲▲▲)[\\s\\S]*$/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": 9,
+        "maxDepth": null
+    },
+    {
+        "id": "183a4732-7456-4541-8d39-fabcde8b9d41",
+        "scriptName": "自动总结选一|5楼前仅发送摘要",
+        "findRegex": "/^[\\s\\S]*?▼▼▼[\\s\\S]*?###((?:(?!▲▲▲)[\\s\\S])+?)###[\\s\\S]*$/g",
+        "replaceString": "$1",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": 9,
+        "maxDepth": null
+    },
+    {
+        "id": "250e1ad6-c907-4b33-a97b-e67c83fac871",
+        "scriptName": "可选|去形副堆砌|隐藏含有两个“的/地”的堆砌",
+        "findRegex": "/(?<!、[^\\p{P}\\s]*)(的|地)、(?![^\\p{P}\\s]*、)[^\\p{P}\\s]{1,20}?(?:的|地)/gu",
+        "replaceString": "$1",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "9a6d622e-2203-466d-b9e9-a94822dea8e8",
+        "scriptName": "可选|去形副堆砌|隐藏仅末尾词含“的/地”的形容词副词堆砌",
+        "findRegex": "/(?<![\\p{P}]*、[^\\p{P}\\s]*)([^\\p{P}\\s、]+)、(?![^\\p{P}\\s]*、)[^\\p{P}\\s]{1,20}?(的|地)/gu",
+        "replaceString": "$1$2",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "57068743-ba1f-48f6-899e-ad065a4216e4",
+        "scriptName": "别动|隐藏正文标签前全部提示词内容",
+        "findRegex": "^[\\s\\S]*?@@\\[[^\\n]*?]@@",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "063a2ec1-242e-485d-8463-4e20e3585b46",
+        "scriptName": "别动|隐藏meta",
+        "findRegex": "/<meta>[^<]*<\\/meta>/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "966d3c01-f609-46e3-9233-23576233bd2a",
+        "scriptName": "装饰|正文标签美化",
+        "findRegex": "/@@\\[[^\\n]*?]@@/g",
+        "replaceString": "<style>@keyframes tbc-l{0%,100%{opacity:.3;transform:scaleX(.7)}50%{opacity:1;transform:scaleX(1)}}@keyframes tbc-g{0%,100%{opacity:.5;text-shadow:none}50%{opacity:1;text-shadow:0 0 8px currentColor}}@keyframes tbc-r{to{transform:rotate(360deg)}}.tbc-box{display:flex;align-items:center;justify-content:center;margin:25px auto;width:85%;max-width:400px;color:var(--smart-theme-body-color,inherit);opacity:.9;font-family:inherit}.tbc-line{flex:1;height:1px;animation:tbc-l 4s ease-in-out infinite}.tbc-line.l{background-image:linear-gradient(90deg,transparent,currentColor);transform-origin:right}.tbc-line.r{background-image:linear-gradient(90deg,currentColor,transparent);transform-origin:left}.tbc-text{margin:0 12px;font-size:13px;letter-spacing:4px;font-weight:700;white-space:nowrap;animation:tbc-g 4s ease-in-out infinite}.tbc-icon{color:currentColor;animation:tbc-r 4s linear infinite;transform-origin:center center;display:block;opacity:.8}</style><div class=\"tbc-box\"><div class=\"tbc-line l\"></div><svg class=\"tbc-icon\" width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"><polygon points=\"12 4 5 16 19 16\"></polygon><polygon points=\"12 20 5 8 19 8\"></polygon></svg><span class=\"tbc-text\">正 文</span><svg class=\"tbc-icon\" width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"><polygon points=\"12 4 5 16 19 16\"></polygon><polygon points=\"12 20 5 8 19 8\"></polygon></svg><div class=\"tbc-line r\"></div></div>",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "48974478-d778-4f8c-9fcd-59b5d47eff73",
+        "scriptName": "装饰|创作后记美化",
+        "findRegex": "/▼▼▼([\\s\\S]*?)▲▲▲/g",
+        "replaceString": "<style>.ps-box.ps-box summary,.ps-box.ps-box details{all:unset!important;display:revert!important;box-sizing:border-box!important;background:none!important;border:none!important;box-shadow:none!important;text-shadow:none!important;margin:0!important;padding:0!important;text-align:left!important;text-indent:0!important;color:inherit!important;width:auto!important;height:auto!important;min-height:0!important;border-radius:0!important;position:relative!important;opacity:1!important;transform:none!important}.ps-box.ps-box summary::before,.ps-box.ps-box summary::after,.ps-box.ps-box details::before,.ps-box.ps-box details::after{content:none!important;display:none!important;all:unset!important;background:none!important;width:0!important;height:0!important;border:none!important}.ps-box.ps-box summary::-webkit-details-marker,.ps-box.ps-box summary::marker{display:none!important;content:\"\"!important;all:unset!important}.ps-box{margin:10px auto;width:96%;max-width:620px;font-family:inherit;color:var(--smart-theme-body-color,inherit);--bor:rgba(127,127,127,0.4)}.ps-box details{transition:all .3s ease}.ps-box.ps-box details>summary{all:unset!important;display:block!important;cursor:pointer!important;box-sizing:border-box!important;width:100%!important}@keyframes ps-spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.ps-sum{display:flex;justify-content:center;align-items:center;gap:12px;user-select:none;font-size:14px;font-weight:700;letter-spacing:1.5px;padding:12px 0;transition:all .5s cubic-bezier(.68,-0.55,.27,1.55);opacity:.85;position:relative;margin:0!important}.ps-sum:hover{opacity:1;letter-spacing:3px}.ps-star{display:block;width:16px;height:16px;color:currentColor;opacity:.8;transition:transform .5s;animation:ps-spin 8s linear infinite;transform-origin:center center;background:none!important;border:none!important;margin:0!important;padding:0!important;box-shadow:none!important}.ps-box details[open] .ps-star{animation:ps-spin 3s linear infinite;filter:drop-shadow(0 0 2px currentColor);transform:scale(1.1)}.ps-box details[open] .ps-sum{opacity:1;letter-spacing:5px;text-shadow:0 0 1px currentColor}.ps-card{margin-top:5px;padding:12px 22px;background:var(--smart-theme-bg,rgba(0,0,0,0.02));border:1px solid var(--bor);border-top:3px double currentColor;border-radius:6px;position:relative;font-size:.85em;line-height:1.5;color:inherit;text-align:justify;overflow:hidden;transition:all .5s cubic-bezier(.4,0,.2,1);max-height:8000px;opacity:1;box-shadow:0 4px 15px rgba(0,0,0,0.05)}.ps-card h3{font-size:1.1em;font-weight:700;margin:1.5em 0 .5em;padding-bottom:4px;border-bottom:1px solid rgba(127,127,127,0.3);opacity:.95;color:currentColor}.ps-card h3:first-child{margin-top:.2em}.ps-card ul,.ps-card ol{list-style:none!important;padding-left:0!important;margin:0.5em 0!important}.ps-card li{position:relative;padding-left:1.4em;margin:0.3em 0!important;line-height:1.45}.ps-card li::before{content:\"✦\";position:absolute;left:0;top:.1em;font-size:0.9em;opacity:.7}.ps-card:active{transform:scale(0.99);background:rgba(0,0,0,0.04)}.ps-box details:not([open]) .ps-card{max-height:0;opacity:0;margin-top:0;padding-top:0;padding-bottom:0;border-width:0;pointer-events:none}.ps-card::before{content:'';position:absolute;top:0;left:0;width:100%;height:100%;background:currentColor;opacity:.02;pointer-events:none}.ps-card p{margin:0.5em 0!important}</style><div class=\"ps-box\"><details><summary><div class=\"ps-sum\"><svg class=\"ps-star\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z\"/></svg><span>创作后记</span><svg class=\"ps-star\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M12 2 L14.5 9.5 L22 12 L14.5 14.5 L12 22 L9.5 14.5 L2 12 L9.5 9.5 Z\"/></svg></div><div class=\"ps-card\">$1</div></summary></details></div>",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "f61bdb62-428f-423b-8295-96f152d0f3ea",
+        "scriptName": "装饰|待续标签美化",
+        "findRegex": "/(?:<br\\s*\\/?>\\s*)?<center>待续<\\/center>(?:\\s*<br\\s*\\/?>)?/gi",
+        "replaceString": "<style>@keyframes tbc-l{0%,100%{opacity:.3;transform:scaleX(.7)}50%{opacity:1;transform:scaleX(1)}}@keyframes tbc-g{0%,100%{opacity:.5;text-shadow:none}50%{opacity:1;text-shadow:0 0 8px currentColor}}@keyframes tbc-r{to{transform:rotate(360deg)}}.tbc-box{display:flex;align-items:center;justify-content:center;margin:25px auto;width:85%;max-width:400px;color:var(--smart-theme-body-color,inherit);opacity:.9;font-family:inherit}.tbc-line{flex:1;height:1px;animation:tbc-l 4s ease-in-out infinite}.tbc-line.l{background-image:linear-gradient(90deg,transparent,currentColor);transform-origin:right}.tbc-line.r{background-image:linear-gradient(90deg,currentColor,transparent);transform-origin:left}.tbc-text{margin:0 12px;font-size:13px;letter-spacing:4px;font-weight:700;white-space:nowrap;animation:tbc-g 4s ease-in-out infinite}.tbc-icon{color:currentColor;animation:tbc-r 4s linear infinite;transform-origin:center center;display:block;opacity:.8}</style><div class=\"tbc-box\"><div class=\"tbc-line l\"></div><svg class=\"tbc-icon\" width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"><line x1=\"12\" y1=\"12\" x2=\"20\" y2=\"12\"></line><line x1=\"12\" y1=\"12\" x2=\"4\" y2=\"12\"></line><line x1=\"12\" y1=\"12\" x2=\"16\" y2=\"5\"></line><line x1=\"12\" y1=\"12\" x2=\"8\" y2=\"19\"></line><line x1=\"12\" y1=\"12\" x2=\"8\" y2=\"5\"></line><line x1=\"12\" y1=\"12\" x2=\"16\" y2=\"19\"></line></svg><span class=\"tbc-text\">待 续</span><svg class=\"tbc-icon\" width=\"13\" height=\"13\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linejoin=\"round\" stroke-linecap=\"round\"><line x1=\"12\" y1=\"12\" x2=\"20\" y2=\"12\"></line><line x1=\"12\" y1=\"12\" x2=\"4\" y2=\"12\"></line><line x1=\"12\" y1=\"12\" x2=\"16\" y2=\"5\"></line><line x1=\"12\" y1=\"12\" x2=\"8\" y2=\"19\"></line><line x1=\"12\" y1=\"12\" x2=\"8\" y2=\"5\"></line><line x1=\"12\" y1=\"12\" x2=\"16\" y2=\"19\"></line></svg><div class=\"tbc-line r\"></div></div>",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "c9c28a06-df88-44bd-81f9-f04a32be9ee6",
+        "scriptName": "装饰|小剧场美化",
+        "findRegex": "/(?:<!--\\s*)?@【([^\\n】]*)】((?:(?!@【)[\\s\\S])*?)【([^\\n】]*)】@(?:\\s*-->)?/g",
+        "replaceString": "<style>/* --- 核心防御层 --- */.t-fix.t-fix summary,.t-fix.t-fix details{all:unset!important;display:revert!important;box-sizing:border-box!important;background:none!important;border:none!important;box-shadow:none!important;text-shadow:none!important;margin:0!important;padding:0!important;text-align:left!important;text-indent:0!important;color:inherit!important;width:auto!important;height:auto!important;min-height:0!important;border-radius:0!important;position:relative!important;opacity:1!important;transform:none!important}.t-fix.t-fix summary::before,.t-fix.t-fix summary::after,.t-fix.t-fix details::before,.t-fix.t-fix details::after{content:none!important;display:none!important;all:unset!important}.t-fix.t-fix summary::-webkit-details-marker,.t-fix.t-fix summary::marker{display:none!important;content:\"\"!important;all:unset!important}.t-fix.t-fix details>summary{all:unset!important;display:block!important;cursor:pointer!important;width:100%!important;box-sizing:border-box!important}/* --- 基础配置 --- */.t-fix{margin:15px auto;width:100%;max-width:600px;font-family:inherit;color:var(--smart-theme-body-color,inherit);--acc:var(--smart-theme-link-color,rgba(125,200,255,0.8));--bor:rgba(127,127,127,0.3);--ink:currentColor}.t-fix details{/* 丝滑下拉交给grid */}/* --- 沙漏图标区 (已改为居左) --- */.t-head{display:flex;align-items:center;justify-content:flex-start; /* 改为靠左 */gap:12px;padding:12px 0;user-select:none;color:var(--ink);position:relative;opacity:.9;transition:.3s;z-index:2}.t-head:hover{opacity:1}.t-icon{width:16px;height:16px;fill:currentColor;transition:transform .6s cubic-bezier(.34,1.56,.64,1);flex-shrink:0}/* 沙漏翻转逻辑 */.t-fix details[open] .t-icon{transform:rotate(180deg);fill:var(--acc);filter:drop-shadow(0 0 5px var(--acc))}/* --- 稳健版打字机 --- */.t-title-box{position:relative;font-size:11px;font-weight:700;letter-spacing:1px;display:flex;align-items:center}.t-static{display:block;transition:.2s}.t-type{position:absolute;left:0;top:0;bottom:0;display:none;color:var(--acc);white-space:nowrap;align-items:center;overflow:hidden;animation:t-reveal 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;border-right:2px solid var(--acc);padding-right:4px;background:var(--smart-theme-bg, transparent)}.t-fix details[open] .t-static{opacity:0;transform:scale(0.95)}.t-fix details[open] .t-type{display:flex}@keyframes t-reveal{0%{clip-path:inset(0 100% 0 0);opacity:0}100%{clip-path:inset(0 0 0 0);opacity:1}}/* --- 丝滑下拉动画 --- */.t-dropdown{display:grid;grid-template-rows:0fr;transition:grid-template-rows .5s cubic-bezier(0.4,0,0.2,1);border-top:1px solid transparent}.t-fix details[open] .t-dropdown{grid-template-rows:1fr;border-color:rgba(127,127,127,0.2)}.t-wrapper{overflow:hidden;min-height:0;transform:translateY(-10px);opacity:0;transition:all .5s ease}.t-fix details[open] .t-wrapper{transform:translateY(0);opacity:1;transition-delay:0.1s}/* --- 内容样式 --- */.t-body{font-size:.9em;line-height:1.6;text-align:justify;padding:15px 5px}/* --- 分割线 --- */.t-line{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--bor),transparent);margin:0; /* 线也改为左对齐延伸 */transition:width .6s ease;opacity:0.5}.t-fix details[open] .t-line{width:100%}</style><div class=\"t-fix\"><details><summary><div class=\"t-head\"><svg class=\"t-icon\" viewBox=\"0 0 24 24\"><path d=\"M6 2v6h.01L6 8.01 10 12l-4 4 .01.01H6V22h12v-5.99h-.01L18 16l-4-4 4-3.99-.01-.01H18V2H6zm10 14.5V20H8v-3.5l4-4 4 4zm-4-5l-4-4V4h8v3.5l-4 4z\"/></svg><div class=\"t-title-box\"><span class=\"t-static\">$1</span><div class=\"t-type\">$3</div></div></div><div class=\"t-line\"></div></summary><div class=\"t-dropdown\"><div class=\"t-wrapper\"><div class=\"t-body\">$2</div></div></div></details></div>",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "2927bf42-88bd-41c4-a555-d51c2605c7b9",
+        "scriptName": "别动|历史消息添加tag",
+        "findRegex": "^([\\s\\S]*)$",
+        "replaceString": "{{user}}：$1",
+        "trimStrings": [],
+        "placement": [
+            1
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": 2,
+        "maxDepth": null
+    },
+    {
+        "id": "53378571-50ad-482d-a8f6-55946ec3a96f",
+        "scriptName": "别动|最新消息添加tag",
+        "findRegex": "^([\\s\\S]*)$",
+        "replaceString": "[/INFO:NARRATIVE MEMORY]\n<UserInput>\n{{user}}：$1\n</UserInput>\n<Additional_Requirement>",
+        "trimStrings": [],
+        "placement": [
+            1
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": 1
+    },
+    {
+        "id": "724ed2b0-f752-4a12-9a39-173f9c2cc6a0",
+        "scriptName": "别动|去注释提示词",
+        "findRegex": "/<!--[\\s\\S]*?-->\\n?/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "a722ffd9-2feb-49cc-9e33-74018926fdd5",
+        "scriptName": "可选|隐藏全部楼层创作后记提示词",
+        "findRegex": "/▼▼▼([\\s\\S]*?)▲▲▲/g",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            2
+        ],
+        "disabled": true,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    },
+    {
+        "id": "f7fb623d-bd8a-403c-be49-6e5063128d66",
+        "scriptName": "可选|不发送历史u输入",
+        "findRegex": "^([\\s\\S]*)$",
+        "replaceString": "",
+        "trimStrings": [],
+        "placement": [
+            1
+        ],
+        "disabled": true,
+        "markdownOnly": false,
+        "promptOnly": true,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": 1,
+        "maxDepth": null
+    },
+    {
+        "id": "1c0f9685-0ade-4588-bb3f-7e5913dff1f0",
+        "scriptName": "可选|行动选项",
+        "findRegex": "/(?:<!--(?:(?!<!--|-->)[\\s\\S])*?)?\\s*→\\s*([^：:\\r\\n]+?)\\s*[：:]\\s*([^\\r\\n]*)\\r?\\n\\s*→\\s*([^：:\\r\\n]+?)\\s*[：:]\\s*([^\\r\\n]*)\\r?\\n\\s*→\\s*([^：:\\r\\n]+?)\\s*[：:]\\s*([^\\r\\n]*)(?=\\r?\\n|$)(?:\\s*-->)?/g",
+        "replaceString": "```html\n<!DOCTYPE html>\n<html>\n<head>\n<style>\n/* --- 核心防御层 (Anti-Theme Armor) --- */\n/* 强制重置容器样式，防止被主题污染 */\n.opt-w.opt-w {\n    all: unset !important;\n    display: flex !important;\n    flex-direction: column !important;\n    gap: 10px !important;\n    margin: 15px auto !important;\n    width: 90% !important;\n    max-width: 500px !important;\n    box-sizing: border-box !important;\n    font-family: inherit !important;\n}\n\n/* 强制重置按钮样式 */\n.opt-w .opt-btn {\n    all: unset !important;\n    display: block !important;\n    position: relative !important;\n    padding: 12px 20px !important;\n    text-align: center !important;\n    cursor: pointer !important;\n    box-sizing: border-box !important;\n    font-size: 14px !important;\n    letter-spacing: 1px !important;\n    transition: all .4s cubic-bezier(0.25, 1, 0.5, 1) !important;\n    user-select: none !important;\n    /* 抓取主题色，但保持幽灵线框风格 */\n    color: var(--smart-theme-body-color, inherit) !important;\n    border: 1px solid rgba(127,127,127,0.3) !important;\n    background: rgba(0,0,0,0.02) !important;\n    border-radius: 4px !important;\n    opacity: 0.8 !important;\n}\n\n/* --- 悬浮交互特效 --- */\n.opt-w .opt-btn:hover {\n    opacity: 1 !important;\n    /* 悬浮时边框变亮（抓取链接色） */\n    border-color: var(--smart-theme-link-color, rgba(125,200,255,0.8)) !important;\n    background: var(--smart-theme-bg, rgba(255,255,255,0.05)) !important;\n    transform: translateY(-2px) !important;\n    box-shadow: 0 4px 12px rgba(0,0,0,0.05) !important;\n    letter-spacing: 2px !important;\n}\n\n/* --- 点击反馈 --- */\n.opt-w .opt-btn:active {\n    transform: scale(0.98) translateY(0) !important;\n    opacity: 0.6 !important;\n}\n</style>\n</head>\n<body>\n\n<!-- 这里是极简的三行布局 -->\n<div class=\"opt-w\">\n    <!-- 选项 1 -->\n    <!-- $1: 标题, $2: 填入的内容 -->\n    <!-- 注意：onclick 里加了转义，防止单引号报错 -->\n    <div class=\"opt-btn\" onclick=\"selectOption('$2')\">\n        $1\n    </div>\n    \n    <!-- 选项 2 -->\n    <!-- $3: 标题, $4: 填入的内容 -->\n    <div class=\"opt-btn\" onclick=\"selectOption('$4')\">\n        $3\n    </div>\n    \n    <!-- 选项 3 -->\n    <!-- $5: 标题, $6: 填入的内容 -->\n    <div class=\"opt-btn\" onclick=\"selectOption('$6')\">\n         $5\n    </div>\n</div>\n\n<script>\n    // 这就是从那个代码里学来的核心逻辑\n    // 使用 SillyTavern 内部的 triggerSlash 函数\n    async function selectOption(text) {\n        if (typeof triggerSlash === 'function') {\n            // /setinput 是仅仅填入不发送\n            // 如果你想点击即发送，就把 /setinput 改成 /send\n            await triggerSlash('/setinput ' + text); \n        } else {\n            console.error('错误：未找到 triggerSlash 函数，请确保在 SillyTavern 环境中运行。');\n            \n            // 兼容性保底（万一 triggerSlash 不可用，尝试老方法）\n            try {\n                const textarea = document.getElementById('send_textarea');\n                if(textarea) {\n                    textarea.value = text;\n                    textarea.dispatchEvent(new Event('input', { bubbles: true }));\n                }\n            } catch(e) {}\n        }\n    }\n</script>\n\n</body>\n</html>\n```",
+        "trimStrings": [
+            "【",
+            "】"
+        ],
+        "placement": [
+            2
+        ],
+        "disabled": false,
+        "markdownOnly": true,
+        "promptOnly": false,
+        "runOnEdit": true,
+        "substituteRegex": 0,
+        "minDepth": null,
+        "maxDepth": null
+    }
+]

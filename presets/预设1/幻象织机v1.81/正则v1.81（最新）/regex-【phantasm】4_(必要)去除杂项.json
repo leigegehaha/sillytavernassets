@@ -1,0 +1,17 @@
+{
+    "id": "82281914-1c51-4090-a1ab-7be72e52568d",
+    "scriptName": "【Phantasm】4.(必要)去除杂项",
+    "findRegex": "/(<disclaimer>.*?</disclaimer>)|<!--\\s*(?:だんらく|段落|字数|consider|draft)\\s*:\\s*(.*?)\\s*-->|\\[[Ff][^:\\]]*:\\s*(.*?)\\s*\\]|<phase\\s*(.*?)>/gs",
+    "replaceString": "",
+    "trimStrings": [],
+    "placement": [
+        2
+    ],
+    "disabled": false,
+    "markdownOnly": true,
+    "promptOnly": true,
+    "runOnEdit": true,
+    "substituteRegex": 0,
+    "minDepth": null,
+    "maxDepth": null
+}
