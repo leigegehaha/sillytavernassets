@@ -1,0 +1,91 @@
+VenomSludge
+By今天我也是一个加把劲骑士了呢
+(请仅激活内置世界书,查看创建者的注释)
+请采用clewd4.5以及以上版本(目前是4.5),
+破限采用“8.25猫的七夕酒馆破限预设(只能clewd加入Radeon英文)”，配套的压缩包里面有，后缀用的是 </character>，如果你非要采用7.29或者坎佬自用的3.4/3.5或者你自己写的，请把角色描述最后面的</character>改成对应的内容（比如</rule S>或者</card>）
+
+自己的用户名{{user}}请改成"吕山德"，以带入剧情内容（这个名字的灵感来源于英文名字：Lysander，源于古希腊，在历史上是一位著名的斯巴达将军，与Gigachad的特点相符，你应该知道什么是Gigachad吧）
+
+务必要激活且最好仅激活内置的世界书，里面自带xmlPolt和定制的状态栏DLC！！！
+务必要激活且最好仅激活内置的世界书，里面自带xmlPolt和定制的状态栏DLC！！！
+务必要激活且最好仅激活内置的世界书，里面自带xmlPolt和定制的状态栏DLC！！！
+
+{{user}}你自己的发言需要参考如下格式（请自觉遵守）：
+*旁白内容要用这个星号包裹*
+"{{user}}的发言用引号包裹"
+
+正则表达式（共6个，从上到下的顺序，其它的不要激活，这是为了修正酒馆的引号bug和肉刃问题）
+1.
+Script Name:
+坎佬的用户输入引号替换
+Find Regex:
+/[”“"].*?[”“"]/g
+Replace With:
+「$&」
+Affects:
+仅勾选User Input
+
+2.
+Script Name:
+坎佬的输入引号修正2
+Find Regex:
+/["“”]/g
+Replace With:这里留空，不填
+Affects:
+仅勾选User Input
+
+3.
+Script Name:
+坎佬的引号修正3
+Find Regex:
+/[「」“”]/g
+Replace With:
+"
+Affects:
+仅勾选User Input
+
+4.
+Script Name:
+名称替换
+Find Regex:
+/肉刃/g
+Replace With:
+肉棒
+Affects:
+仅勾选AI Output
+Other Options:
+仅勾选Only Format Display
+
+5.
+Script Name:
+名称替换2
+Find Regex:
+/花蒂|花核|玉蒂/g
+Replace With:
+阴蒂
+Affects:
+仅勾选AI Output
+Other Options:
+仅勾选Only Format Display
+
+6.
+Script Name
+名称替换3
+Find Regex
+/花径/g
+Replace With
+阴道
+Affects:
+仅勾选AI Output
+Other Options:
+仅勾选Only Format Display
+
+建议导入我发的聊天记录
+
+未来开发计划：目前是v1.0版本，只有一个VenomSludge，以后可能会搞一个VenomSludge大战终结者T800？剧情往科幻向发展？比如黏液与纳米机器人？最后再来一个灵能，直接让人类实现三大飞升……不敢想，不敢想
+
+VenomSludge v1.0现在具备的的标签（简直是丧心病狂，适合XP比较奇怪的朋友）:
+absorption, adventitious mouth, adventitious penis, adventitious vagina, ahegao, pregnant, big breasts, big penis, blowjob, body modification, clit growth, cockphagia, corruption, dick growth, dicknipples, footjob, futanari, giant, long tongue, mind break, mind control, monster girl, multiple penises, nipple fuck, NTR, parasite, guro, possession, selfcest, shared senses, slime girl, snuff, sperm, stomach deformation, tentacles, transformation, vore
+
+感谢名单（排名不分先后）：
+东山小红猫、三月七、坎佬、黄豆粉、剑冲、夕阳红木黑、高桥凉介等群友的帮助，他们有点提供了教程，有的提供了角色模板或启发了我的灵感，在此非常感谢他们的付出！
