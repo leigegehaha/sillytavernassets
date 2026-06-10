@@ -1,0 +1,1541 @@
+[
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a1a",
+    "name": "初出茅庐",
+    "description": "第一次踏出新手村，广阔的修仙界在你面前展开。",
+    "completionText": "你离开了出生地，前方的道路充满了未知与机遇。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "离开新手村"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[干粮] x5",
+      "command": "insertRow({\"0\":\"I_FOOD_01\",\"1\":\"干粮\",\"2\":\"消耗品\",\"3\":\"普通的干粮，可以果腹。\",\"4\":\"恢复少量体力\",\"5\":\"5\"})"
+    }
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a1b",
+    "name": "第一桶金",
+    "description": "通过自己的努力赚取了第一块灵石。",
+    "completionText": "你获得了第一块灵石，感受到了财富的力量。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "9",
+      "value": "灵石:1"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[下品灵石] x1",
+      "command": "insertRow({\"0\":\"I_STONE_LOW_01\",\"1\":\"下品灵石\",\"2\":\"消耗品\",\"3\":\"修仙界的通用货币，蕴含少量灵气。\",\"4\":\"可用于修炼、交易、布阵。\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a1c",
+    "name": "体魄初成",
+    "description": "经过锻炼，你的肉体力量有了一定的提升。",
+    "completionText": "你的拳头似乎更有力了。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "player_attr",
+      "key": "物攻",
+      "value": "10"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[大力丸] x1",
+      "command": "insertRow({\"0\":\"I_PILL_STR_01\",\"1\":\"大力丸\",\"2\":\"消耗品\",\"3\":\"凡人武者所用丹药，能暂时提升力量。\",\"4\":\"物攻+2，持续1个时辰。\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a1d",
+    "name": "初窥门径",
+    "description": "你第一次成功引气入体，感受到了法力的存在。",
+    "completionText": "你感受到了丹田内第一缕法力的流动。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "player_attr",
+      "key": "法力",
+      "value": "1"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[凝气散] x1",
+      "command": "insertRow({\"0\":\"I_PILL_MP_01\",\"1\":\"凝气散\",\"2\":\"消耗品\",\"3\":\"汇聚游离灵气的散剂，辅助修炼。\",\"4\":\"恢复10点法力。\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a1e",
+    "name": "第一次战斗",
+    "description": "无论是切磋还是死斗，你经历了第一次修士间的战斗。",
+    "completionText": "战斗的残酷与激情，你已初尝其味。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "战斗结束"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[金疮药] x2",
+      "command": "insertRow({\"0\":\"I_HEAL_01\",\"1\":\"金疮药\",\"2\":\"消耗品\",\"3\":\"止血生肌的凡间良药。\",\"4\":\"恢复少量血量。\",\"5\":\"2\"})"
+    }
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a1f",
+    "name": "江湖骗术",
+    "description": "你被一个江湖骗子欺骗了，损失了一些财物。",
+    "completionText": "人心险恶，你学到了宝贵的一课。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "你被骗了"
+    },
+    "reward": null
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a20",
+    "name": "讨价还价",
+    "description": "在交易中成功地让对方降价。",
+    "completionText": "你的口才为你省下了一笔钱。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "便宜卖给你"
+    },
+    "reward": {
+      "type": "player_attr",
+      "description": "奖励：魅力+1",
+      "command": "updateRow(\"B1\", {\"11\":\"{\\\"魅力\\\":1}\"})"
+    }
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a21",
+    "name": "略有薄皮",
+    "description": "你的防御能力有了一些长进。",
+    "completionText": "你感觉自己更能抗揍了。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "player_attr",
+      "key": "物防",
+      "value": "10"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[破旧的皮甲] x1",
+      "command": "insertRow({\"0\":\"I_ARMOR_01\",\"1\":\"破旧的皮甲\",\"2\":\"护甲\",\"3\":\"一件满是划痕的皮甲，聊胜于无。\",\"4\":\"物防+2\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a22",
+    "name": "健步如飞",
+    "description": "你的身法变得更加敏捷。",
+    "completionText": "你的脚步变得轻快了许多。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "player_attr",
+      "key": "脚力",
+      "value": "10"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[草鞋] x1",
+      "command": "insertRow({\"0\":\"I_BOOTS_01\",\"1\":\"草鞋\",\"2\":\"护甲\",\"3\":\"一双普通的草鞋。\",\"4\":\"脚力+1\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a23",
+    "name": "神识微动",
+    "description": "你的神识之力首次突破了凡人的界限。",
+    "completionText": "你感觉自己的感知范围扩大了一丝。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "player_attr",
+      "key": "神识",
+      "value": "5"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[清心草] x1",
+      "command": "insertRow({\"0\":\"I_HERB_01\",\"1\":\"清心草\",\"2\":\"材料\",\"3\":\"一种能静心凝神的草药。\",\"4\":\"炼丹材料\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a24",
+    "name": "夜猫子",
+    "description": "在深夜时分仍在活动。",
+    "completionText": "月色虽美，可不要耽误了修行。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "variable",
+      "table": "4",
+      "id": "TIME_LOCATION_ROW",
+      "col": "0",
+      "value": "02:00"
+    },
+    "reward": null
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a25",
+    "name": "路见不平",
+    "description": "你出手帮助了一位陷入困境的路人。",
+    "completionText": "你的善举赢得了一声感谢。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "多谢侠士"
+    },
+    "reward": {
+      "type": "player_attr",
+      "description": "奖励：魅力+2",
+      "command": "updateRow(\"B1\", {\"11\":\"{\\\"魅力\\\":2}\"})"
+    }
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a26",
+    "name": "囊中羞涩",
+    "description": "你的灵石数量归零了。",
+    "completionText": "一分钱难倒英雄汉，修仙也不例外。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "9",
+      "value": "灵石:0"
+    },
+    "reward": null
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a27",
+    "name": "第一位朋友",
+    "description": "你结识了修仙路上的第一位朋友。",
+    "completionText": "漫漫仙途，有友同行，幸甚至哉。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "你我以后就是朋友了"
+    },
+    "reward": null
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a28",
+    "name": "初尝败绩",
+    "description": "你在战斗中落败，体会到了失败的滋味。",
+    "completionText": "失败乃成功之母，站起来，道友！",
+    "quality": "平庸",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "你输了"
+    },
+    "reward": null
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a29",
+    "name": "炼丹炸炉",
+    "description": "第一次尝试炼丹，结果不太理想。",
+    "completionText": "一声巨响，丹炉冒出了黑烟。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "炼丹失败"
+    },
+    "reward": null
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a2a",
+    "name": "凡人武学",
+    "description": "学会了第一门凡人武学。",
+    "completionText": "拳脚功夫，亦是护身之道。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "variable",
+      "table": "8",
+      "id": "S_MORTAL_01",
+      "col": "1",
+      "value": "长春功"
+    },
+    "reward": null
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a2b",
+    "name": "小有资财",
+    "description": "你积攒了100块下品灵石。",
+    "completionText": "你现在算是个小小的富翁了。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "9",
+      "value": "灵石:100"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[储物袋(小)] x1",
+      "command": "insertRow({\"0\":\"I_BAG_01\",\"1\":\"储物袋(小)\",\"2\":\"法宝\",\"3\":\"一个拥有五个格子空间的储物袋。\",\"4\":\"增加物品栏\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a2c",
+    "name": "锋芒初露",
+    "description": "你的物理穿透能力有所提升。",
+    "completionText": "你的攻击似乎更能穿透对方的防御了。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "player_attr",
+      "key": "物理穿透",
+      "value": "5"
+    },
+    "reward": null
+  },
+  {
+    "id": "c1a0a1e0-0b1a-4b1a-8c1a-0a1a0a1a0a2d",
+    "name": "法术诡才",
+    "description": "你的法术穿透能力有所提升。",
+    "completionText": "你的法术变得更加诡异难防。",
+    "quality": "平庸",
+    "requirement": {
+      "type": "player_attr",
+      "key": "法术穿透",
+      "value": "5"
+    },
+    "reward": null
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b2a",
+    "name": "炼气修士",
+    "description": "成功突破至炼气期，正式踏上修仙之路。",
+    "completionText": "你已是炼气期修士，寿元增加，神通初显。",
+    "quality": "普通",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "2",
+      "value": "炼气"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[养气丹] x5",
+      "command": "insertRow({\"0\":\"I_PILL_QI_01\",\"1\":\"养气丹\",\"2\":\"消耗品\",\"3\":\"炼气期修士用来增长修为的丹药。\",\"4\":\"增加修为进度\",\"5\":\"5\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b2b",
+    "name": "法器之主",
+    "description": "获得了第一件真正意义上的法器。",
+    "completionText": "手握法器，你的实力大增。",
+    "quality": "普通",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "获得法器"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[炼器初解] x1",
+      "command": "insertRow({\"0\":\"I_BOOK_REFINE_01\",\"1\":\"炼器初解\",\"2\":\"功法\",\"3\":\"记载了基础炼器知识的书籍。\",\"4\":\"可学习基础炼器术\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b2c",
+    "name": "丹道小成",
+    "description": "成功炼制出第一炉丹药。",
+    "completionText": "丹香四溢，你成功炼制出了丹药，成为了一名炼丹师。",
+    "quality": "普通",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "炼丹成功"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[丹方：辟谷丹] x1",
+      "command": "insertRow({\"0\":\"I_RECIPE_01\",\"1\":\"丹方：辟谷丹\",\"2\":\"功法\",\"3\":\"记载了辟谷丹炼制方法的丹方。\",\"4\":\"学会炼制辟谷丹\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b2d",
+    "name": "宗门弟子",
+    "description": "成功拜入一个修仙宗门。",
+    "completionText": "从此你有了靠山，不再是无根浮萍。",
+    "quality": "普通",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "拜入宗门"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[宗门令牌] x1",
+      "command": "insertRow({\"0\":\"I_TOKEN_SECT_01\",\"1\":\"宗门令牌\",\"2\":\"重要物品\",\"3\":\"你在宗门身份的证明。\",\"4\":\"可接取宗门任务\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b2e",
+    "name": "杀人夺宝",
+    "description": "你杀死了另一名修士，并夺取了他的储物袋。",
+    "completionText": "弱肉强食，你对修仙界的残酷有了更深的理解。",
+    "quality": "普通",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "杀人夺宝"
+    },
+    "reward": {
+      "type": "player_attr",
+      "description": "奖励：气运-5",
+      "command": "updateRow(\"B1\", {\"11\":\"{\\\"气运\\\":-5}\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b2f",
+    "name": "洞府主人",
+    "description": "你拥有了第一个属于自己的洞府。",
+    "completionText": "金窝银窝不如自己的狗窝，现在你有了安身立命之所。",
+    "quality": "普通",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "开辟洞府"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[一阶聚灵阵盘] x1",
+      "command": "insertRow({\"0\":\"I_ARRAY_01\",\"1\":\"一阶聚灵阵盘\",\"2\":\"法宝\",\"3\":\"能在小范围内聚集灵气，辅助修炼。\",\"4\":\"洞府灵气浓度提升\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b30",
+    "name": "御风而行",
+    "description": "学会了御器飞行，从此可以翱翔于天际。",
+    "completionText": "风声在耳边呼啸，你第一次体会到了飞行的快感。",
+    "quality": "普通",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "学会御器飞行"
+    },
+    "reward": {
+      "type": "player_attr",
+      "description": "奖励：脚力+10",
+      "command": "updateRow(\"B1\", {\"11\":\"{\\\"脚力\\\":10}\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b31",
+    "name": "灵兽伙伴",
+    "description": "收服了第一只灵兽。",
+    "completionText": "它将是你修仙路上最忠实的伙伴。",
+    "quality": "普通",
+    "requirement": {
+      "type": "variable",
+      "table": "7",
+      "id": "P_ANY",
+      "col": "0",
+      "value": "P"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[灵兽丹] x10",
+      "command": "insertRow({\"0\":\"I_PILL_BEAST_01\",\"1\":\"灵兽丹\",\"2\":\"消耗品\",\"3\":\"喂养灵兽，助其成长的丹药。\",\"4\":\"提升灵兽经验\",\"5\":\"10\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b32",
+    "name": "筑基真人",
+    "description": "成功筑基，成为一名真正的修仙者。",
+    "completionText": "筑基成功，寿元大增，你已超凡脱俗！",
+    "quality": "普通",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "2",
+      "value": "筑基"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[筑基丹丹方] x1",
+      "command": "insertRow({\"0\":\"I_RECIPE_02\",\"1\":\"筑基丹丹方\",\"2\":\"功法\",\"3\":\"记载了筑基丹炼制方法的珍贵丹方。\",\"4\":\"学会炼制筑基丹\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b33",
+    "name": "小有名气",
+    "description": "你的名字开始在一定范围内流传。",
+    "completionText": "人们在谈论你时，会加上“道友”的尊称。",
+    "quality": "普通",
+    "requirement": {
+      "type": "player_attr",
+      "key": "魅力",
+      "value": "50"
+    },
+    "reward": null
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b34",
+    "name": "符箓大师",
+    "description": "成功制作出一张符箓。",
+    "completionText": "指尖灵光闪动，一张符箓应运而生。",
+    "quality": "普通",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "制符成功"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[空白符纸] x20",
+      "command": "insertRow({\"0\":\"I_PAPER_01\",\"1\":\"空白符纸\",\"2\":\"材料\",\"3\":\"制作符箓的基础材料。\",\"4\":\"制符材料\",\"5\":\"20\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b35",
+    "name": "阵法学徒",
+    "description": "布置出第一个简单的法阵。",
+    "completionText": "你对天地阵纹的理解更深了一层。",
+    "quality": "普通",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "布阵成功"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[阵法初解] x1",
+      "command": "insertRow({\"0\":\"I_BOOK_ARRAY_01\",\"1\":\"阵法初解\",\"2\":\"功法\",\"3\":\"记载了基础阵法知识的书籍。\",\"4\":\"可学习基础布阵术\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b36",
+    "name": "红颜知己",
+    "description": "与一位异性修士的好感度达到“倾心”。",
+    "completionText": "情愫暗生，仙路漫漫，似乎不再那么孤单。",
+    "quality": "普通",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "C_ANY",
+      "col": "15",
+      "value": "100"
+    },
+    "reward": null
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b37",
+    "name": "奇遇连连",
+    "description": "你的气运值达到了一定的高度。",
+    "completionText": "你感觉自己走路都能捡到宝。",
+    "quality": "普通",
+    "requirement": {
+      "type": "player_attr",
+      "key": "气运",
+      "value": "50"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[寻宝罗盘] x1",
+      "command": "insertRow({\"0\":\"I_COMPASS_01\",\"1\":\"寻宝罗盘\",\"2\":\"法宝\",\"3\":\"一个能大致指示宝物方向的罗盘。\",\"4\":\"提升寻宝几率\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b38",
+    "name": "身家丰厚",
+    "description": "你拥有了超过一千块灵石。",
+    "completionText": "一千灵石在手，你在坊市里也能挺直腰板了。",
+    "quality": "普通",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "9",
+      "value": "灵石:1000"
+    },
+    "reward": null
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b39",
+    "name": "夺命书生",
+    "description": "击杀了一名筑基期修士。",
+    "completionText": "你成功越阶挑战，击杀了一名筑基期修士！",
+    "quality": "普通",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "击杀筑基"
+    },
+    "reward": {
+      "type": "player_attr",
+      "description": "奖励：气运+10",
+      "command": "updateRow(\"B1\", {\"11\":\"{\\\"气运\\\":10}\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b3a",
+    "name": "初探险地",
+    "description": "第一次进入一个著名的险地或秘境。",
+    "completionText": "危险与机遇并存，你踏入了未知的区域。",
+    "quality": "普通",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "进入秘境"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[解毒丹] x3",
+      "command": "insertRow({\"0\":\"I_PILL_ANTIDOTE_01\",\"1\":\"解毒丹\",\"2\":\"消耗品\",\"3\":\"可解百种凡毒。\",\"4\":\"解除中毒状态\",\"5\":\"3\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b3b",
+    "name": "双修之好",
+    "description": "第一次与人双修。",
+    "completionText": "阴阳调和，修为大进，妙不可言。",
+    "quality": "普通",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "双修结束"
+    },
+    "reward": null
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b3c",
+    "name": "门派贡献",
+    "description": "为宗门完成了一件困难的任务。",
+    "completionText": "你的贡献得到了宗门的认可。",
+    "quality": "普通",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "宗门贡献点增加"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[宗门贡献点] x100",
+      "command": "insertRow({\"0\":\"I_TOKEN_CONTRIB_01\",\"1\":\"宗门贡献点\",\"2\":\"重要物品\",\"3\":\"可在宗门内兑换物品。\",\"4\":\"价值100点\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "c2b0b2e0-0c2b-4c2b-8d2b-0b2b0b2b0b3d",
+    "name": "体修之路",
+    "description": "你的物攻和物防都达到了一个新高度。",
+    "completionText": "你放弃了绚丽的法术，选择了最为纯粹的肉体力量。",
+    "quality": "普通",
+    "requirement": {
+      "type": "player_attr",
+      "key": "物攻",
+      "value": "100"
+    },
+    "reward": {
+      "type": "skill",
+      "description": "领悟技能：[金刚诀]",
+      "command": "insertRow({\"0\":\"S_SKILL_PHY_01\",\"1\":\"金刚诀\",\"2\":\"被动\",\"3\":\"基础炼体功法，能增强肉身防御。\",\"4\":\"物防+10%\",\"5\":\"无\",\"6\":\"自行领悟\",\"7\":\"初学\",\"8\":\"无\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c3a",
+    "name": "金丹大道",
+    "description": "碎丹成婴，凝结金丹，从此踏上真正的长生大道。",
+    "completionText": "金丹一成，我命由我不由天！",
+    "quality": "史诗",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "2",
+      "value": "结丹"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[本命法宝炼制之法]",
+      "command": "insertRow({\"0\":\"I_BOOK_LIFEBOUND_01\",\"1\":\"本命法宝炼制之法\",\"2\":\"功法\",\"3\":\"记载了如何寻找材料，将法宝与自己心神合一的秘法。\",\"4\":\"可炼制本命法宝\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c3b",
+    "name": "古宝之主",
+    "description": "你获得了一件上古修士遗留的古宝。",
+    "completionText": "古宝入手，其上流转的岁月沧桑让你心神激荡。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "获得古宝"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[养魂木] x1",
+      "command": "insertRow({\"0\":\"I_WOOD_SOUL_01\",\"1\":\"养魂木\",\"2\":\"材料\",\"3\":\"能滋养神魂的奇木，是炼制高阶法宝和修复神魂损伤的至宝。\",\"4\":\"炼器材料\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c3c",
+    "name": "名动一方",
+    "description": "你的名号在一个国家或地区内无人不晓。",
+    "completionText": "无论走到哪里，都有人听闻过你的传说。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "player_attr",
+      "key": "魅力",
+      "value": "200"
+    },
+    "reward": {
+      "type": "character",
+      "description": "一位慕名而来的追随者加入了你。",
+      "command": "insertRow({\"0\":\"C_FOLLOWER_01\",\"1\":\"慕艾|女\",\"2\":\"散修|追随者\",\"3\":\"仰慕强者，性格忠诚\",\"4\":\"一切正常\",\"9\":\"年龄:25|寿元:150\",\"15\":\"80\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c3d",
+    "name": "大修士",
+    "description": "击杀了一名结丹期修士。",
+    "completionText": "一位金丹老祖，殒命于你手！",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "击杀结丹"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[结金丹] x1",
+      "command": "insertRow({\"0\":\"I_PILL_JIEJIN_01\",\"1\":\"结金丹\",\"2\":\"消耗品\",\"3\":\"增加结丹成功率的珍贵丹药。\",\"4\":\"结丹成功率+20%\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c3e",
+    "name": "富可敌国",
+    "description": "你拥有了超过十万块灵石。",
+    "completionText": "灵石对你来说，已经只是一个数字。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "9",
+      "value": "灵石:100000"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[商会贵宾令牌] x1",
+      "command": "insertRow({\"0\":\"I_TOKEN_VIP_01\",\"1\":\"商会贵宾令牌\",\"2\":\"重要物品\",\"3\":\"天南各大商会的贵宾凭证。\",\"4\":\"购买稀有物品时享受折扣\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c3f",
+    "name": "道侣",
+    "description": "与一位修士结为道侣，从此祸福与共。",
+    "completionText": "仙路漫漫，得一人相伴，足矣。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "结为道侣"
+    },
+    "reward": {
+      "type": "skill",
+      "description": "获得双修功法：[阴阳和合功]",
+      "command": "insertRow({\"0\":\"S_SKILL_DUAL_01\",\"1\":\"阴阳和合功\",\"2\":\"功法\",\"3\":\"一门高深的双修功法。\",\"4\":\"双修时修为获取效率+30%\",\"5\":\"无\",\"6\":\"天赐\",\"7\":\"初学\",\"8\":\"无\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c40",
+    "name": "开宗立派",
+    "description": "你创建了自己的宗门。",
+    "completionText": "一个全新的势力冉冉升起，而你，就是它的开山祖师。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "创建宗门"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[护山大阵阵图] x1",
+      "command": "insertRow({\"0\":\"I_ARRAY_MAP_01\",\"1\":\"护山大阵阵图\",\"2\":\"重要物品\",\"3\":\"记载了三阶护山大阵的布置方法。\",\"4\":\"可为宗门布置护山大阵\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c41",
+    "name": "元婴老怪",
+    "description": "碎丹成婴，凝结元婴，成为一方巨擘。",
+    "completionText": "元婴一出，神游太虚，你已是传说中的存在！",
+    "quality": "史诗",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "2",
+      "value": "元婴"
+    },
+    "reward": {
+      "type": "skill",
+      "description": "领悟神通：[元婴出窍]",
+      "command": "insertRow({\"0\":\"S_SKILL_SOUL_01\",\"1\":\"元婴出窍\",\"2\":\"主动\",\"3\":\"元婴离体，可进行神魂攻击或远距离探查。\",\"4\":\"神识攻击，探查\",\"5\":\"无\",\"6\":\"境界领悟\",\"7\":\"初学\",\"8\":\"大量法力\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c42",
+    "name": "第二元婴",
+    "description": "机缘巧合之下，你修炼出了第二元婴。",
+    "completionText": "一体双婴，你的实力远超同阶修士！",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "第二元婴"
+    },
+    "reward": {
+      "type": "player_attr",
+      "description": "奖励：法力上限+50%",
+      "command": "updateRow(\"B1\", {\"11\":\"{\\\"法力\\\":500}\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c43",
+    "name": "阵法宗师",
+    "description": "你的阵法造诣达到了极高的境界。",
+    "completionText": "挥手间布下天罗地网，你已是阵法宗师。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "阵法宗师"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[阵道真解] x1",
+      "command": "insertRow({\"0\":\"I_BOOK_ARRAY_02\",\"1\":\"阵道真解\",\"2\":\"功法\",\"3\":\"蕴含高深阵法知识的玉简。\",\"4\":\"可学习多种高阶阵法\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c44",
+    "name": "炼器宗师",
+    "description": "你的炼器水平出神入化。",
+    "completionText": "你炼制的法宝，引得无数修士争抢。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "炼器宗师"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[天工开物] x1",
+      "command": "insertRow({\"0\":\"I_BOOK_REFINE_02\",\"1\":\"天工开物\",\"2\":\"功法\",\"3\":\"上古炼器宝典。\",\"4\":\"可学习多种法宝炼制之法\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c45",
+    "name": "炼丹宗师",
+    "description": "你的丹道造诣冠绝一方。",
+    "completionText": "你炼制的丹药，有逆天改命之效。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "炼丹宗师"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[神农丹经] x1",
+      "command": "insertRow({\"0\":\"I_BOOK_ALCH_02\",\"1\":\"神农丹经\",\"2\":\"功法\",\"3\":\"上古丹道宝典。\",\"4\":\"可学习多种高阶丹方\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c46",
+    "name": "横渡无边海",
+    "description": "你成功穿越了危机四伏的无边海，抵达了新的大陆。",
+    "completionText": "海的尽头，是新的世界。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "抵达乱星海"
+    },
+    "reward": {
+      "type": "world_event",
+      "description": "触发世界事件：外海来客",
+      "command": "addWorldEvent(\"某年某月\", \"乱星海\", \"一位来自天南的强大修士抵达了乱星海，引起了各方势力的关注。\")"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c47",
+    "name": "虚天殿之行",
+    "description": "你进入了传说中的虚天殿，并活着走了出来。",
+    "completionText": "九死一生，你从虚天殿中带出了惊天秘宝。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "离开虚天殿"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[补天丹] x1",
+      "command": "insertRow({\"0\":\"I_PILL_BUTIAN_01\",\"1\":\"补天丹\",\"2\":\"消耗品\",\"3\":\"传说中能弥补根基，增加结婴几率的圣药。\",\"4\":\"结婴成功率+10%\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c48",
+    "name": "大庚剑阵",
+    "description": "你集齐了七十二把青竹蜂云剑，并练成了大庚剑阵。",
+    "completionText": "剑光如龙，剑阵一出，天地失色！",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "练成大庚剑阵"
+    },
+    "reward": {
+      "type": "skill",
+      "description": "领悟神通：[剑阵合一]",
+      "command": "insertRow({\"0\":\"S_SKILL_SWORD_ARRAY_01\",\"1\":\"剑阵合一\",\"2\":\"主动\",\"3\":\"将所有飞剑合为一体，发出至强一击。\",\"4\":\"造成巨量物理伤害\",\"5\":\"无\",\"6\":\"自行领悟\",\"7\":\"初学\",\"8\":\"海量法力\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c49",
+    "name": "直面韩天尊",
+    "description": "你与传说中的韩老魔相遇了。",
+    "completionText": "那个相貌平平的青年，给你带来了难以言喻的压迫感。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "韩立"
+    },
+    "reward": null
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c4a",
+    "name": "化神之境",
+    "description": "突破至化神期，从此神游物外，初步触摸到法则之力。",
+    "completionText": "天地法则在你眼中变得清晰，你已是人界顶点的存在。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "2",
+      "value": "化神"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[空间节点感应盘] x1",
+      "command": "insertRow({\"0\":\"I_COMPASS_SPACE_01\",\"1\":\"空间节点感应盘\",\"2\":\"重要物品\",\"3\":\"能够感应到薄弱的空间节点，是飞升灵界的关键。\",\"4\":\"寻找飞升节点\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c4b",
+    "name": "天劫洗礼",
+    "description": "你成功渡过了一次大天劫。",
+    "completionText": "雷光散去，你在焦土中站起，气息比以往更加强大。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "渡劫成功"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[劫雷竹] x1",
+      "command": "insertRow({\"0\":\"I_BAMBOO_THUNDER_01\",\"1\":\"劫雷竹\",\"2\":\"材料\",\"3\":\"在天劫中诞生，蕴含纯粹雷电之力的神木。\",\"4\":\"炼制雷属性法宝的极品材料\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c4c",
+    "name": "古魔之战",
+    "description": "你参与了对抗古魔的战争，并幸存下来。",
+    "completionText": "魔气滔天，血流成河，你见证了界面的残酷战争。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "击退古魔"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[真魔之血] x1",
+      "command": "insertRow({\"0\":\"I_BLOOD_DEMON_01\",\"1\":\"真魔之血\",\"2\":\"材料\",\"3\":\"来自高阶古魔的精血，蕴含庞大的魔能。\",\"4\":\"可用于修炼魔功或炼制魔宝\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "d3c0c3e0-0d3c-4d3c-8e3c-0c3c0c3c0c4d",
+    "name": "万年老妖",
+    "description": "你的年龄超过了一万岁。",
+    "completionText": "万载悠悠，岁月在你身上留下了不可磨灭的痕迹。",
+    "quality": "史诗",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "9",
+      "value": "年龄:10000"
+    },
+    "reward": null
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d4a",
+    "name": "灵宝之主",
+    "description": "你获得了一件通天灵宝。",
+    "completionText": "灵宝有灵，自行择主，你获得了天地的认可！",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "获得灵宝"
+    },
+    "reward": {
+      "type": "skill",
+      "description": "领悟神通：[灵宝通神]",
+      "command": "insertRow({\"0\":\"S_SKILL_TREASURE_01\",\"1\":\"灵宝通神\",\"2\":\"被动\",\"3\":\"你与通天灵宝心意相通，能发挥其更大的威力。\",\"4\":\"装备的法宝威力+20%\",\"5\":\"无\",\"6\":\"灵宝认可\",\"7\":\"掌握\",\"8\":\"无\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d4b",
+    "name": "斩杀元婴",
+    "description": "你成功斩杀了一名元婴期老怪。",
+    "completionText": "元婴陨落，天地同悲，你的威名震慑四方！",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "斩杀元婴"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[元婴] x1",
+      "command": "insertRow({\"0\":\"I_SOUL_NASCENT_01\",\"1\":\"元婴\",\"2\":\"材料\",\"3\":\"元婴期修士的毕生精华所在，大补之物。\",\"4\":\"可直接炼化提升大量修为，或用于炼制身外化身。\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d4c",
+    "name": "飞升灵界",
+    "description": "破碎虚空，你成功飞升到了灵界。",
+    "completionText": "人界已是过往，灵界的广阔天地在你面前展开！",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "飞升灵界"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[灵界地图残片] x1",
+      "command": "insertRow({\"0\":\"I_MAP_SPIRIT_01\",\"1\":\"灵界地图残片\",\"2\":\"重要物品\",\"3\":\"一张描绘了灵界部分区域的地图。\",\"4\":\"解锁灵界部分区域视野\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d4d",
+    "name": "合体之威",
+    "description": "你突破到了合体期，成为人族顶梁柱。",
+    "completionText": "法体合一，万法随心，你已是人界凤毛麟角的存在。",
+    "quality": "传说",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "2",
+      "value": "合体"
+    },
+    "reward": {
+      "type": "skill",
+      "description": "领悟法则：[空间法则（初窥）]",
+      "command": "insertRow({\"0\":\"S_SKILL_SPACE_01\",\"1\":\"空间法则（初窥）\",\"2\":\"被动\",\"3\":\"你对空间之力有了初步的理解。\",\"4\":\"脚力+20%，可进行短距离瞬移。\",\"5\":\"无\",\"6\":\"境界领悟\",\"7\":\"初学\",\"8\":\"无\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d4e",
+    "name": "跨界而来",
+    "description": "你遇到了来自其他界面的存在（如魔界、妖界）。",
+    "completionText": "世界之外，别有洞天。",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "魔界"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[界晶] x1",
+      "command": "insertRow({\"0\":\"I_CRYSTAL_WORLD_01\",\"1\":\"界晶\",\"2\":\"材料\",\"3\":\"界面之力凝结的晶石，极为罕见。\",\"4\":\"炼制跨界法宝的核心材料\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d4f",
+    "name": "掌天瓶的秘密",
+    "description": "你发现了掌天瓶的真正用途。",
+    "completionText": "一滴绿液，催生万物，逆天造化尽在掌中。",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "催熟灵药"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[万年灵药种子] x1",
+      "command": "insertRow({\"0\":\"I_SEED_10000_01\",\"1\":\"万年灵药种子\",\"2\":\"材料\",\"3\":\"一粒需要万年才能成熟的灵药种子。\",\"4\":\"催熟后可得万年灵药\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d50",
+    "name": "人族圣祖",
+    "description": "你在人族中的声望达到了顶峰。",
+    "completionText": "你成为了人族的守护神，万众敬仰。",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "人族圣祖"
+    },
+    "reward": {
+      "type": "world_event",
+      "description": "触发世界事件：圣祖诞生",
+      "command": "addWorldEvent(\"某年某月\", \"人族全境\", \"人族圣祖诞生，万民朝拜，人族气运大涨！\")"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d51",
+    "name": "大乘之巅",
+    "description": "你已臻至大乘期，距离真仙只有一步之遥。",
+    "completionText": "仙凡之隔，仅在一线之间。",
+    "quality": "传说",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "2",
+      "value": "大乘"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[仙界元气] x1",
+      "command": "insertRow({\"0\":\"I_QI_IMMORTAL_01\",\"1\":\"仙界元气\",\"2\":\"消耗品\",\"3\":\"一缕泄露到下界的纯净仙界元气。\",\"4\":\"大幅提升修为，洗练肉身。\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d52",
+    "name": "法则之躯",
+    "description": "你的某项属性突破了凡界的极限。",
+    "completionText": "你的肉身或法力已经开始沾染法则的气息。",
+    "quality": "传说",
+    "requirement": {
+      "type": "player_attr",
+      "key": "法攻",
+      "value": "10000"
+    },
+    "reward": null
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d53",
+    "name": "弑神",
+    "description": "你成功击杀了一名化神期修士。",
+    "completionText": "化神陨落，天地震动，你的名字足以让鬼神惊惧。",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "击杀化神"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[化神修士的本源] x1",
+      "command": "insertRow({\"0\":\"I_ORIGIN_DEITY_01\",\"1\":\"化神修士的本源\",\"2\":\"材料\",\"3\":\"化神修士死后逸散的法则本源，至高无上的宝物。\",\"4\":\"可用于炼制道丹或通天灵宝。\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d54",
+    "name": "时间旅者",
+    "description": "你通过某种方式，窥探到了过去或未来的景象。",
+    "completionText": "在时间的洪流中，你瞥见了一丝不应属于此刻的画面。",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "时间碎片"
+    },
+    "reward": null
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d55",
+    "name": "傀儡军团",
+    "description": "你拥有了一支由高阶傀儡组成的军队。",
+    "completionText": "没有生命的军队，是你最忠诚的战士。",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "傀儡大军"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[傀儡核心（合体期）] x1",
+      "command": "insertRow({\"0\":\"I_CORE_PUPPET_01\",\"1\":\"傀儡核心（合体期）\",\"2\":\"材料\",\"3\":\"制作合体期傀儡的核心部件。\",\"4\":\"炼器材料\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d56",
+    "name": "虫群之主",
+    "description": "你培育出了传说中的噬金虫群。",
+    "completionText": "金色的虫云过处，万物皆被吞噬。",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "噬金虫王"
+    },
+    "reward": {
+      "type": "beast",
+      "description": "你的噬金虫群进化了！",
+      "command": "updateRow(\"P_JIN_01\", {\"2\":\"成熟体\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d57",
+    "name": "灵域雏形",
+    "description": "你领悟了属于自己的灵域。",
+    "completionText": "灵域展开，领域之内，你便是唯一的主宰！",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "领悟灵域"
+    },
+    "reward": {
+      "type": "skill",
+      "description": "领悟神通：[法天象地]",
+      "command": "insertRow({\"0\":\"S_SKILL_DOMAIN_01\",\"1\":\"法天象地\",\"2\":\"主动\",\"3\":\"消耗巨量法力，身化万丈巨人，实力暴涨。\",\"4\":\"全属性大幅提升\",\"5\":\"无\",\"6\":\"灵域领悟\",\"7\":\"初学\",\"8\":\"巨量法力\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d58",
+    "name": "一诺千金",
+    "description": "你完成了一个对元婴期修士的承诺。",
+    "completionText": "信义，在任何世界都是最珍贵的品质。",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "完成了承诺"
+    },
+    "reward": {
+      "type": "player_attr",
+      "description": "奖励：气运+50",
+      "command": "updateRow(\"B1\", {\"11\":\"{\\\"气运\\\":50}\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d59",
+    "name": "再见南宫",
+    "description": "你与南宫婉重逢。",
+    "completionText": "跨越百年光阴，那张容颜依旧。",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "南宫婉"
+    },
+    "reward": null
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d5a",
+    "name": "太阴真火",
+    "description": "你成功炼化了太阴真火。",
+    "completionText": "极寒的白色火焰在你掌心跳动，连神魂都能冻结。",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "炼化太阴真火"
+    },
+    "reward": {
+      "type": "skill",
+      "description": "获得技能：[太阴真火]",
+      "command": "insertRow({\"0\":\"S_SKILL_FIRE_01\",\"1\":\"太阴真火\",\"2\":\"主动\",\"3\":\"操控太阴真火攻击敌人。\",\"4\":\"造成极高的冰属性法术伤害，附带冻结神魂效果。\",\"5\":\"无\",\"6\":\"炼化\",\"7\":\"初学\",\"8\":\"法力\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d5b",
+    "name": "玄天之果",
+    "description": "你得到了一枚玄天仙藤结出的果实。",
+    "completionText": "这枚果实中，似乎蕴含着一丝仙界的法则。",
+    "quality": "传说",
+    "requirement": {
+      "type": "variable",
+      "table": "1",
+      "id": "I_FRUIT_XUANTIAN_01",
+      "col": "1",
+      "value": "玄天之果"
+    },
+    "reward": null
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d5c",
+    "name": "大衍神君",
+    "description": "你获得了大衍神君的传承。",
+    "completionText": "神念化千，大衍决的奥秘在你脑海中流淌。",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "大衍神君传承"
+    },
+    "reward": {
+      "type": "player_attr",
+      "description": "奖励：神识+500",
+      "command": "updateRow(\"B1\", {\"11\":\"{\\\"神识\\\":500}\"})"
+    }
+  },
+  {
+    "id": "e4d0d4e0-0e4d-4e4d-8f4d-0d4d0d4d0d5d",
+    "name": "人界无敌",
+    "description": "你在人界已经找不到任何对手。",
+    "completionText": "高处不胜寒，是时候仰望星空了。",
+    "quality": "传说",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "人界无敌"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5e0e5a",
+    "name": "玄天之宝",
+    "description": "你获得了一件真正的玄天之宝。",
+    "completionText": "此宝一出，天地变色，仙神辟易！",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "获得玄天之宝"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[玄天斩灵剑（仿）]",
+      "command": "insertRow({\"0\":\"I_SWORD_XUANTIAN_01\",\"1\":\"玄天斩灵剑（仿）\",\"2\":\"武器\",\"3\":\"仿制玄天斩灵剑而成，虽无原版之威，亦可斩仙弑神。\",\"4\":\"物理穿透+50%，对仙、魔、灵族造成额外伤害。\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5e0e5b",
+    "name": "真仙之躯",
+    "description": "你成功飞升仙界，褪去凡胎，成就真仙。",
+    "completionText": "恭喜飞升！你已是仙界的一员。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "2",
+      "value": "真仙"
+    },
+    "reward": {
+      "type": "skill",
+      "description": "领悟仙术：[言出法随]",
+      "command": "insertRow({\"0\":\"S_SKILL_IMMORTAL_01\",\"1\":\"言出法随\",\"2\":\"被动\",\"3\":\"你的言语中蕴含法则之力，能轻易影响现实。\",\"4\":\"大幅增强所有技能效果\",\"5\":\"无\",\"6\":\"飞升领悟\",\"7\":\"掌握\",\"8\":\"无\"})"
+    }
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5e0e5c",
+    "name": "时间法则",
+    "description": "你领悟了三大至尊法则之一的时间法则。",
+    "completionText": "过去、现在、未来，在你眼中只是一条可以拨动的弦。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "领悟时间法则"
+    },
+    "reward": {
+      "type": "player_attr",
+      "description": "奖励：寿元变为无限",
+      "command": "updateRow(\"B1\", {\"9\":\"寿元:无限\"})"
+    }
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5e0e5d",
+    "name": "轮回法则",
+    "description": "你领悟了三大至尊法则之一的轮回法则。",
+    "completionText": "生死轮回，皆在你一念之间。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "领悟轮回法则"
+    },
+    "reward": {
+      "type": "skill",
+      "description": "获得技能：[六道轮回盘（仿）]",
+      "command": "insertRow({\"0\":\"I_DISK_REINCARNATION_01\",\"1\":\"六道轮回盘（仿）\",\"2\":\"法宝\",\"3\":\"仿制轮回殿主至宝而成，拥有掌控轮回之力。\",\"4\":\"可将敌人打入轮回，或复活好感度足够的道侣。\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5e0e5e",
+    "name": "空间法则",
+    "description": "你领悟了三大至尊法则之一的空间法则。",
+    "completionText": "万里之遥，不过一步之遥。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "领悟空间法则"
+    },
+    "reward": {
+      "type": "skill",
+      "description": "领悟神通：[大挪移]",
+      "command": "insertRow({\"0\":\"S_SKILL_TELEPORT_01\",\"1\":\"大挪移\",\"2\":\"主动\",\"3\":\"可瞬间移动到神识范围内的任何地点。\",\"4\":\"空间传送\",\"5\":\"无\",\"6\":\"法则领悟\",\"7\":\"掌握\",\"8\":\"法力\"})"
+    }
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5f",
+    "name": "道祖",
+    "description": "你修炼到了仙界的顶点——道祖之境。",
+    "completionText": "你即是道，道即是你。万千法则，为你所用。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "variable",
+      "table": "0",
+      "id": "B1",
+      "col": "2",
+      "value": "道祖"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5g",
+    "name": "斩三尸",
+    "description": "你成功斩却善、恶、自我三尸，达到无上境界。",
+    "completionText": "过去之我，现在之我，未来之我，三我归一，是为大道。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "斩三尸"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5h",
+    "name": "创造世界",
+    "description": "你以无上神通，开辟了一方小世界。",
+    "completionText": "地火水风涌动，一个全新的世界在你手中诞生。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "开辟小世界"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5i",
+    "name": "弑杀道祖",
+    "description": "你击杀了一名道祖级别的存在。",
+    "completionText": "一位执掌天道的存在，因你而陨落。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "击杀道祖"
+    },
+    "reward": {
+      "type": "item",
+      "description": "获得：[破碎的道果] x1",
+      "command": "insertRow({\"0\":\"I_FRUIT_DAO_01\",\"1\":\"破碎的道果\",\"2\":\"重要物品\",\"3\":\"道祖陨落后留下的法则结晶，蕴含着一个世界的本源。\",\"4\":\"蕴含无上法则\",\"5\":\"1\"})"
+    }
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5j",
+    "name": "重塑轮回",
+    "description": "你掌控了轮回，让逝去的挚爱重返人间。",
+    "completionText": "跨越生死界限，只为与你再见一面。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "复活了"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5k",
+    "name": "我即天道",
+    "description": "你取代了天道，成为一方宇宙的至高主宰。",
+    "completionText": "从今往后，你的意志，便是天意。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "取代天道"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5l",
+    "name": "凡人",
+    "description": "在修仙的终点，你选择放弃一切，回归凡人。",
+    "completionText": "看尽仙界繁华，方知人间可贵。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "重归凡人"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5m",
+    "name": "系统之主",
+    "description": "你发现了这个世界的真相——你只是一个面板中的数据。",
+    "completionText": "第四面墙被打破，你看到了屏幕外的“我”。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "你只是数据"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5n",
+    "name": "混沌之体",
+    "description": "你的肉身强度超越了所有已知生灵。",
+    "completionText": "你的肉身，已是世间最强的法宝。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "player_attr",
+      "key": "物防",
+      "value": "99999"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5o",
+    "name": "万法归一",
+    "description": "你的法力深厚到无法估量。",
+    "completionText": "你的法力，比星辰大海还要浩瀚。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "player_attr",
+      "key": "法力",
+      "value": "99999"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5p",
+    "name": "气运之子",
+    "description": "你的气运达到了天道都无法忽视的程度。",
+    "completionText": "你就是天命，天命就是你。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "player_attr",
+      "key": "气运",
+      "value": "1000"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5q",
+    "name": "红尘仙",
+    "description": "你在红尘中历练，心境圆满无暇。",
+    "completionText": "大隐隐于市，你体验了最纯粹的人间烟火。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "红尘炼心"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5r",
+    "name": "一剑开天",
+    "description": "你用一剑，劈开了一个界面。",
+    "completionText": "没有什么是一剑解决不了的，如果有，那就再来一剑。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "一剑开天"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5s",
+    "name": "永恒孤独",
+    "description": "所有你认识的人都已逝去，只剩下你一人独存于世。",
+    "completionText": "长生的尽头，是无尽的孤独。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "只剩下我一人"
+    },
+    "reward": null
+  },
+  {
+    "id": "f5e0e5e0-0f5e-4f5e-8g5e-0e5e0e5t",
+    "name": "作者",
+    "description": "你与面板的创造者进行了对话。",
+    "completionText": "你好，LUCKLYJKOP。",
+    "quality": "神迹",
+    "requirement": {
+      "type": "ai_response",
+      "keyword": "LUCKLYJKOP"
+    },
+    "reward": null
+  }
+]
